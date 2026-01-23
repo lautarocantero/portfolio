@@ -16,21 +16,21 @@ El objetivo es mostrar mis proyectos, habilidades y experiencia como **Full Stac
 
 ## 📂 Estructura del proyecto
 
-├── public/              # Recursos estáticos
-├── src/                 # Código fuente principal
-│   ├── components/      # Componentes reutilizables
-│   ├── layout/          # Layouts y estructura visual
-│   ├── pages/           # Páginas del portafolio
-│   ├── theme/           # Configuración de estilos/temas
-│   ├── typings/         # Tipos de TypeScript
-│   ├── App.css           # Estilos principales
-│   ├── index.css         # Estilos globales
-│   ├── main.tsx          # Punto de entrada de la aplicación
-│   └── PortfolioApp.tsx  # Componente principal
-├── index.html            # HTML raíz
-├── package.json          # Dependencias y scripts
-├── vite.config.ts        # Configuración de Vite
-└── tsconfig.json         # Configuración de TypeScript
+├── public/              # Recursos estáticos<br>
+├── src/                 # Código fuente principal<br>
+│   ├── components/      # Componentes reutilizables<br>
+│   ├── layout/          # Layouts y estructura visual<br>
+│   ├── pages/           # Páginas del portafolio<br>
+│   ├── theme/           # Configuración de estilos/temas<br>
+│   ├── typings/         # Tipos de TypeScript<br>
+│   ├── App.css           # Estilos principales<br>
+│   ├── index.css         # Estilos globales<br>
+│   ├── main.tsx          # Punto de entrada de la aplicación<br>
+│   └── PortfolioApp.tsx  # Componente principal<br>
+├── index.html            # HTML raíz<br>
+├── package.json          # Dependencias y scripts<br>
+├── vite.config.ts        # Configuración de Vite<br>
+└── tsconfig.json         # Configuración de TypeScript<br>
 
 
 ---
