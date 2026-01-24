@@ -11,7 +11,7 @@ const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode
                 margin: '0.5em',
                 display: "grid",
                 gridTemplateColumns: { 
-                    xs: "repeat(4, 1fr)", 
+                    xs: "repeat(3, 1fr)", 
                     sm: "repeat(8, 1fr)",
                     md: "repeat(12, 1fr)",
                     lg: "repeat(14, 1fr)",
