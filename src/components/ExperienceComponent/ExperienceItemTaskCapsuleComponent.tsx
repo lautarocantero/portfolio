@@ -6,12 +6,11 @@ const ExperienceItemTaskCapsuleComponent = ({task}: ExperienceItemTaskCapsulePro
     return(
         <Grid
             sx={(theme: Theme) => ({
-                backgroundColor: theme?.custom?.backgroundLigth,
+                backgroundColor: theme?.palette?.primary?.main,
                 borderRadius: '10em',
                 display: 'flex',
                 flexDirection: 'row',
                 padding: '0.2em 0.8em',
-                maxHeight: "1.5em",
                 gap: { xs: '0.2em'}
             })}
         >

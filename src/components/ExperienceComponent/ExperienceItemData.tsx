@@ -2,8 +2,7 @@ import { Grid, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceItemDataProps } from "../../typings/reactComponents";
 import ExperienceItemDescriptionComponent from "./ExperienceItemDescription";
-import ExperienceItemStackExpositurecomponent from "./ExperienceItemStackExpositure";
-import ExperienceItemTaskExpositureComponent from "./ExperienceItemTaskExpositure";
+import ExperienceItemSwitcher from "./ExperienceItemSwitcher";
 
 const ExperienceItemDatacomponent = ({isExpanded, title, stack, short_description, long_description, tasks}: ExperienceItemDataProps):React.ReactNode => {
     return(
@@ -27,8 +26,7 @@ const ExperienceItemDatacomponent = ({isExpanded, title, stack, short_descriptio
             </Typography>
             
             <ExperienceItemDescriptionComponent description={ isExpanded ? long_description  : short_description }/>
-            <ExperienceItemStackExpositurecomponent stack={stack}/>
-            <ExperienceItemTaskExpositureComponent tasks={tasks} />
+            <ExperienceItemSwitcher stack={stack} tasks={tasks} />
         </Grid>
     )
 };

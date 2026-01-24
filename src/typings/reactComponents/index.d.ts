@@ -81,6 +81,9 @@ export type ExperienceItemIlustrationProps = Pick<ExperienceItemInterface, 'gall
 export type ExperienceItemDataProps = Pick<ExperienceItemInterface, 'title' | 'stack' | 'short_description' | 'long_description' | 'tasks'> & {
     isExpanded?: boolean,
 }
+
+export type ExperienceItemSwitcherProps = Pick<ExperienceItemInterface, 'stack' | 'tasks'>;
+
 export interface ExperienceItemButtonProps {
     isExpanded: boolean,
     setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>,
