@@ -1,37 +1,52 @@
 import { Box, Grid, type Theme } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import type { ExperienceItemProps } from "../../typings/reactComponents";
 import ExperienceItemButtonComponent from "./ExperienceItemButton";
 import ExperienceItemDatacomponent from "./ExperienceItemData";
 import ExperienceItemIlustrationComponent from "./ExperienceItemIlustration";
-import type { Stack } from "../../typings/types";
+import type { Stack, Task } from "../../typings/types";
 
 const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React.ReactNode => {
-  const { gallery_urls,title,stack,short_description} : 
+
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
+  const { gallery_urls,title,stack,short_description, long_description, tasks} : 
     { 
       gallery_urls: string [],
       title: string,
       stack: Stack[], 
-      short_description: string
+      tasks: Task[],
+      short_description: string,
+      long_description: string,
     } = experienceItem;
 
+
   return (
-    <Grid size={{ xs: 12, sm: 6 }}>
+    <Grid size={{ xs: 12, sm: isExpanded ? 12 : 6 }}>
       <Box
+        className={isExpanded ? "animate__animated animate__fadeInLeft" : ""}
         sx={(theme: Theme) => ({
           backgroundColor: theme?.custom?.backgroundLigth,
           borderRadius: "25px",
-          height: { xs: "33em", sm: "32em"},
+          height: { xs: "auto"},
           margin: "1em auto 0",
           width: "95%",
           display: "flex",
           flexDirection: "column",
           position: "relative",
+          transition: "all 0.3s ease-in-out",
         })}
       >
         <ExperienceItemIlustrationComponent gallery_urls={gallery_urls}/>
-        <ExperienceItemDatacomponent title={title} stack={stack} short_description={short_description}/>
-        <ExperienceItemButtonComponent />
+        <ExperienceItemDatacomponent 
+          isExpanded={isExpanded} 
+          title={title} 
+          stack={stack} 
+          short_description={short_description} 
+          long_description={long_description} 
+          tasks={tasks} 
+        />
+        <ExperienceItemButtonComponent isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
       </Box>
     </Grid>
   );

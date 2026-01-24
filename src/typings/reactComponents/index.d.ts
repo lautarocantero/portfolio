@@ -1,3 +1,4 @@
+import type React from "react";
 import type { AboutLinkInterface, LogoExperienceInterface, Stack } from "../types";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
@@ -46,7 +47,9 @@ export interface PresentationButtonProps {
 export interface BaseItemInterface {
     title: string,
     stack: Stack[],
+    task: string,
     short_description: string,
+    long_description: string,
     gallery_urls: string[],
 }
 
@@ -67,7 +70,7 @@ interface ExperienceLogoProps {
 
 export type ExperienceItemInterface = Pick<
     BaseItemInterface,
-    'title' | 'stack' | 'short_description' | 'gallery_urls'
+    'title' | 'stack' | 'short_description' | 'long_description' | 'gallery_urls', 'tasks'
 >
 
 export interface ExperienceItemProps {
@@ -75,11 +78,27 @@ export interface ExperienceItemProps {
 }
 
 export type ExperienceItemIlustrationProps = Pick<ExperienceItemInterface, 'gallery_urls'>
-export type ExperienceItemDataProps = Pick<ExperienceItemInterface, 'title' | 'stack' | 'short_description'>
-export type ExperienceItemStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>
-export type ExperienceItemDescriptionProps = Pick<ExperienceItemInterface, 'short_description'>
+export type ExperienceItemDataProps = Pick<ExperienceItemInterface, 'title' | 'stack' | 'short_description' | 'long_description' | 'tasks'> & {
+    isExpanded?: boolean,
+}
+export interface ExperienceItemButtonProps {
+    isExpanded: boolean,
+    setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+export type ExperienceItemStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>;
+
+export type ExperienceItemTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
+
+export interface ExperienceItemDescriptionProps {
+    description: string,
+}
 export interface ExperienceItemStackCapsuleProps {
     stack: Stack,
+}
+
+export interface ExperienceItemTaskCapsuleProps {
+    task: Task,
 }
 
 {/*─────────────────── 🔎 Proyectos 🔎 ───────────────────*/}

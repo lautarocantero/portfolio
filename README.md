@@ -63,3 +63,22 @@ yarn dev
 Lautaro Nicolás Cantero  
 Full Stack Developer
 
+to do:
+
+-Agregar en las cards de experiencia una parte que indique que tareas resolvi. (sin darle a ver mas)
+-Terminar de dar estilo a ver mas de experiencia
+-Agregar i18n 
+-Agregar descarga de cv en ingles
+-Agregar validacion y envio de mail
+-Agregar Links al linkedin de las empresas con las que trabaje
+-Agregar descripcion de como hice los proyectos
+-Agregar botones de ver codigo y ver proyecto desplegado
+-Agregar los proyectos que falten
+-Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa
+-Agregar boton descriptivo a Stack, para que gente no tecnica entienda que es lo que ve
+-Agregar informacion al ver mas de sobre mi
+-Agregar iconos de mouse y navegacion
+-Agregar fotos mas profesionales
+-Agregar feedback
+-Agregar mis scripts de linux
+-Agregar transicion de modo de luz

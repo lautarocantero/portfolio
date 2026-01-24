@@ -1,0 +1,16 @@
+export enum TaskEnum {
+  CorreccionEstilosRotos = "Corrección de estilos rotos",
+  ReestructuracionVistas = "Reestructuración de vistas",
+  ValidacionFormularios = "Validación de formularios",
+  OrganizacionComponentes = "Organización de componentes",
+  DocumentacionComponentes = "Documentación de componentes",
+  CreacionEndpoints = "Creación de endpoints",
+  OptimizacionNavegacion = "Optimización de navegación",
+  CreacionNuevasRutas = "Creación de nuevas rutas",
+  ImplementacionComponentes = "Creación de componentes",
+  ImplementacionHooks = "Creación de hooks",
+  ImplementacionI18n = "Implementación de i18n",
+  ImplementacionPruebasUnitarias = "Implementación de prubas U.",
+  ImplementacionTablas = "Creacion de tablas",
+  CRUDsAxios = "CRUDs completos con Axios",
+}

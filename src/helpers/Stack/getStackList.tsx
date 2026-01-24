@@ -16,8 +16,11 @@ const allStacks: StackSkillType[] = [
   { text: 'Node.js', icon: '/icons/nodejs-svgrepo-com.svg', iconGif: '' },
   { text: 'Firebase', icon: '/icons/firebase-svgrepo-com.svg', iconGif: 'https://media.giphy.com/media/Ri2TUcKlaOcaDBxFpY/giphy.gif' },
   { text: 'Jest', icon: '/icons/jest-svgrepo-com.svg', iconGif: '' },
+  { text: 'C#', icon: 'public/icons/c-sharp-16-svgrepo-com.svg', iconGif: '' },
+
   // 🟪 Bases de datos
   { text: 'MongoDB', icon: '/icons/mongodb-svgrepo-com.svg', iconGif: '' },
+  { text: 'PHP', icon: '/icons/php01-svgrepo-com.svg', iconGif: '' },
 
   // 🟨 Control de versiones / Herramientas de desarrollo
   { text: 'Git', icon: '/icons/git-svgrepo-com.svg', iconGif: 'https://media.giphy.com/media/kH6CqYiquZawmU1HI6/giphy.gif' },

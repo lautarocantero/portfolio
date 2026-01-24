@@ -1,9 +1,10 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
 import React from "react";
-import type { ExperienceItemStackExpositureProps } from "../../typings/reactComponents";
-import ExperienceItemStackCapsuleComponent from "./ExperienceItemStackCapsule";
+import type { ExperienceItemTaskExpositureProps } from "../../typings/reactComponents";
+import type { Task } from "../../typings/types";
+import ExperienceItemTaskCapsuleComponent from "./ExperienceItemTaskCapsuleComponent";
 
-const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpositureProps ):React.ReactNode => {
+const ExperienceItemTaskExpositurecomponent = ({tasks}: ExperienceItemTaskExpositureProps ):React.ReactNode => {
 
     return(
         <Box
@@ -18,7 +19,7 @@ const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpo
                         marginTop: '1em',
                     })}
                 >
-                    Tecnologias utilizadas:
+                    Tareas realizadas:
                 </Typography>
             </Grid>
             <Grid
@@ -39,8 +40,8 @@ const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpo
                 })}
             >
                 {
-                    stack?.map((stk) => (
-                        <ExperienceItemStackCapsuleComponent stack={stk}/>
+                    tasks?.map((task: Task) => (
+                        <ExperienceItemTaskCapsuleComponent task={task}/>
                     ))
                 }
             </Grid>
@@ -48,4 +49,4 @@ const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpo
     )
 };
         
-export default React.memo(ExperienceItemStackExpositureComponent);
+export default React.memo(ExperienceItemTaskExpositurecomponent);

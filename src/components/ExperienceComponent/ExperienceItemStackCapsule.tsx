@@ -8,7 +8,7 @@ const ExperienceItemStackCapsuleComponent = ({stack}: ExperienceItemStackCapsule
     return(
         <Grid
             sx={(theme: Theme) => ({
-                backgroundColor: theme?.custom?.backgroundDark,
+                backgroundColor: theme?.custom?.backgroundLigth,
                 borderRadius: '10em',
                 display: 'flex',
                 flexDirection: 'row',

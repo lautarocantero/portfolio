@@ -8,8 +8,8 @@ import { Element } from "react-scroll";
 const StackComponent = ():React.ReactNode => {
     const appliedStacks: string[] = [
         'HTML5','CSS3','JavaScript','TypeScript',
-        'Bootstrap', 'Sass', "Tailwind", 'React','Redux',
-        'Node.js','Firebase','MongoDB', 'Jest','Git',
+        'Bootstrap', 'Sass', "Tailwind", 'C#', 'React','Redux',
+        'Node.js','Firebase','MongoDB', 'PHP', 'Jest','Git',
         'GitKraken','Figma',
         'Linux'
     ]

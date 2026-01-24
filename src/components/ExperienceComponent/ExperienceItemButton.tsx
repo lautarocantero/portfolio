@@ -1,9 +1,11 @@
 import { Button, Typography, type Theme } from "@mui/material";
+import type { ExperienceItemButtonProps } from "../../typings/reactComponents";
 
 
-const ExperienceItemButtonComponent = ():React.ReactNode => {
+const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceItemButtonProps):React.ReactNode => {
     return(
         <Button
+            onClick={() => setIsExpanded(!isExpanded)}
             sx={(theme: Theme) => ({
                 backgroundColor: theme?.palette?.primary?.main,
                 width: '30%',
@@ -21,7 +23,7 @@ const ExperienceItemButtonComponent = ():React.ReactNode => {
                     textTransform: 'lowercase'
                 })}
             >
-                Ver más
+                {isExpanded ? 'Ver menos' : 'Ver más'}
             </Typography>
         </Button>
     )

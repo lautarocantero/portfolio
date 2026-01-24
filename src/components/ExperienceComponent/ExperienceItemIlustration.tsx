@@ -1,4 +1,4 @@
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, type Theme } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React, { useState } from "react";
@@ -44,15 +44,15 @@ const ExperienceItemIlustrationComponent = ({gallery_urls}: ExperienceItemIlustr
           {/* Flecha izquierda */}
           <IconButton
             onClick={handlePrev}
-            sx={{
+            sx={(theme: Theme) => ({
               position: "absolute",
               top: "50%",
               left: "0.5em",
               transform: "translateY(-50%)",
-              backgroundColor: "rgba(0,0,0,0.4)",
+              backgroundColor: theme?.palette?.primary.main,
               color: "white",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.6)" },
-            }}
+            })}
           >
             <ArrowBackIosNewIcon />
           </IconButton>
@@ -60,15 +60,15 @@ const ExperienceItemIlustrationComponent = ({gallery_urls}: ExperienceItemIlustr
           {/* Flecha derecha */}
           <IconButton
             onClick={handleNext}
-            sx={{
+            sx={(theme: Theme) => ({
               position: "absolute",
               top: "50%",
               right: "0.5em",
               transform: "translateY(-50%)",
-              backgroundColor: "rgba(0,0,0,0.4)",
+              backgroundColor: theme?.palette?.primary.main,
               color: "white",
               "&:hover": { backgroundColor: "rgba(0,0,0,0.6)" },
-            }}
+            })}
           >
             <ArrowForwardIosIcon />
           </IconButton>

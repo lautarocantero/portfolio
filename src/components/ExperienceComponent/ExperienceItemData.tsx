@@ -3,8 +3,9 @@ import React from "react";
 import type { ExperienceItemDataProps } from "../../typings/reactComponents";
 import ExperienceItemDescriptionComponent from "./ExperienceItemDescription";
 import ExperienceItemStackExpositurecomponent from "./ExperienceItemStackExpositure";
+import ExperienceItemTaskExpositureComponent from "./ExperienceItemTaskExpositure";
 
-const ExperienceItemDatacomponent = ({title, stack, short_description}: ExperienceItemDataProps):React.ReactNode => {
+const ExperienceItemDatacomponent = ({isExpanded, title, stack, short_description, long_description, tasks}: ExperienceItemDataProps):React.ReactNode => {
     return(
         <Grid
             container
@@ -24,8 +25,10 @@ const ExperienceItemDatacomponent = ({title, stack, short_description}: Experien
             >
                 {title}
             </Typography>
+            
+            <ExperienceItemDescriptionComponent description={ isExpanded ? long_description  : short_description }/>
             <ExperienceItemStackExpositurecomponent stack={stack}/>
-            <ExperienceItemDescriptionComponent short_description={short_description}/>
+            <ExperienceItemTaskExpositureComponent tasks={tasks} />
         </Grid>
     )
 };

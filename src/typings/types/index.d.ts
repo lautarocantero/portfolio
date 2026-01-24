@@ -5,6 +5,8 @@ export interface Stack {
     icon: string,
 }
 
+export type Task = Pick <Stack, 'text' | 'icon'>;
+
 export interface BaseItemInterface {
     _id: string | null,
     gallery_urls: string[],
@@ -28,7 +30,7 @@ export interface handleToggleThemeInterface {
 
 export type ExperienceItemInterface = Pick<
     BaseItemInterface,
-    '_id' | 'gallery_urls' | 'title' | 'stack' | 'short_description' | 'long_description'
+    '_id' | 'gallery_urls' | 'title' | 'stack' | 'short_description' | 'long_description' | 'tasks'
 >
 
 export interface LogoExperienceInterface {
