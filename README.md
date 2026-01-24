@@ -65,7 +65,9 @@ Full Stack Developer
 
 to do:
 
--Agregar en las cards de experiencia una parte que indique que tareas resolvi. (sin darle a ver mas)
+
+-Agregar animacion a medida que se baja en la pagina
+-En el modo claro aplicar letra blanca en areas donde sea necesario.
 -Terminar de dar estilo a ver mas de experiencia
 -Agregar i18n 
 -Agregar descarga de cv en ingles
