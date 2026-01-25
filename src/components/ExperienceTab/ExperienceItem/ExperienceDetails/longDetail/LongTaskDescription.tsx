@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Typography, type Theme } from "@mui/material";
-import type { LongDataTaskDescriptionProps } from "../../../../../typings/reactComponents";
+import type { LongTaskDescriptionProps } from "../../../../../typings/reactComponents";
 import type { Task } from "../../../../../typings/types";
 import TaskCapsuleComponent from "../../../../shared/Tasks/TaskCapsuleComponent";
 
 const LongTaskDescriptionComponent = ({
   tasks,
-}: LongDataTaskDescriptionProps): React.ReactNode => {
+}: LongTaskDescriptionProps): React.ReactNode => {
 
   return (
     <>

@@ -20,7 +20,7 @@ const ExperienceStackExpositureComponent = ({stack}: ExperienceStackExpositurePr
             >
                 Tecnologías utilizadas
             </Typography>
-            <StackListComponent stack={stack}/>
+            <StackListComponent stacks={stack}/>
         </Box>
     )
 };

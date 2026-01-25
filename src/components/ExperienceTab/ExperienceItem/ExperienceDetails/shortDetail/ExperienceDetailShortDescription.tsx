@@ -1,9 +1,9 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
-import type { ShortDataProps } from "../../../../../typings/reactComponents";
+import type { ExperienceDetailShortDescriptionProps } from "../../../../../typings/reactComponents";
 import ExperienceHandler from "./ExperienceHandler";
 
-const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: ShortDataProps): React.ReactNode => {
+const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: ExperienceDetailShortDescriptionProps ): React.ReactNode => {
     return (
         <Box component="div" sx={{ width: '100%', }} >
             <Box

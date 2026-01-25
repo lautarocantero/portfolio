@@ -1,14 +1,14 @@
 import { Box } from "@mui/material";
 import React from "react";
 import type { LongDataProps } from "../../../../../typings/reactComponents";
-import type { LongDescriptionItem, Stack, Task } from "../../../../../typings/types";
+import type { LongDescriptionItemInterface, Stack, Task } from "../../../../../typings/types";
 import LongDescriptionComponent from "./LongDescription";
 import LongTaskComponent from "./LongTaskComponent";
 import LongObjectiveComponent from "./LongObjective";
 
 const LongDataComponent = ({ experienceItem }: LongDataProps): React.ReactNode => {
     const { stack, tasks, long_description } : 
-    { stack: Stack[], tasks: Task[], long_description: LongDescriptionItem } = experienceItem;
+    { stack: Stack[], tasks: Task[], long_description: LongDescriptionItemInterface } = experienceItem;
 
     const { objective, tasksDescription, technologiesDescription } :
     { objective: string, tasksDescription: string, technologiesDescription: string, } = long_description;

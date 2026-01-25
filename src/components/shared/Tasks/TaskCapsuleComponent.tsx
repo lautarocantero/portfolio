@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
-import type { ExperienceItemTaskCapsuleProps } from "../../../typings/reactComponents";
+import type { TaskCapsuleProps } from "../../../typings/reactComponents";
 
-const TaskCapsuleComponent = ({task}: ExperienceItemTaskCapsuleProps):React.ReactNode => {
+const TaskCapsuleComponent = ({task}: TaskCapsuleProps ):React.ReactNode => {
     const {text, icon}: {text: string, icon: string} = task;
 
     return(

@@ -9,20 +9,21 @@ export type Task = Pick <Stack, 'text' | 'icon'> & {
     description: string,
 };
 
-export interface LongDescriptionItem {
+export interface LongDescriptionItemInterface {
     description: string,
     objective: string,
     tasksDescription: string,
     technologiesDescription: string,
 }
 
-export interface BaseItemInterface {
+interface BaseItemInterface {
     _id: string | null,
     gallery_urls: string[],
     title: string,
     stack: Stack[],
     short_description: string,
     long_description: LongDescriptionItem,
+    tasks: Task[],
 }
 
 {/*─────────────────── 🔎 Appbar 🔎 ───────────────────*/}
@@ -39,7 +40,13 @@ export interface handleToggleThemeInterface {
 
 export type ExperienceItemInterface = Pick<
     BaseItemInterface,
-    '_id' | 'gallery_urls' | 'title' | 'stack' | 'short_description' | 'long_description' | 'tasks'
+    '_id' | 
+    'gallery_urls' | 
+    'title' | 
+    'stack' | 
+    'short_description' | 
+    'long_description' | 
+    'tasks'
 >
 
 export interface LogoExperienceInterface {

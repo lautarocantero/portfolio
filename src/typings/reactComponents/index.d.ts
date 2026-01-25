@@ -48,88 +48,92 @@ export interface CarouselProps {
     gallery_urls: string[];
 }
 
+{/*─────────────────── 🔎 Stack 🔎 ───────────────────*/}
+
+export interface StackListComponentProps {
+    stacks: Stack[],
+}
+
+export interface StackCapsuleProps {
+    stack: Stack,
+}
+
+{/*─────────────────── 🔎 Tareas 🔎 ───────────────────*/}
+
+export interface TaskListProps {
+    tasks: Task[],
+}
+
+export interface TaskCapsuleProps {
+    task: Task,
+};
+
 {/*─────────────────── 🔎 Experiencia 🔎 ───────────────────*/}
 
 export interface BaseItemInterface {
     title: string,
     stack: Stack[],
-    task: string,
+    tasks: Task[],
     short_description: string,
     long_description: LongDescriptionItem,
     gallery_urls: string[],
 }
 
-export interface BaseItemStackCapsuleProps {
-    stack: Stack,
-}
 
-export type BaseItemIlustrationProps = Pick<BaseItemInterface, 'gallery_urls'>
-export type BaseItemDataProps = Pick<BaseItemInterface, 'title' | 'stack' | 'short_description'>
-export type BaseItemStackExpositureProps = Pick<BaseItemInterface, 'stack'>
-export type BaseItemDescriptionProps = Pick<BaseItemInterface, 'short_description'>
-
-interface ExperienceLogoProps {
+export interface ExperienceLogoProps {
     logo: LogoExperienceInterface;
 }
 
-{/*─────────────────── 🔎 Experiencia 🔎 ───────────────────*/}
-
 export type ExperienceItemInterface = Pick<
     BaseItemInterface,
-    'title' | 'stack' | 'short_description' | 'long_description' | 'gallery_urls', 'tasks'
+    'title' | 'stack' | 'short_description' | 'long_description' | 'gallery_urls' | 'tasks'
 >
 
 export interface ExperienceItemProps {
     experienceItem: ExperienceItemInterface,
 }
 
-export type ExperienceItemIlustrationProps = Pick<ExperienceItemInterface, 'gallery_urls'>
-export type ExperienceItemDataProps = Omit<ExperienceItemInterface, ''> & {
+export interface ExperienceDetailProps {
+    experienceItem: BaseItemInterface,
     isExpanded?: boolean,
 }
 
-export type ExperienceItemSwitcherProps = Pick<ExperienceItemInterface, 'stack' | 'tasks'>;
+export type ExperienceDetailHandlerProps = Pick <ExperienceDetailProps , 'experienceItem' | 'isExpanded'>
 
-export interface ExperienceItemButtonProps {
-    isExpanded: boolean,
-    setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>,
-}
+{/*──────── descripcion corta  ────────*/}
 
-export type ExperienceStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>;
+export type ExperienceDetailShortDescriptionProps = Pick<BaseItemInterface, 'stack' | 'short_description' | 'tasks'>;
 
-export type StackListComponentProps = Pick<ExperienceStackExpositureProps, 'stack'>;
+export type ExperienceHandlerProps = Pick<BaseItemInterface, 'stack' | 'tasks'>;
 
-export type ExperienceTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
+export type ExperienceStackExpositureProps = Pick<BaseItemInterface, 'stack'>;
 
-export type ExperienceItemTaskListProps = Pick<ExperienceTaskExpositureProps, 'tasks'>;
+export type ExperienceTaskExpositureProps = Pick<BaseItemInterface, 'tasks'>;
 
-export type ExperienceItemDescriptionProps = Omit <ExperienceItemDataProps , '' >
+{/*──────── descripcion larga  ────────*/}
 
-export type ShortDataProps = Pick<ExperienceItemInterface, 'stack' | 'tasks' | 'short_description'>;
+export type LongDataProps = Pick<ExperienceDetailProps, 'experienceItem'>;
 
-export type LongDataProps = Omit<ExperienceItemInterface, ''>;
-
-export interface LongDataDescriptionProps {
-    title: string,
+export interface LongObjectiveProps {
     text: string,
-    stack: Stack[],
 }
 
-export type LongDataObjectiveProps = Pick<LongDataDescriptionProps, 'text'>;
-
-export type LongDataTasksProps = Pick< LongDataTasksProps, 'title' | 'text'> & {
+export type LongTasksProps = Pick<LongObjectiveProps, 'text'> & {
+    title: string,
     tasks: Task[],
 }
 
-export type LongDataTaskDescriptionProps = Pick<LongDataTasksProps, 'tasks'>;
+export type LongTaskDescriptionProps = Pick<LongTasksProps, 'tasks'>;
 
-export interface ExperienceItemStackCapsuleProps {
-    stack: Stack,
-}
+export type LongDescriptionProps = Pick<LongTasksProps, 'title' | 'text' > & {
+    stack: Stack[],
+};
 
-export interface ExperienceItemTaskCapsuleProps {
-    task: Task,
-}
+{/*──────── botón  ────────*/}
+
+export type  ExperienceItemButtonProps = Pick<ExperienceDetailProps, 'isExpanded'> & {
+    setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>,
+};
 
 {/*─────────────────── 🔎 Proyectos 🔎 ───────────────────*/}
 

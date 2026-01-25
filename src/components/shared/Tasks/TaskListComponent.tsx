@@ -1,10 +1,10 @@
 import { Grid, type Theme } from "@mui/material";
-import type { ExperienceItemTaskListProps } from "../../../typings/reactComponents";
+import type { TaskListProps } from "../../../typings/reactComponents";
 import TaskCapsuleComponent from "./TaskCapsuleComponent";
 import type { Task } from "../../../typings/types";
 
 
-const TaskListComponent = ({tasks}: ExperienceItemTaskListProps ):React.ReactNode => {
+const TaskListComponent = ({tasks}: TaskListProps ):React.ReactNode => {
     return(
         <Grid
             container

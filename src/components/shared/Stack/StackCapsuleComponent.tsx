@@ -1,7 +1,7 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import type { ExperienceItemStackCapsuleProps } from "../../../typings/reactComponents";
+import type { StackCapsuleProps } from "../../../typings/reactComponents";
 
-const StackCapsuleComponent = ({stack}: ExperienceItemStackCapsuleProps):React.ReactNode => {
+const StackCapsuleComponent = ({stack}: StackCapsuleProps):React.ReactNode => {
 
     const {text, icon} : {text: string, icon: string} = stack;
 

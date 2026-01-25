@@ -3,7 +3,7 @@ import type { StackListComponentProps } from "../../../typings/reactComponents";
 import type { Stack } from "../../../typings/types";
 import StackCapsuleComponent from "./StackCapsuleComponent";
 
-const StackListComponent = ({stack}: StackListComponentProps ):React.ReactNode => {
+const StackListComponent = ({stacks}: StackListComponentProps ):React.ReactNode => {
 
     return(
         <Grid
@@ -24,7 +24,7 @@ const StackListComponent = ({stack}: StackListComponentProps ):React.ReactNode =
             })}
         >
             {
-                stack?.map((stk: Stack) => (
+                stacks?.map((stk: Stack) => (
                     <StackCapsuleComponent stack={stk}/>
                 ))
             }

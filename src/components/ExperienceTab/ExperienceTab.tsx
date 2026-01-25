@@ -4,7 +4,7 @@ import ExperienceExhibitorcomponent from "./ExperienceExhibitorComponent";
 
 const ExperienceTab = (): React.ReactNode => {
     return (
-        <Box sx={{mt: '3em'}}>
+        <Box component="section"  sx={{mt: '3em'}}>
             <Element name="Experiencia">
                     <Typography
                         component={'h2'}

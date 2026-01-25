@@ -1,9 +1,9 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
-import type { ExperienceItemDataProps } from "../../../../typings/reactComponents";
+import type { ExperienceDetailProps } from "../../../../typings/reactComponents";
 import ExperienceDetailHandlerComponent from "./ExperienceDetailHandler";
 
-const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceItemDataProps):React.ReactNode => {
+const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceDetailProps):React.ReactNode => {
 
     const { title } : { title: string } = experienceItem;
 

@@ -3,8 +3,8 @@ import { getExperienceItems } from "../../helpers/Experience/getExperienceItems"
 import type { ExperienceItemInterface } from "../../typings/types";
 import ExperienceItemcomponent from "./ExperienceItem/ExperienceItemComponent";
 
-const ExperienceExhibitorcomponent = ():React.ReactNode => {
-    const experienceItem: ExperienceItemInterface[] = getExperienceItems();
+const ExperienceExhibitorcomponent = () : React.ReactNode => {
+    const experienceItems: ExperienceItemInterface[] = getExperienceItems();
     
     return(
         <Grid
@@ -17,7 +17,7 @@ const ExperienceExhibitorcomponent = ():React.ReactNode => {
             })}
         >
             {
-                experienceItem.map((experience: ExperienceItemInterface) => (
+                experienceItems.map((experience: ExperienceItemInterface) => (
                     <ExperienceItemcomponent experienceItem={experience} />
                 ))
             }

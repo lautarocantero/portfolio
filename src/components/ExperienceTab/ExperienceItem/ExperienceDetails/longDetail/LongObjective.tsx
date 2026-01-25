@@ -1,7 +1,7 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import type { LongDataObjectiveProps } from "../../../../../typings/reactComponents";
+import type { LongObjectiveProps } from "../../../../../typings/reactComponents";
 
-const LongObjectiveComponent = ({ text }: LongDataObjectiveProps): React.ReactNode => {
+const LongObjectiveComponent = ({ text }: LongObjectiveProps): React.ReactNode => {
     return(
         <Box
            sx={(theme: Theme) => ({
