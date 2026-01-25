@@ -1,7 +1,7 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import type { ExperienceItemStackCapsuleProps } from "../../../typings/reactComponents";
 
-const ExperienceItemStackCapsuleComponent = ({stack}: ExperienceItemStackCapsuleProps):React.ReactNode => {
+const StackCapsuleComponent = ({stack}: ExperienceItemStackCapsuleProps):React.ReactNode => {
 
     const {text, icon} : {text: string, icon: string} = stack;
 
@@ -40,4 +40,4 @@ const ExperienceItemStackCapsuleComponent = ({stack}: ExperienceItemStackCapsule
     )
 };
         
-export default ExperienceItemStackCapsuleComponent;
+export default StackCapsuleComponent;

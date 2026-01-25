@@ -1,7 +1,7 @@
 import { Grid, type Theme } from "@mui/material";
 import type { StackListComponentProps } from "../../../typings/reactComponents";
 import type { Stack } from "../../../typings/types";
-import ExperienceItemStackCapsuleComponent from "./ExperienceItemStackCapsule";
+import StackCapsuleComponent from "./StackCapsuleComponent";
 
 const StackListComponent = ({stack}: StackListComponentProps ):React.ReactNode => {
 
@@ -25,7 +25,7 @@ const StackListComponent = ({stack}: StackListComponentProps ):React.ReactNode =
         >
             {
                 stack?.map((stk: Stack) => (
-                    <ExperienceItemStackCapsuleComponent stack={stk}/>
+                    <StackCapsuleComponent stack={stk}/>
                 ))
             }
         </Grid>

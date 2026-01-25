@@ -5,15 +5,15 @@ import React, { lazy, useCallback, useState } from "react";
 import { handleNext, handlePrev } from "../../../../../helpers/Experience/handleExperienceNavigation";
 import type { ExperienceItemSwitcherProps } from "../../../../../typings/reactComponents";
 
-const ExperienceItemStackExpositure = lazy(() => import("../../ExperienceItemStackExpositure")); 
-const ExperienceItemTaskExpositure = lazy(() => import("../../ExperienceItemTaskExpositure"));
+const ExperienceStackExpositure = lazy(() => import("../../ExperienceStackExpositure")); 
+const ExperienceTaskExpositure = lazy(() => import("../../ExperienceTaskExpositure"));
 
-const ExperienceItemSwitcherComponent = ({ stack, tasks }: ExperienceItemSwitcherProps): React.ReactNode => {
+const ExperienceHandler = ({ stack, tasks }: ExperienceItemSwitcherProps): React.ReactNode => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const components = [
-    <ExperienceItemStackExpositure stack={stack} />,
-    <ExperienceItemTaskExpositure tasks={tasks} />,
+    <ExperienceStackExpositure stack={stack} />,
+    <ExperienceTaskExpositure tasks={tasks} />,
   ];
 
   const memoizedHandlePrev = useCallback( 
@@ -69,4 +69,4 @@ const ExperienceItemSwitcherComponent = ({ stack, tasks }: ExperienceItemSwitche
   );
 };
 
-export default React.memo(ExperienceItemSwitcherComponent);
+export default React.memo(ExperienceHandler);

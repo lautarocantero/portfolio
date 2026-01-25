@@ -95,13 +95,13 @@ export interface ExperienceItemButtonProps {
     setIsExpanded: React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-export type ExperienceItemStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>;
+export type ExperienceStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>;
 
-export type StackListComponentProps = Pick<ExperienceItemStackExpositureProps, 'stack'>;
+export type StackListComponentProps = Pick<ExperienceStackExpositureProps, 'stack'>;
 
-export type ExperienceItemTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
+export type ExperienceTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
 
-export type ExperienceItemTaskListProps = Pick<ExperienceItemTaskExpositureProps, 'tasks'>;
+export type ExperienceItemTaskListProps = Pick<ExperienceTaskExpositureProps, 'tasks'>;
 
 export type ExperienceItemDescriptionProps = Omit <ExperienceItemDataProps , '' >
 

@@ -1,8 +1,8 @@
 import React from "react";
 import type { ExperienceItemDescriptionProps } from "../../../../typings/reactComponents";
 import type { Stack, Task } from "../../../../typings/types";
-import ShortData from "./shortDetail/ShortData";
-import LongDataComponent from "./longDetail/Longdata";
+import ExperienceDetailShortDescription from "./shortDetail/ExperienceDetailShortDescription";
+import ExperienceDetailLongDescription from "./longDetail/ExperienceDetailLongDescription";
 
 const ExperienceDetailHandlerComponent = ( { isExpanded, experienceItem  } : ExperienceItemDescriptionProps ):React.ReactNode => {
 
@@ -13,9 +13,9 @@ const ExperienceDetailHandlerComponent = ( { isExpanded, experienceItem  } : Exp
         <>
             {
                 !isExpanded ? 
-                <ShortData stack={stack} tasks={tasks} short_description={short_description} /> 
+                <ExperienceDetailShortDescription stack={stack} tasks={tasks} short_description={short_description} /> 
                 : 
-                <LongDataComponent experienceItem={experienceItem} />
+                <ExperienceDetailLongDescription experienceItem={experienceItem} />
             }
         </>
     )

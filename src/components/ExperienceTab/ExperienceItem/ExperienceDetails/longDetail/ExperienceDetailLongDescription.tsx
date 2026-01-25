@@ -2,9 +2,9 @@ import { Box } from "@mui/material";
 import React from "react";
 import type { LongDataProps } from "../../../../../typings/reactComponents";
 import type { LongDescriptionItem, Stack, Task } from "../../../../../typings/types";
-import LongDataDescriptionComponent from "../LongDataDescription";
-import LongDataTaskComponent from "./LongDataTaskComponen";
-import LongDataObjectiveComponent from "./LongdataObjective";
+import LongDescriptionComponent from "./LongDescription";
+import LongTaskComponent from "./LongTaskComponent";
+import LongObjectiveComponent from "./LongObjective";
 
 const LongDataComponent = ({ experienceItem }: LongDataProps): React.ReactNode => {
     const { stack, tasks, long_description } : 
@@ -15,9 +15,9 @@ const LongDataComponent = ({ experienceItem }: LongDataProps): React.ReactNode =
 
     return (
         <Box sx={{ width: '100%', }} >
-            <LongDataObjectiveComponent text={objective} />
-            <LongDataTaskComponent title="Participación" text={tasksDescription} tasks={tasks}/>
-            <LongDataDescriptionComponent title="Tecnologías" text={technologiesDescription} stack={stack} />
+            <LongObjectiveComponent text={objective} />
+            <LongTaskComponent title="Participación" text={tasksDescription} tasks={tasks}/>
+            <LongDescriptionComponent title="Tecnologías" text={technologiesDescription} stack={stack} />
         </Box>
     );
 };

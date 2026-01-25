@@ -1,8 +1,8 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import type { LongDataDescriptionProps } from "../../../../typings/reactComponents";
-import StackListComponent from "../../../shared/Stack/ExperienceItemsStackList";
+import type { LongDataDescriptionProps } from "../../../../../typings/reactComponents";
+import StackListComponent from "../../../../shared/Stack/StackListComponent";
 
-const LongDataDescriptionComponent = ({title, text, stack}: LongDataDescriptionProps):React.ReactNode => {
+const LongDescriptionComponent = ({title, text, stack}: LongDataDescriptionProps):React.ReactNode => {
     return(
         <Box
             sx={() => ({
@@ -42,4 +42,4 @@ const LongDataDescriptionComponent = ({title, text, stack}: LongDataDescriptionP
     )
 };
         
-export default LongDataDescriptionComponent;
+export default LongDescriptionComponent;

@@ -1,9 +1,9 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
-import type { ExperienceItemTaskExpositureProps } from "../../../typings/reactComponents";
-import ExperienceItemTaskListComponent from "../../shared/Tasks/ExperienceItemTaskList";
+import type { ExperienceTaskExpositureProps } from "../../../typings/reactComponents";
+import TaskListComponent from "../../shared/Tasks/TaskListComponent";
 
-const ExperienceItemTaskExpositurecomponent = ({tasks}: ExperienceItemTaskExpositureProps ):React.ReactNode => {
+const ExperienceTaskExpositurecomponent = ({tasks}: ExperienceTaskExpositureProps ):React.ReactNode => {
 
     return(
         <Box
@@ -20,9 +20,9 @@ const ExperienceItemTaskExpositurecomponent = ({tasks}: ExperienceItemTaskExposi
                 >
                     Tareas realizadas
                 </Typography>
-            <ExperienceItemTaskListComponent tasks={tasks} />
+            <TaskListComponent tasks={tasks} />
         </Box>
     )
 };
         
-export default React.memo(ExperienceItemTaskExpositurecomponent);
+export default React.memo(ExperienceTaskExpositurecomponent);

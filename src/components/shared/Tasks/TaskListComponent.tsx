@@ -1,10 +1,10 @@
 import { Grid, type Theme } from "@mui/material";
 import type { ExperienceItemTaskListProps } from "../../../typings/reactComponents";
-import ExperienceItemTaskCapsuleComponent from "./ExperienceItemTaskCapsuleComponent";
+import TaskCapsuleComponent from "./TaskCapsuleComponent";
 import type { Task } from "../../../typings/types";
 
 
-const ExperienceItemTaskListComponent = ({tasks}: ExperienceItemTaskListProps ):React.ReactNode => {
+const TaskListComponent = ({tasks}: ExperienceItemTaskListProps ):React.ReactNode => {
     return(
         <Grid
             container
@@ -25,11 +25,11 @@ const ExperienceItemTaskListComponent = ({tasks}: ExperienceItemTaskListProps ):
         >
             {
                 tasks?.map((task: Task) => (
-                    <ExperienceItemTaskCapsuleComponent task={task}/>
+                    <TaskCapsuleComponent task={task}/>
                 ))
             }
         </Grid>
     )
 };
         
-export default ExperienceItemTaskListComponent;
+export default TaskListComponent;

@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Typography, type Theme } from "@mui/material";
 import type { LongDataTaskDescriptionProps } from "../../../../../typings/reactComponents";
 import type { Task } from "../../../../../typings/types";
-import ExperienceItemTaskCapsuleComponent from "../../../../shared/Tasks/ExperienceItemTaskCapsuleComponent";
+import TaskCapsuleComponent from "../../../../shared/Tasks/TaskCapsuleComponent";
 
-const LongDataTaskDescriptionComponent = ({
+const LongTaskDescriptionComponent = ({
   tasks,
 }: LongDataTaskDescriptionProps): React.ReactNode => {
 
@@ -22,7 +22,7 @@ const LongDataTaskDescriptionComponent = ({
                 margin: { xs: '1em auto 0', sm: '1em 0' },
             }}
         >
-            <ExperienceItemTaskCapsuleComponent task={task} />
+            <TaskCapsuleComponent task={task} />
             <Typography
                 sx={(theme: Theme) => ({
                     color: theme?.custom?.fontColor,
@@ -40,4 +40,4 @@ const LongDataTaskDescriptionComponent = ({
   );
 };
 
-export default LongDataTaskDescriptionComponent;
+export default LongTaskDescriptionComponent;

@@ -1,9 +1,9 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ShortDataProps } from "../../../../../typings/reactComponents";
-import ExperienceItemSwitcher from "./ExperienceItemSwitcher";
+import ExperienceHandler from "./ExperienceHandler";
 
-const ShortDataComponent = ({ stack, tasks, short_description }: ShortDataProps): React.ReactNode => {
+const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: ShortDataProps): React.ReactNode => {
     return (
         <Box component="div" sx={{ width: '100%', }} >
             <Box
@@ -27,9 +27,9 @@ const ShortDataComponent = ({ stack, tasks, short_description }: ShortDataProps)
                     {short_description}
                 </Typography>
             </Box>
-            <ExperienceItemSwitcher stack={stack} tasks={tasks} />
+            <ExperienceHandler stack={stack} tasks={tasks} />
         </Box>
     );
 };
 
-export default React.memo(ShortDataComponent);
+export default React.memo(ExperienceDetailShortDescription);

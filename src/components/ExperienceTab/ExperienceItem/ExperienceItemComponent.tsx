@@ -11,7 +11,6 @@ const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React
 
   const { gallery_urls} : { gallery_urls: string [] } = experienceItem;
 
-
   return (
     <Grid size={{ xs: 12, sm: isExpanded ? 12 : 6 }}>
       <Box

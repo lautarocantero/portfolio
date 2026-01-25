@@ -1,6 +1,6 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import type { LongDataTasksProps } from "../../../../../typings/reactComponents";
-import LongDataTaskDescriptionComponent from "./LongDataTaskDescription";
+import LongTaskDescriptionComponent from "./LongTaskDescription";
 
 const LongDataTaskComponent = ({title, text, tasks}: LongDataTasksProps):React.ReactNode => {
     return(
@@ -37,7 +37,7 @@ const LongDataTaskComponent = ({title, text, tasks}: LongDataTasksProps):React.R
             >
                 {text}
             </Typography>
-            <LongDataTaskDescriptionComponent tasks={tasks} />
+            <LongTaskDescriptionComponent tasks={tasks} />
         </Box>
     )
 };
