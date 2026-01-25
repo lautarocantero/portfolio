@@ -4,14 +4,14 @@ import type { ProjectItemProps } from "../../typings/reactComponents";
 import ProjectItemButtonComponent from "./ProjectItemButton";
 import ProjectItemIlustration from "./ProjectItemIlustration";
 import ProjectItemData from "./ProjectItemData";
-import type { Stack } from "../../typings/types";
+import type { StackInterface } from "../../typings/types";
 
 const ProjectItemcomponent = ( {projectItem} : ProjectItemProps): React.ReactNode => {
   const { gallery_urls,title,stack,short_description} : 
   { 
     gallery_urls: string [],
     title: string,
-    stack: Stack[], 
+    stack: StackInterface[], 
     short_description: string
   } = projectItem;
 

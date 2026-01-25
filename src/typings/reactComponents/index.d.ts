@@ -1,5 +1,5 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionItem, Stack, Task } from "../types";
+import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionItem, StackInterface, Task } from "../types";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -51,11 +51,11 @@ export interface CarouselProps {
 {/*─────────────────── 🔎 Stack 🔎 ───────────────────*/}
 
 export interface StackListComponentProps {
-    stacks: Stack[],
+    stacks: StackInterface[],
 }
 
 export interface StackCapsuleProps {
-    stack: Stack,
+    stack: StackInterface,
 }
 
 {/*─────────────────── 🔎 Tareas 🔎 ───────────────────*/}
@@ -72,7 +72,7 @@ export interface TaskCapsuleProps {
 
 export interface BaseItemInterface {
     title: string,
-    stack: Stack[],
+    stack: StackInterface[],
     tasks: Task[],
     short_description: string,
     long_description: LongDescriptionItem,
@@ -126,7 +126,7 @@ export type LongTasksProps = Pick<LongObjectiveProps, 'text'> & {
 export type LongTaskDescriptionProps = Pick<LongTasksProps, 'tasks'>;
 
 export type LongDescriptionProps = Pick<LongTasksProps, 'title' | 'text' > & {
-    stack: Stack[],
+    stack: StackInterface[],
 };
 
 {/*──────── botón  ────────*/}
@@ -151,7 +151,7 @@ export type ProjectItemDataProps = Pick<ProjectItemInterface, 'title' | 'stack' 
 export type ProjectItemStackExpositureProps = Pick<ProjectItemInterface, 'stack'>
 export type ProjectItemDescriptionProps = Pick<ProjectItemInterface, 'short_description'>
 export interface ProjectItemStackCapsuleProps {
-    stack: Stack,
+    stack: StackInterface,
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}

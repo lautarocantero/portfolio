@@ -1,7 +1,7 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceStackExpositureProps } from "../../../typings/reactComponents";
-import StackListComponent from "../../shared/Stack/StackListComponent";
+import StackListComponent from "../../shared/stack/StackListComponent";
 
 const ExperienceStackExpositureComponent = ({stack}: ExperienceStackExpositureProps ):React.ReactNode => {
 

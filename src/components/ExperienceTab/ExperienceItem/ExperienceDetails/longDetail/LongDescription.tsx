@@ -1,5 +1,5 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import StackListComponent from "../../../../shared/Stack/StackListComponent";
+import StackListComponent from "../../../../shared/stack/StackListComponent";
 import type { LongDescriptionProps } from "../../../../../typings/reactComponents";
 
 const LongDescriptionComponent = ({title, text, stack}: LongDescriptionProps ):React.ReactNode => {

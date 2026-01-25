@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import type { Stack } from "../../typings/types";
+import type { StackInterface } from "../../typings/types";
 import type { Theme } from "@mui/material/styles";
 import StackExhibitorComponent from "./StackExhibitor";
 import { getStackList } from "../../helpers/Stack/getStackList";
@@ -13,7 +13,7 @@ const StackComponent = ():React.ReactNode => {
         'GitKraken','Figma',
         'Linux'
     ]
-    const stacks : Stack[]  = getStackList(appliedStacks);
+    const stacks : StackInterface[]  = getStackList(appliedStacks);
 
     return(
         <Element name="Habilidades">

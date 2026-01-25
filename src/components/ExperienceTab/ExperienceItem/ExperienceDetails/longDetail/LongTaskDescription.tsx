@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, type Theme } from "@mui/material";
 import type { LongTaskDescriptionProps } from "../../../../../typings/reactComponents";
 import type { Task } from "../../../../../typings/types";
-import TaskCapsuleComponent from "../../../../shared/Tasks/TaskCapsuleComponent";
+import TaskCapsuleComponent from "../../../../shared/tasks/TaskCapsuleComponent";
 
 const LongTaskDescriptionComponent = ({
   tasks,

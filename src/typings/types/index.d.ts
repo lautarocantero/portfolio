@@ -1,11 +1,11 @@
-import type { Stack } from "../reactComponents";
+import type { StackInterface } from "../reactComponents";
 
-export interface Stack {
+export interface StackInterface {
     text: string,
     icon: string,
 }
 
-export type Task = Pick <Stack, 'text' | 'icon'> & {
+export type Task = Pick <StackInterface, 'text' | 'icon'> & {
     description: string,
 };
 
@@ -20,7 +20,7 @@ interface BaseItemInterface {
     _id: string | null,
     gallery_urls: string[],
     title: string,
-    stack: Stack[],
+    stack: StackInterface[],
     short_description: string,
     long_description: LongDescriptionItem,
     tasks: Task[],
@@ -66,7 +66,7 @@ export type ProjectItemInterface = Pick<
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 
-export type StackSkillType = Pick<Stack, 'text' | 'icon'> & {
+export type StackSkillType = Pick<StackInterface, 'text' | 'icon'> & {
     iconGif: string,
 }
 

@@ -1,7 +1,7 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceTaskExpositureProps } from "../../../typings/reactComponents";
-import TaskListComponent from "../../shared/Tasks/TaskListComponent";
+import TaskListComponent from "../../shared/tasks/TaskListComponent";
 
 const ExperienceTaskExpositurecomponent = ({tasks}: ExperienceTaskExpositureProps ):React.ReactNode => {
 

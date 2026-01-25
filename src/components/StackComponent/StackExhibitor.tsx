@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import type { StackExhibitorProps } from "../../typings/reactComponents";
 import StackSkillComponent from "./StackSkillComponent";
-import type { Stack } from "../../typings/types";
+import type { StackInterface } from "../../typings/types";
 
 const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode => {
     return(
@@ -20,7 +20,7 @@ const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode
             }}
         >
             {
-                stacks?.map((stackItem: Stack) => (
+                stacks?.map((stackItem: StackInterface) => (
                     <StackSkillComponent stack={stackItem} />
                 ))
             }
