@@ -1,16 +1,17 @@
 import { Button, Typography, type Theme } from "@mui/material";
-import type { ExperienceItemButtonProps } from "../../typings/reactComponents";
-
+import type { ExperienceItemButtonProps } from "../../../typings/reactComponents";
+import React from "react";
 
 const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceItemButtonProps):React.ReactNode => {
+    
     return(
         <Button
             onClick={() => setIsExpanded(!isExpanded)}
             sx={(theme: Theme) => ({
                 backgroundColor: theme?.palette?.primary?.main,
-                width: '30%',
-                margin: '2em auto 1em',
                 borderRadius: '0.3em',
+                margin: '2em auto 1em',
+                width: '30%',
                 '&:hover': {
                     cursor: 'pointer',
                 }
@@ -29,4 +30,4 @@ const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceIt
     )
 };
         
-export default ExperienceItemButtonComponent;
+export default React.memo(ExperienceItemButtonComponent);

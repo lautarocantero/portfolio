@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Typography, type Theme } from "@mui/material";
-import type { LongDataTaskDescriptionProps } from "../../typings/reactComponents";
-import type { Task } from "../../typings/types";
-import ExperienceItemTaskCapsuleComponent from "./ExperienceItemTaskCapsuleComponent";
-
+import type { LongDataTaskDescriptionProps } from "../../../../../typings/reactComponents";
+import type { Task } from "../../../../../typings/types";
+import ExperienceItemTaskCapsuleComponent from "../../../../shared/Tasks/ExperienceItemTaskCapsuleComponent";
 
 const LongDataTaskDescriptionComponent = ({
   tasks,
@@ -28,8 +27,8 @@ const LongDataTaskDescriptionComponent = ({
                 sx={(theme: Theme) => ({
                     color: theme?.custom?.fontColor,
                     fontSize: theme?.typography?.body2?.fontSize,
-                    textAlign: 'start',
                     marginTop: '0.2em',
+                    textAlign: 'start',
                 })}
             >
                 {task.description}

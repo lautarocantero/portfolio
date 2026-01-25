@@ -42,6 +42,12 @@ export interface PresentationButtonProps {
     onClick?: () => void;
 }
 
+{/*─────────────────── 🔎 Carousel 🔎 ───────────────────*/}
+
+export interface CarouselProps {
+    gallery_urls: string[];
+}
+
 {/*─────────────────── 🔎 Experiencia 🔎 ───────────────────*/}
 
 export interface BaseItemInterface {
@@ -95,6 +101,8 @@ export type StackListComponentProps = Pick<ExperienceItemStackExpositureProps, '
 
 export type ExperienceItemTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
 
+export type ExperienceItemTaskListProps = Pick<ExperienceItemTaskExpositureProps, 'tasks'>;
+
 export type ExperienceItemDescriptionProps = Omit <ExperienceItemDataProps , '' >
 
 export type ShortDataProps = Pick<ExperienceItemInterface, 'stack' | 'tasks' | 'short_description'>;
@@ -106,6 +114,8 @@ export interface LongDataDescriptionProps {
     text: string,
     stack: Stack[],
 }
+
+export type LongDataObjectiveProps = Pick<LongDataDescriptionProps, 'text'>;
 
 export type LongDataTasksProps = Pick< LongDataTasksProps, 'title' | 'text'> & {
     tasks: Task[],

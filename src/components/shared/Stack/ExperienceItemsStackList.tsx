@@ -1,26 +1,26 @@
 import { Grid, type Theme } from "@mui/material";
-import type { StackListComponentProps } from "../../typings/reactComponents";
-import type { Stack } from "../../typings/types";
+import type { StackListComponentProps } from "../../../typings/reactComponents";
+import type { Stack } from "../../../typings/types";
 import ExperienceItemStackCapsuleComponent from "./ExperienceItemStackCapsule";
 
-
 const StackListComponent = ({stack}: StackListComponentProps ):React.ReactNode => {
+
     return(
         <Grid
             container
             display={'flex'}
             flexDirection={'row'}
             sx={(theme: Theme) => ({
+                alignItems: "start",
+                backgroundColor: theme?.custom?.backgroundDark,
+                borderRadius: '1em',
                 gap: { xs: '0.1em 0.2em'},
                 height: 'auto',
-                overflowY: 'auto',
-                scrollbarWidth: "thin",
                 justifyContent: 'center',
-                alignItems: "start",
                 marginTop: { xs: '2em', sm: "1em" },
-                backgroundColor: theme?.custom?.backgroundDark,
+                overflowY: 'auto',
                 padding: '0.5em',
-                borderRadius: '1em',
+                scrollbarWidth: "thin",
             })}
         >
             {

@@ -1,20 +1,20 @@
-import { Box, Grid, Typography, type Theme } from "@mui/material";
-import type { ExperienceItemStackCapsuleProps } from "../../typings/reactComponents";
-
-
+import { Box, Typography, type Theme } from "@mui/material";
+import type { ExperienceItemStackCapsuleProps } from "../../../typings/reactComponents";
 
 const ExperienceItemStackCapsuleComponent = ({stack}: ExperienceItemStackCapsuleProps):React.ReactNode => {
-    const {text, icon} = stack;
+
+    const {text, icon} : {text: string, icon: string} = stack;
+
     return(
-        <Grid
+        <Box
             sx={(theme: Theme) => ({
                 backgroundColor: theme?.custom?.backgroundLigth,
                 borderRadius: '10em',
                 display: 'flex',
                 flexDirection: 'row',
-                padding: '0.2em 0.8em',
+                gap: { xs: '0.2em'},
                 maxHeight: "1.5em",
-                gap: { xs: '0.2em'}
+                padding: '0.2em 0.8em',
             })}
         >
              <Box
@@ -22,21 +22,21 @@ const ExperienceItemStackCapsuleComponent = ({stack}: ExperienceItemStackCapsule
                component="img"
                src={icon}
                sx={{
-                 width: "1.2em",
+                 margin: 'auto',
                  maxHeight: "1em",
-                 margin: 'auto'
+                 width: "1.2em",
                }}
              />
             <Typography
                 sx={(theme: Theme) => ({
+                    alignContent: 'center',
                     color: theme?.custom?.fontColor,
                     fontSize: theme?.typography?.body2?.fontSize,
-                    alignContent: 'center',
                 })}
             >
                 {text}
             </Typography>
-        </Grid>
+        </Box>
     )
 };
         

@@ -1,9 +1,9 @@
 import { Box, Grid, type Theme } from "@mui/material";
 import React, { useState } from "react";
-import type { ExperienceItemProps } from "../../typings/reactComponents";
-import ExperienceItemButtonComponent from "./ExperienceItemButton";
-import ExperienceItemDatacomponent from "./ExperienceItemData";
-import ExperienceItemIlustrationComponent from "./ExperienceItemIlustration";
+import type { ExperienceItemProps } from "../../../typings/reactComponents";
+import ExperienceButtonComponent from "./ExperienceItemButton";
+import ExperienceDetailcomponent from "./ExperienceDetails/ExperienceDetailComponent";
+import CarouselComponent from "../../shared/CarouselComponent";
 
 const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React.ReactNode => {
 
@@ -19,20 +19,20 @@ const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React
         sx={(theme: Theme) => ({
           backgroundColor: theme?.custom?.backgroundLigth,
           borderRadius: "25px",
-          height: { xs: "auto"},
-          margin: "1em auto 0",
-          width: "95%",
           display: "flex",
           flexDirection: "column",
+          height: { xs: "auto"},
+          margin: "1em auto 0",
           position: "relative",
           transition: "all 0.3s ease-in-out",
+          width: "95%",
         })}
       >
-        <ExperienceItemIlustrationComponent gallery_urls={gallery_urls}/>
-        <ExperienceItemDatacomponent 
+        <CarouselComponent gallery_urls={gallery_urls} />
+        <ExperienceDetailcomponent 
           isExpanded={isExpanded} experienceItem={experienceItem}
         />
-        <ExperienceItemButtonComponent isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
+        <ExperienceButtonComponent isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
       </Box>
     </Grid>
   );

@@ -1,32 +1,26 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import ExperienceExhibitorcomponent from "./ExperienceExhibitor";
 import { Element } from "react-scroll";
+import ExperienceExhibitorcomponent from "./ExperienceExhibitorComponent";
 
-const ExperienceComponent = (): React.ReactNode => {
+const ExperienceTab = (): React.ReactNode => {
     return (
-        <Box
-            sx={{
-                mt: '3em'
-            }}
-        >
+        <Box sx={{mt: '3em'}}>
             <Element name="Experiencia">
-                <Box>
                     <Typography
                         component={'h2'}
                         sx={(theme: Theme) => ({
                             color: theme?.custom?.fontColor,
-                            textAlign: 'center',
                             fontSize: theme?.typography?.h2?.fontSize,
                             position: 'relative',
+                            textAlign: 'center',
                         })}
                     >
                         Experiencia
                     </Typography>
                     <ExperienceExhibitorcomponent />
-                </Box>
             </Element>
         </Box>
     )
 }
 
-export default ExperienceComponent;
+export default ExperienceTab;

@@ -86,3 +86,27 @@ export interface DialogContextType {
     setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
+//─────────────────────────────── 📷 Carrusel de Imagenes 📷 ───────────────────────────────//
+
+interface handleImages {
+    setImageNumber: Dispatch<SetStateAction<number>>;
+    gallery_urls: string[];
+}
+
+export type handlePrevInterface = Pick<handleImages, 'setImageNumber' | 'gallery_urls'>;
+
+export type handleNextInterface = Pick<handleImages, 'setImageNumber' | 'gallery_urls'>;
+
+//─────────────────────────────── 💲 Carrusel de experiencia (lenguaje/tareas) 💲 ───────────────────────────────//
+
+interface handleExperiences {
+    setCurrentIndex: Dispatch<SetStateAction<number>>;
+    components: React.ReactNode[];
+}
+
+
+export type handlePrevExperienceInterface = Pick<handleExperiences, 'setCurrentIndex' | 'components'>;
+
+
+export type handleNextExperienceInterface = Pick<handleExperiences, 'setCurrentIndex' | 'components'>;
+

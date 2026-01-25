@@ -1,8 +1,9 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
-import type { ExperienceItemTaskCapsuleProps } from "../../typings/reactComponents";
+import type { ExperienceItemTaskCapsuleProps } from "../../../typings/reactComponents";
 
 const ExperienceItemTaskCapsuleComponent = ({task}: ExperienceItemTaskCapsuleProps):React.ReactNode => {
-    const {text, icon} = task;
+    const {text, icon}: {text: string, icon: string} = task;
+
     return(
         <Grid
             sx={(theme: Theme) => ({
@@ -10,21 +11,21 @@ const ExperienceItemTaskCapsuleComponent = ({task}: ExperienceItemTaskCapsulePro
                 borderRadius: '10em',
                 display: 'flex',
                 flexDirection: 'row',
+                gap: { xs: '0.2em'},
                 padding: '0.2em 0.8em',
-                gap: { xs: '0.2em'}
             })}
         >
             <Box
               component="div"
               sx={(theme: Theme) => ({
-                width: "1.2em",
-                height: "1.2em",
+                alignItems: "center",
                 backgroundColor: theme?.custom?.white,
-                overflow: "hidden",
                 borderRadius: "50%",
                 display: "flex",
+                height: "1.2em",
                 justifyContent: "center",
-                alignItems: "center",
+                overflow: "hidden",
+                width: "1.2em",
               })}
             >
               <Box
@@ -32,17 +33,17 @@ const ExperienceItemTaskCapsuleComponent = ({task}: ExperienceItemTaskCapsulePro
                 component="img"
                 src={icon}
                 sx={{
-                  width: "70%",
                   height: "70%",
                   objectFit: "contain",
+                  width: "70%",
                 }}
               />
             </Box>
             <Typography
                 sx={(theme: Theme) => ({
+                    alignContent: 'center',
                     color: theme?.custom?.white,
                     fontSize: theme?.typography?.body2?.fontSize,
-                    alignContent: 'center',
                 })}
             >
                 {text}

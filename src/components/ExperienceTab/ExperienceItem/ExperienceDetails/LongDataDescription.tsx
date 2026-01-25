@@ -1,29 +1,28 @@
-import { alpha, Box, Typography, type Theme } from "@mui/material";
-import type { LongDataTasksProps } from "../../typings/reactComponents";
-import LongDataTaskDescriptionComponent from "./LongDataTaskDescription";
+import { Box, Typography, type Theme } from "@mui/material";
+import type { LongDataDescriptionProps } from "../../../../typings/reactComponents";
+import StackListComponent from "../../../shared/Stack/ExperienceItemsStackList";
 
-
-const LongDataTaskComponent = ({title, text, tasks}: LongDataTasksProps):React.ReactNode => {
+const LongDataDescriptionComponent = ({title, text, stack}: LongDataDescriptionProps):React.ReactNode => {
     return(
         <Box
-            sx={(theme: Theme) => ({
+            sx={() => ({
                 margin: '1em auto 0',
                 padding: '1em',
-                width: { xs: '100%', md: '70%' },
+                width: { xs: '95%', md: '70%' },
             })}
         >
             <Box
                 sx={(theme: Theme) => ({
                     background: theme?.palette?.primary?.main,
-                    width: '100%',
-                    padding: '0.5em',
                     marginBottom: '1em', 
+                    padding: '0.5em',
+                    width: '100%',
                 })}
             >
                 <Typography
                     sx={(theme: Theme) => ({
-                        textAlign: 'center',
                         color: theme?.custom.white,
+                        textAlign: 'center',
                     })}
                 >
                     {title}
@@ -38,9 +37,9 @@ const LongDataTaskComponent = ({title, text, tasks}: LongDataTasksProps):React.R
             >
                 {text}
             </Typography>
-            <LongDataTaskDescriptionComponent tasks={tasks} />
+            <StackListComponent stack={stack} />
         </Box>
     )
 };
         
-export default LongDataTaskComponent;
+export default LongDataDescriptionComponent;

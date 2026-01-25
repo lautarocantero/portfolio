@@ -1,7 +1,7 @@
 import AboutMeComponent from "../components/AboutMe/AboutMeComponent";
 import AppBarComponent from "../components/AppBar/AppBar";
 import ContactComponent from "../components/Contact/ContactComponent";
-import ExperienceComponent from "../components/ExperienceComponent/ExperienceComponent";
+import ExperienceTab from "../components/ExperienceTab/ExperienceComponent";
 import PresentationComponent from "../components/Presentation/Presentation";
 import PreviousJobs from "../components/PreviousJobs/PreviousJobs";
 import ProjectsComponent from "../components/ProjectsComponent/ProjectsComponent";
@@ -16,7 +16,7 @@ const PortfolioPage = () => {
             <AppBarComponent />
             <PresentationComponent />
             <PreviousJobs />
-            <ExperienceComponent />
+            <ExperienceTab />
             <ProjectsComponent />
             <StackComponent />
             <AboutMeComponent />
