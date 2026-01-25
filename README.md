@@ -69,7 +69,7 @@ to do:
 -Agregar animacion a medida que se baja en la pagina
 -En el modo claro aplicar letra blanca en areas donde sea necesario.
 -Terminar de dar estilo a ver mas de experiencia
--Agregar algo que contenga stack, o que se vea un poco mejor a estar suelto.
+-Agregar Una ilustracion de un estuche de herramientas, que al presioanar, deje ver en el interior el stack tecnico.
 -Agregar i18n 
 -Agregar descarga de cv en ingles
 -Agregar validacion y envio de mail

@@ -40,7 +40,7 @@ const ExperienceItemTaskCapsuleComponent = ({task}: ExperienceItemTaskCapsulePro
             </Box>
             <Typography
                 sx={(theme: Theme) => ({
-                    color: theme?.custom?.fontColor,
+                    color: theme?.custom?.white,
                     fontSize: theme?.typography?.body2?.fontSize,
                     alignContent: 'center',
                 })}

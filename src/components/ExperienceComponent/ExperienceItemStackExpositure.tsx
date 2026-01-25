@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceItemStackExpositureProps } from "../../typings/reactComponents";
-import ExperienceItemStackCapsuleComponent from "./ExperienceItemStackCapsule";
+import StackListComponent from "./ExperienceItemsStackList";
 
 const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpositureProps ):React.ReactNode => {
 
@@ -18,32 +18,10 @@ const ExperienceItemStackExpositureComponent = ({stack}: ExperienceItemStackExpo
                         marginTop: '1em',
                     })}
                 >
-                    Tecnologias utilizadas:
+                    Tecnologias utilizadas
                 </Typography>
             </Grid>
-            <Grid
-                container
-                display={'flex'}
-                flexDirection={'row'}
-                sx={(theme: Theme) => ({
-                    gap: { xs: '0.1em 0.2em'},
-                    height: 'auto',
-                    overflowY: 'auto',
-                    scrollbarWidth: "thin",
-                    justifyContent: 'center',
-                    alignItems: "start",
-                    marginTop: { xs: '2em', sm: "1em" },
-                    backgroundColor: theme?.custom?.backgroundDark,
-                    padding: '0.5em',
-                    borderRadius: '1em',
-                })}
-            >
-                {
-                    stack?.map((stk) => (
-                        <ExperienceItemStackCapsuleComponent stack={stk}/>
-                    ))
-                }
-            </Grid>
+            <StackListComponent stack={stack}/>
         </Box>
     )
 };

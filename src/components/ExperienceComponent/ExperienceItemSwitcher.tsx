@@ -25,7 +25,6 @@ const ExperienceItemSwitcherComponent = ({ stack, tasks }: ExperienceItemSwitche
   return (
     <Box
       sx={{
-        width: "90%",
         margin: "0.5em auto",
         position: "relative",
         borderRadius: "10px",

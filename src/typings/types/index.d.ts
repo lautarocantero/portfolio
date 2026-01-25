@@ -5,7 +5,16 @@ export interface Stack {
     icon: string,
 }
 
-export type Task = Pick <Stack, 'text' | 'icon'>;
+export type Task = Pick <Stack, 'text' | 'icon'> & {
+    description: string,
+};
+
+export interface LongDescriptionItem {
+    description: string,
+    objective: string,
+    tasksDescription: string,
+    technologiesDescription: string,
+}
 
 export interface BaseItemInterface {
     _id: string | null,
@@ -13,7 +22,7 @@ export interface BaseItemInterface {
     title: string,
     stack: Stack[],
     short_description: string,
-    long_description: string,
+    long_description: LongDescriptionItem,
 }
 
 {/*─────────────────── 🔎 Appbar 🔎 ───────────────────*/}

@@ -4,21 +4,12 @@ import type { ExperienceItemProps } from "../../typings/reactComponents";
 import ExperienceItemButtonComponent from "./ExperienceItemButton";
 import ExperienceItemDatacomponent from "./ExperienceItemData";
 import ExperienceItemIlustrationComponent from "./ExperienceItemIlustration";
-import type { Stack, Task } from "../../typings/types";
 
 const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React.ReactNode => {
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
-  const { gallery_urls,title,stack,short_description, long_description, tasks} : 
-    { 
-      gallery_urls: string [],
-      title: string,
-      stack: Stack[], 
-      tasks: Task[],
-      short_description: string,
-      long_description: string,
-    } = experienceItem;
+  const { gallery_urls} : { gallery_urls: string [] } = experienceItem;
 
 
   return (
@@ -39,12 +30,7 @@ const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React
       >
         <ExperienceItemIlustrationComponent gallery_urls={gallery_urls}/>
         <ExperienceItemDatacomponent 
-          isExpanded={isExpanded} 
-          title={title} 
-          stack={stack} 
-          short_description={short_description} 
-          long_description={long_description} 
-          tasks={tasks} 
+          isExpanded={isExpanded} experienceItem={experienceItem}
         />
         <ExperienceItemButtonComponent isExpanded={isExpanded} setIsExpanded={setIsExpanded}/>
       </Box>

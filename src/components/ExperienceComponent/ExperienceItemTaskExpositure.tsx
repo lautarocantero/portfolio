@@ -19,7 +19,7 @@ const ExperienceItemTaskExpositurecomponent = ({tasks}: ExperienceItemTaskExposi
                         marginTop: '1em',
                     })}
                 >
-                    Tareas realizadas:
+                    Tareas realizadas
                 </Typography>
             </Grid>
             <Grid

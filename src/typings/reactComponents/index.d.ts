@@ -1,5 +1,5 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, Stack } from "../types";
+import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionItem, Stack, Task } from "../types";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -49,7 +49,7 @@ export interface BaseItemInterface {
     stack: Stack[],
     task: string,
     short_description: string,
-    long_description: string,
+    long_description: LongDescriptionItem,
     gallery_urls: string[],
 }
 
@@ -78,7 +78,7 @@ export interface ExperienceItemProps {
 }
 
 export type ExperienceItemIlustrationProps = Pick<ExperienceItemInterface, 'gallery_urls'>
-export type ExperienceItemDataProps = Pick<ExperienceItemInterface, 'title' | 'stack' | 'short_description' | 'long_description' | 'tasks'> & {
+export type ExperienceItemDataProps = Omit<ExperienceItemInterface, ''> & {
     isExpanded?: boolean,
 }
 
@@ -91,11 +91,28 @@ export interface ExperienceItemButtonProps {
 
 export type ExperienceItemStackExpositureProps = Pick<ExperienceItemInterface, 'stack'>;
 
+export type StackListComponentProps = Pick<ExperienceItemStackExpositureProps, 'stack'>;
+
 export type ExperienceItemTaskExpositureProps = Pick<ExperienceItemInterface, 'tasks'>;
 
-export interface ExperienceItemDescriptionProps {
-    description: string,
+export type ExperienceItemDescriptionProps = Omit <ExperienceItemDataProps , '' >
+
+export type ShortDataProps = Pick<ExperienceItemInterface, 'stack' | 'tasks' | 'short_description'>;
+
+export type LongDataProps = Omit<ExperienceItemInterface, ''>;
+
+export interface LongDataDescriptionProps {
+    title: string,
+    text: string,
+    stack: Stack[],
 }
+
+export type LongDataTasksProps = Pick< LongDataTasksProps, 'title' | 'text'> & {
+    tasks: Task[],
+}
+
+export type LongDataTaskDescriptionProps = Pick<LongDataTasksProps, 'tasks'>;
+
 export interface ExperienceItemStackCapsuleProps {
     stack: Stack,
 }

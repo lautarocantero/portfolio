@@ -1,0 +1,46 @@
+import { alpha, Box, Typography, type Theme } from "@mui/material";
+import type { LongDataTasksProps } from "../../typings/reactComponents";
+import LongDataTaskDescriptionComponent from "./LongDataTaskDescription";
+
+
+const LongDataTaskComponent = ({title, text, tasks}: LongDataTasksProps):React.ReactNode => {
+    return(
+        <Box
+            sx={(theme: Theme) => ({
+                margin: '1em auto 0',
+                padding: '1em',
+                width: { xs: '100%', md: '70%' },
+            })}
+        >
+            <Box
+                sx={(theme: Theme) => ({
+                    background: theme?.palette?.primary?.main,
+                    width: '100%',
+                    padding: '0.5em',
+                    marginBottom: '1em', 
+                })}
+            >
+                <Typography
+                    sx={(theme: Theme) => ({
+                        textAlign: 'center',
+                        color: theme?.custom.white,
+                    })}
+                >
+                    {title}
+                </Typography>
+            </Box>
+            <Typography
+                sx={(theme: Theme) => ({
+                    color: theme?.custom?.fontColor,
+                    fontSize: theme?.typography?.body2?.fontSize,
+                    textAlign: 'start',
+                })}
+            >
+                {text}
+            </Typography>
+            <LongDataTaskDescriptionComponent tasks={tasks} />
+        </Box>
+    )
+};
+        
+export default LongDataTaskComponent;
