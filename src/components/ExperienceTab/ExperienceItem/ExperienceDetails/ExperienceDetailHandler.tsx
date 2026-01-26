@@ -2,7 +2,7 @@ import React from "react";
 import type { ExperienceDetailHandlerProps } from "../../../../typings/reactComponents";
 import type { StackInterface, Task } from "../../../../typings/types";
 import ExperienceDetailShortDescription from "./shortDetail/ExperienceDetailShortDescription";
-import ExperienceDetailLongDescription from "./longDetail/ExperienceDetailLongDescription";
+import ExperienceDetailLongDescription from "./longDetail/LongDescriptionComponent";
 
 const ExperienceDetailHandlerComponent = ( { isExpanded, experienceItem  } : ExperienceDetailHandlerProps ):React.ReactNode => {
 

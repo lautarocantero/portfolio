@@ -112,7 +112,13 @@ export type ExperienceTaskExpositureProps = Pick<BaseItemInterface, 'tasks'>;
 
 {/*──────── descripcion larga  ────────*/}
 
-export type LongDataProps = Pick<ExperienceDetailProps, 'experienceItem'>;
+export type LongDescriptionProps = Pick<ExperienceDetailProps, 'experienceItem'>;
+
+export interface LongDescriptionContentProps {
+    title: string,
+    text: string,
+    stack: StackInterface[],
+};
 
 export interface LongObjectiveProps {
     text: string,
