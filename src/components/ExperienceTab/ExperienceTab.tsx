@@ -9,7 +9,7 @@ const ExperienceTab = (): React.ReactNode => {
                     <Typography
                         component={'h2'}
                         sx={(theme: Theme) => ({
-                            color: theme?.custom?.fontColor,
+                            color: theme?.custom?.white,
                             fontSize: theme?.typography?.h2?.fontSize,
                             position: 'relative',
                             textAlign: 'center',

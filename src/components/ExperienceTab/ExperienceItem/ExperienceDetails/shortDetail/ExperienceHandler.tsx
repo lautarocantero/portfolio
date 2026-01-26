@@ -43,7 +43,7 @@ const ExperienceHandler = ({ stack, tasks }: ExperienceHandlerProps): React.Reac
         sx={() => ({
           color: "white",
           display: currentIndex === 0 ? "none" : "block",
-          left: "-0.3em",
+          left: { xs: "-0.3em", sm: "1em", md: '2em' },
           position: "absolute",
           top: "1.3em",
           transform: "translateY(-50%)",
@@ -58,7 +58,7 @@ const ExperienceHandler = ({ stack, tasks }: ExperienceHandlerProps): React.Reac
           color: "white",
           display: currentIndex === 0 ? "block" : "none",
           position: "absolute",
-          right: "-0.3em",
+          right: { xs: "-0.3em", sm: "1em", md: '2em' },
           top: "1.3em",
           transform: "translateY(-50%)",
         })}

@@ -65,15 +65,12 @@ Full Stack Developer
 
 to do:
 
-
--Agregar animacion a medida que se baja en la pagina
--En el modo claro aplicar letra blanca en areas donde sea necesario.
--Terminar de dar estilo a ver mas de experiencia
--Agregar Una ilustracion de un estuche de herramientas, que al presioanar, deje ver en el interior el stack tecnico.
+-Agregar validacion y envio de mail
 -Agregar i18n 
 -Agregar descarga de cv en ingles
--Agregar validacion y envio de mail
+-En el modo claro aplicar letra blanca en areas donde sea necesario.
 -Agregar Links al linkedin de las empresas con las que trabaje
+-Agregar animacion a medida que se baja en la pagina
 -Agregar descripcion de como hice los proyectos
 -Agregar botones de ver codigo y ver proyecto desplegado
 -Agregar los proyectos que falten
@@ -85,3 +82,4 @@ to do:
 -Agregar feedback
 -Agregar mis scripts de linux
 -Agregar transicion de modo de luz
+-Hacer que al clicker en ver menos me lleve el foco a experiencia.

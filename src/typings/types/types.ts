@@ -9,8 +9,8 @@ export enum TaskEnum {
   CreacionNuevasRutas = "Creación de nuevas rutas",
   ImplementacionComponentes = "Creación de componentes",
   ImplementacionHooks = "Creación de hooks",
-  ImplementacionI18n = "Implementación de i18n",
+  UtilizacionI18n = "Utilización de i18n",
   ImplementacionPruebasUnitarias = "Implementación de testing",
   ImplementacionTablas = "Creacion de tablas",
-  CRUDsAxios = "CRUDs",
+  CRUDsAxios = "Gestión de datos",
 }

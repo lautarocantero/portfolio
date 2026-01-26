@@ -1,32 +1,44 @@
-import { Button, Typography, type Theme } from "@mui/material";
+import { Box, Button, Typography, type Theme } from "@mui/material";
 import type { ExperienceItemButtonProps } from "../../../typings/reactComponents";
 import React from "react";
 
 const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceItemButtonProps):React.ReactNode => {
     
     return(
-        <Button
-            onClick={() => setIsExpanded(!isExpanded)}
-            sx={(theme: Theme) => ({
-                backgroundColor: theme?.palette?.primary?.main,
-                borderRadius: '0.3em',
-                margin: '2em auto 1em',
-                width: '30%',
-                '&:hover': {
-                    cursor: 'pointer',
-                }
-            })}
+        <Box
+            component={'div'}
+            sx={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+            }}
         >
-            <Typography
+            <Button
+                onClick={() => { 
+                    setIsExpanded(!isExpanded);
+                    }
+                }
                 sx={(theme: Theme) => ({
-                    color: theme?.custom?.white,
-                    fontSize: theme?.typography?.body2?.fontSize,
-                    textTransform: 'lowercase'
+                    backgroundColor: theme?.palette?.primary?.main,
+                    borderRadius: '0.3em',
+                    margin: '2em auto 1em',
+                    width: '30%',
+                    '&:hover': {
+                        cursor: 'pointer',
+                    }
                 })}
             >
-                {isExpanded ? 'Ver menos' : 'Ver más'}
-            </Typography>
-        </Button>
+                <Typography
+                    sx={(theme: Theme) => ({
+                        color: theme?.custom?.white,
+                        fontSize: theme?.typography?.body2?.fontSize,
+                        textTransform: 'lowercase'
+                    })}
+                >
+                    {isExpanded ? 'Ver menos' : 'Ver más'}
+                </Typography>
+            </Button>
+        </Box>
     )
 };
         

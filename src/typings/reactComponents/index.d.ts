@@ -1,5 +1,5 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionItem, StackInterface, Task } from "../types";
+import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, StackInterface, Task } from "../types";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -75,7 +75,7 @@ export interface BaseItemInterface {
     stack: StackInterface[],
     tasks: Task[],
     short_description: string,
-    long_description: LongDescriptionItem,
+    long_description: LongDescriptionInterface,
     gallery_urls: string[],
 }
 

@@ -9,8 +9,7 @@ export type Task = Pick <StackInterface, 'text' | 'icon'> & {
     description: string,
 };
 
-export interface LongDescriptionItemInterface {
-    description: string,
+export interface LongDescriptionInterface {
     objective: string,
     tasksDescription: string,
     technologiesDescription: string,
@@ -22,7 +21,7 @@ interface BaseItemInterface {
     title: string,
     stack: StackInterface[],
     short_description: string,
-    long_description: LongDescriptionItem,
+    long_description: LongDescriptionInterface,
     tasks: Task[],
 }
 

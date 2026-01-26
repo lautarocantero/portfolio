@@ -15,6 +15,7 @@ const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceDeta
                 flexDirection: 'column',
                 justifyContent: "flex-start", 
                 alignItems: "center", 
+                minHeight: { sm: '22em', md: '20em' },
             }}
         >
             <Typography
@@ -22,6 +23,7 @@ const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceDeta
                 sx={(theme: Theme) => ({
                     textAlign: 'center',
                     color: theme?.custom?.fontColor,
+                    mt: '1em',
                 })}
             >
                 {title}
