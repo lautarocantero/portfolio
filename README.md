@@ -65,7 +65,8 @@ Full Stack Developer
 
 to do:
 
--Agregar validacion y envio de mail
+-Agregar validacion de mail
+-Agregar un mensaje de error o de exito si se envio el email
 -Agregar i18n 
 -Agregar descarga de cv en ingles
 -En el modo claro aplicar letra blanca en areas donde sea necesario.
@@ -83,3 +84,4 @@ to do:
 -Agregar mis scripts de linux
 -Agregar transicion de modo de luz
 -Hacer que al clicker en ver menos me lleve el foco a experiencia.
+-agregar sombras con sentido. es decirque sigan una direccion
