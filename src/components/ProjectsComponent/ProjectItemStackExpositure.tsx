@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import React from "react";
 import type { ProjectItemStackExpositureProps } from "../../typings/reactComponents";
 import ProjectItemStackCapsuleComponent from "./ProjectItemStackCapsule";
+import type { StackInterface } from "../../typings/types";
 
 const ProjectItemStackExpositurecomponent = ({stack}: ProjectItemStackExpositureProps ):React.ReactNode => {
 
@@ -17,8 +18,8 @@ const ProjectItemStackExpositurecomponent = ({stack}: ProjectItemStackExpositure
             }}
         >
             {
-                stack?.map((stk) => (
-                    <ProjectItemStackCapsuleComponent stack={stk}/>
+                stack?.map((stk: StackInterface) => (
+                    <ProjectItemStackCapsuleComponent stack={stk} key={stk.text}/>
                 ))
             }
         </Grid>

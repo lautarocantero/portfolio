@@ -19,14 +19,14 @@ const AboutLinksButtonsExhibitorComponent = ():React.ReactNode => {
                 backgroundColor: theme?.palette?.primary?.main,
                 p: '0.5em',
                 borderRadius: '1em',
-                boxShadow: `8px 8px 10px ${alpha(theme?.custom?.backgroundDark, 100)}`,
+                boxShadow: `8px 8px 10px ${alpha(theme?.custom?.backgroundDark, 1)}`,
                 width: { xs: '100%', md: '50%'},
                 margin: '2em auto 0'
             })}
         >
             {
                 aboutLinks?.map((link: AboutLinkInterface ) => (
-                    <AboutLinkComponent link={link} />
+                    <AboutLinkComponent link={link} key={link.text}/>
                 ))
             }
         </Box>

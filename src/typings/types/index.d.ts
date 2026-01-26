@@ -51,6 +51,7 @@ export type ExperienceItemInterface = Pick<
 export interface LogoExperienceInterface {
     logo: string,
     title: string,
+    url: string,
 }
 
 {/*─────────────────── 🔎 Proyecto 🔎 ───────────────────*/}
@@ -86,8 +87,26 @@ export interface handleAboutLinkActionInterface {
 
 {/*─────────────────── 🔎 Contacto 🔎 ───────────────────*/}
 
+export interface EmailContactFormInterface { 
+    name: string; 
+    email: string; 
+    message: string 
+}
+
+export interface ContactFormSubmitInterface {
+    values: EmailContactFormInterface;
+    resetForm: () => void;
+}
+
+export type sendEmailInterface = Pick<ContactFormSubmitInterface, 'values' | 'resetForm'>;
+
 export interface ContactErrorInterface {
     text: string
+}
+
+export interface ContactFormHandleSubmitInterface {
+    values: EmailContactFormInterface,
+    sendEmailMemorized: (e: React.FormEvent<HTMLFormElement>) => void,
 }
 
 //─────────────────────────────── 🪧 Dialog 🪧 ───────────────────────────────//

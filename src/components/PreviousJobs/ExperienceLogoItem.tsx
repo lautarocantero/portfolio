@@ -3,12 +3,14 @@ import type { ExperienceLogoProps } from "../../typings/reactComponents";
 
 
 const ExperienceLogoItemComponent = ( { logo } : ExperienceLogoProps ):React.ReactNode => {
-    const { logo: logoImage, title } : { logo: string, title: string} = logo;
+    const { logo: logoImage, title, url } : { logo: string, title: string, url: string} = logo;
     return(
         <Box
+            onClick={ () => window.open(url, "_blank")}  
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
+                cursor: 'pointer',
             }}
         >
             <Box 

@@ -25,7 +25,7 @@ const StackListComponent = ({stacks}: StackListComponentProps ):React.ReactNode 
         >
             {
                 stacks?.map((stk: StackInterface) => (
-                    <StackCapsuleComponent stack={stk}/>
+                    <StackCapsuleComponent stack={stk} key={stk.text}/>
                 ))
             }
         </Grid>

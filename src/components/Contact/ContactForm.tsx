@@ -1,36 +1,71 @@
 import { Box, Button, TextField, Typography, type Theme } from "@mui/material";
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import type { ContactErrorInterface } from "../../typings/types";
+import { useFormik } from "formik";
+import React, { useCallback, useState } from "react";
+import * as Yup from "yup";
+import { sendEmail } from "../../helpers/ContactForm/handleSendEmail";
+import type { ContactFormSubmitInterface, EmailContactFormInterface } from "../../typings/types";
+
+const getInitialValues = (): EmailContactFormInterface => ({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const getValidationSchema = () =>
+  Yup.object({
+    name: Yup.string()
+      .trim()
+      .required("El nombre es obligatorio")
+      .min(2, "El nombre debe tener al menos 2 caracteres")
+      .max(50, "El nombre no puede superar los 50 caracteres"),
+
+    email: Yup.string()
+      .trim()
+      .email("Debe ser un email válido")
+      .required("El email es obligatorio"),
+
+    message: Yup.string()
+      .trim()
+      .required("El mensaje es obligatorio")
+      .min(10, "El mensaje debe tener al menos 10 caracteres")
+      .max(500, "El mensaje no puede superar los 500 caracteres"),
+  });
 
 const ContactFormComponent = (): React.ReactNode => {
-  const form = useRef<HTMLFormElement>(null);
+  const [isLoadingSendEmail, setIsLoadingSendEmail] = useState<boolean>(false);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const sendEmailMemorized = useCallback(
+    async (values: EmailContactFormInterface, { resetForm }: { resetForm: () => void }) => {
+      setIsLoadingSendEmail(true);
+      const payload: ContactFormSubmitInterface = { values, resetForm };
+      try {
+        await sendEmail(payload);
+      } finally {
+        setIsLoadingSendEmail(false);
+      }
+    },
+    []
+  );
 
-    emailjs
-      .sendForm("service_k1r3emb", "template_ec2a37s", form.current!, {
-        publicKey: "_hhq0MIv0xJ_bL7e0",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error: ContactErrorInterface) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
+  const {
+    values,
+    errors,
+    handleSubmit,
+    setFieldValue,
+    isValid, 
+    dirty,
+  } = useFormik({
+    initialValues: getInitialValues(),
+    validationSchema: getValidationSchema(),
+    onSubmit: sendEmailMemorized,
+  });
 
   return (
     <Box
-      component={"form"}
-      ref={form}
-      onSubmit={sendEmail}
+      component="form"
+      onSubmit={handleSubmit}
       sx={{
         width: "100%",
-        height: "auto",
         margin: "0 auto",
         padding: "1em",
         display: "flex",
@@ -41,36 +76,41 @@ const ContactFormComponent = (): React.ReactNode => {
       <TextField
         variant="filled"
         label="Nombre"
-        name="user_name"
-        sx={(theme: Theme) => ({
-          backgroundColor: theme?.custom?.white,
-        })}
+        name="name"
+        value={values.name}
+        onChange={(e) => setFieldValue("name", e.target.value)}
+        error={errors.name ? true : false}
+        helperText={errors.name}
+        sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
       <TextField
         variant="filled"
         label="Email"
-        name="user_email"
+        name="email"
         type="email"
-        sx={(theme: Theme) => ({
-          backgroundColor: theme?.custom?.white,
-        })}
+        value={values.email}
+        onChange={(e) => setFieldValue("email", e.target.value)}
+        error={errors.email ? true : false}
+        helperText={errors.email}
+        sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
       <TextField
-        id="filled-multiline-static"
         label="Mensaje"
         name="message"
         multiline
         rows={6}
-        defaultValue=""
         variant="filled"
-        sx={(theme: Theme) => ({
-          backgroundColor: theme?.custom?.white,
-        })}
+        value={values.message}
+        onChange={(e) => setFieldValue("message", e.target.value)}
+        error={errors.message ? true : false}
+        helperText={errors.message}
+        sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
       <Button
         type="submit"
+        disabled={!isValid || !dirty || isLoadingSendEmail}
         sx={(theme: Theme) => ({
-          backgroundColor: theme?.custom?.backgroundLigth,
+          backgroundColor: isValid && dirty ? theme?.custom?.backgroundLigth : theme?.palette?.error?.main,
           width: "10em",
           margin: "2em auto 1em",
           borderRadius: "0.3em",
@@ -86,7 +126,7 @@ const ContactFormComponent = (): React.ReactNode => {
             textTransform: "lowercase",
           })}
         >
-          Enviar
+          {isLoadingSendEmail ? "Enviando..." : "Enviar"}
         </Typography>
       </Button>
     </Box>

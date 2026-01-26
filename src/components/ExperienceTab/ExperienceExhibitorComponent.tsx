@@ -18,7 +18,7 @@ const ExperienceExhibitorcomponent = () : React.ReactNode => {
         >
             {
                 experienceItems.map((experience: ExperienceItemInterface) => (
-                    <ExperienceItemcomponent experienceItem={experience} />
+                    <ExperienceItemcomponent experienceItem={experience} key={experience._id}/>
                 ))
             }
         </Grid>

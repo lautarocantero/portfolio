@@ -21,7 +21,7 @@ const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode
         >
             {
                 stacks?.map((stackItem: StackInterface) => (
-                    <StackSkillComponent stack={stackItem} />
+                    <StackSkillComponent stack={stackItem} key={stackItem.text}/>
                 ))
             }
         </Box>

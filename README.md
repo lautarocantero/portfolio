@@ -65,23 +65,35 @@ Full Stack Developer
 
 to do:
 
--Agregar validacion de mail
 -Agregar un mensaje de error o de exito si se envio el email
+--------------------
 -Agregar i18n 
--Agregar descarga de cv en ingles
+    -Agregar descarga de cv en ingles
+--------------------
 -En el modo claro aplicar letra blanca en areas donde sea necesario.
--Agregar Links al linkedin de las empresas con las que trabaje
+    -Poner iconos blancos donde sea necesario
+--------------------
 -Agregar animacion a medida que se baja en la pagina
--Agregar descripcion de como hice los proyectos
--Agregar botones de ver codigo y ver proyecto desplegado
--Agregar los proyectos que falten
--Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa
--Agregar boton descriptivo a Stack, para que gente no tecnica entienda que es lo que ve
--Agregar informacion al ver mas de sobre mi
 -Agregar iconos de mouse y navegacion
--Agregar fotos mas profesionales
+--------------------
+-Agregar descripcion de como hice los proyectos
+    -Agregar botones de ver codigo y ver proyecto desplegado
+    -Agregar los proyectos que falten
+--------------------
+-Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa
+    -Agregar boton descriptivo a Stack, para que gente no tecnica entienda que es lo que ve
+--------------------
+-Agregar informacion al ver mas de sobre mi
+    -Agregar fotos mas profesionales
+--------------------
 -Agregar feedback
+--------------------
 -Agregar mis scripts de linux
+--------------------
 -Agregar transicion de modo de luz
+--------------------
 -Hacer que al clicker en ver menos me lleve el foco a experiencia.
+--------------------
+-Agregar lazy loading a las imagenes e imagen default
+--------------------
 -agregar sombras con sentido. es decirque sigan una direccion

@@ -19,7 +19,7 @@ const PreviousJobsExhibitorComponent = ():React.ReactNode => {
         >
             {
                 experienceLogosObject?.map((logo: LogoExperienceInterface) => (
-                    <ExperienceLogoItemComponent logo={logo} />
+                    <ExperienceLogoItemComponent logo={logo} key={logo.title}/>
                 ))
             }
         </Box>

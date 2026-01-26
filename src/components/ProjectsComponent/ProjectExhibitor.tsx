@@ -17,8 +17,8 @@ const ProjectExhibitorcomponent = ():React.ReactNode => {
             })}
         >
             {
-                experienceItem.map((experience: ProjectItemInterface) => (
-                    <ProjectItemcomponent projectItem={experience} />
+                experienceItem.map((project: ProjectItemInterface) => (
+                    <ProjectItemcomponent projectItem={project} key={project._id}/>
                 ))
             }
         </Grid>

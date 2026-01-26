@@ -9,7 +9,7 @@ const PresentationButtoncomponent = ({ text, icon, onClick: handleClick }: Prese
       onClick={handleClick}
       sx={(theme: Theme) => ({
         alignItems: "center",
-        background: { xs: theme?.palette?.primary?.main, sm: alpha(theme.palette.primary.main, 0.27)},
+        background: { xs: theme?.palette?.primary?.main },
         borderRadius: "0.1em",
         boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
         backdropFilter: "blur(5px)",
