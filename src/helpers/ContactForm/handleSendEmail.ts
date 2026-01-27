@@ -1,7 +1,8 @@
 import emailjs from "@emailjs/browser";
 import type { ContactErrorInterface, sendEmailInterface } from "../../typings/types";
+import { AlertColor } from "../../typings/types/types";
 
-export const sendEmail = ({ values, resetForm }: sendEmailInterface): Promise<void> => {
+export const sendEmail = ({ values, resetForm, showSnackBar }: sendEmailInterface): Promise<void> => {
   return emailjs
     .send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -10,9 +11,10 @@ export const sendEmail = ({ values, resetForm }: sendEmailInterface): Promise<vo
       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(() => {
+      showSnackBar(`Gracias por contactarme, respondere a la brevedad`, AlertColor.Success);
       resetForm();
     })
     .catch((error: ContactErrorInterface) => {
-      console.log("FAILED...", error.text);
+      showSnackBar(`No se pudo enviar el email, intenta de nuevo!`, AlertColor.Error);
     });
 };

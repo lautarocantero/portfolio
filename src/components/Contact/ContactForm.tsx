@@ -1,9 +1,10 @@
 import { Box, Button, TextField, Typography, type Theme } from "@mui/material";
 import { useFormik } from "formik";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import * as Yup from "yup";
 import { sendEmail } from "../../helpers/ContactForm/handleSendEmail";
 import type { ContactFormSubmitInterface, EmailContactFormInterface } from "../../typings/types";
+import { SnackBarContext } from "../shared/snackbar/SnackBarContext";
 
 const getInitialValues = (): EmailContactFormInterface => ({
   name: "",
@@ -33,13 +34,17 @@ const getValidationSchema = () =>
 
 const ContactFormComponent = (): React.ReactNode => {
   const [isLoadingSendEmail, setIsLoadingSendEmail] = useState<boolean>(false);
+  const { showSnackBar } = useContext(SnackBarContext)!;
 
   const sendEmailMemorized = useCallback(
     async (values: EmailContactFormInterface, { resetForm }: { resetForm: () => void }) => {
       setIsLoadingSendEmail(true);
-      const payload: ContactFormSubmitInterface = { values, resetForm };
       try {
-        await sendEmail(payload);
+        await sendEmail({
+          values: values,
+          resetForm: resetForm,
+          showSnackBar: showSnackBar,
+        });
       } finally {
         setIsLoadingSendEmail(false);
       }

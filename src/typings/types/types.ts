@@ -1,3 +1,6 @@
+
+//─────────────────────────────── Tareas ───────────────────────────────//
+
 export enum TaskEnum {
   CorreccionEstilosRotos = "Corrección de estilos",
   ReestructuracionVistas = "Reestructuración de vistas",
@@ -13,4 +16,13 @@ export enum TaskEnum {
   ImplementacionPruebasUnitarias = "Implementación de testing",
   ImplementacionTablas = "Creacion de tablas",
   CRUDsAxios = "Gestión de datos",
+}
+
+//─────────────────────────────── Alert color ───────────────────────────────//
+
+export enum AlertColor {
+  Success = 'success',
+  Error = 'error',
+  Warning = 'warning',
+  Info = 'info',
 }

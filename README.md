@@ -65,7 +65,6 @@ Full Stack Developer
 
 to do:
 
--Agregar un mensaje de error o de exito si se envio el email
 --------------------
 -Agregar i18n 
     -Agregar descarga de cv en ingles
@@ -83,7 +82,7 @@ to do:
 -Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa
     -Agregar boton descriptivo a Stack, para que gente no tecnica entienda que es lo que ve
 --------------------
--Agregar informacion al ver mas de sobre mi
+-Agregar informacion al 'ver mas' de sobre mi
     -Agregar fotos mas profesionales
 --------------------
 -Agregar feedback

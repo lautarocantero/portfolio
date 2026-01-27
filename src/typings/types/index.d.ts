@@ -98,7 +98,9 @@ export interface ContactFormSubmitInterface {
     resetForm: () => void;
 }
 
-export type sendEmailInterface = Pick<ContactFormSubmitInterface, 'values' | 'resetForm'>;
+export type sendEmailInterface = Pick<ContactFormSubmitInterface, 'values' | 'resetForm'> & {
+    showSnackBar: (message: string, color: AlertColor) => void;
+};
 
 export interface ContactErrorInterface {
     text: string
@@ -141,3 +143,11 @@ export type handlePrevExperienceInterface = Pick<handleExperiences, 'setCurrentI
 
 export type handleNextExperienceInterface = Pick<handleExperiences, 'setCurrentIndex' | 'components'>;
 
+//─────────────────────────────── 🍫 Snack Bar 🍫 ───────────────────────────────//
+
+export interface SnackBarState {
+  open: boolean;
+  message: string;
+  autoHideDuration?: number;
+  color: AlertColor;
+}

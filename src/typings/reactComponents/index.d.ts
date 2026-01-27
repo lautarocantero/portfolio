@@ -175,3 +175,20 @@ export interface StackSkillProps {
 export interface AboutLinkProps {
     link: AboutLinkInterface,
 }
+
+//─────────────────────────────── 🍫 Snack Bar 🍫 ───────────────────────────────//
+
+
+export interface SnackBarState {
+  open: boolean;
+  message: string;
+  autoHideDuration?: number;
+  color: AlertColor;
+}
+
+
+export interface SnackBarContextInterface { 
+  snackBar: SnackBarState;
+  showSnackBar: (message: string, color: AlertColor) => void;
+  closeSnackBar: () => void;
+}
