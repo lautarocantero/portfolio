@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import type { ContactErrorInterface, sendEmailInterface } from "../../typings/types";
-import { AlertColor } from "../../typings/types/types";
+import { AlertColor } from "../../typings/types/enums";
 
 export const sendEmail = ({ values, resetForm, showSnackBar }: sendEmailInterface): Promise<void> => {
   return emailjs

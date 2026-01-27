@@ -26,3 +26,10 @@ export enum AlertColor {
   Warning = 'warning',
   Info = 'info',
 }
+
+//─────────────────────────────── Languages ───────────────────────────────//
+
+export enum LanguagesEnum {
+  Spanish = 'es',
+  English = 'en',
+}

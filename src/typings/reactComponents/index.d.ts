@@ -186,7 +186,6 @@ export interface SnackBarState {
   color: AlertColor;
 }
 
-
 export interface SnackBarContextInterface { 
   snackBar: SnackBarState;
   showSnackBar: (message: string, color: AlertColor) => void;

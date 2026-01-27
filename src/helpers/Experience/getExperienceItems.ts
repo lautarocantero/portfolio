@@ -1,5 +1,5 @@
 import type { ExperienceItemInterface } from "../../typings/types"
-import { TaskEnum } from "../../typings/types/types"
+import { TaskEnum } from "../../typings/types/enums"
 import { getStackList } from "../Stack/getStackList"
 
 export const getExperienceItems = (): ExperienceItemInterface[] => {

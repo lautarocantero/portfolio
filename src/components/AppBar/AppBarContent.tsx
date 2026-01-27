@@ -6,6 +6,7 @@ import { handleDrawerToggle } from "../../helpers/AppBar/handleDrawerToggle";
 import LightModeComponent from "../LightMode/LightModeComponent";
 import AppBarMenu from "./AppBarMenu";
 import AppBarMobileDrawer from "./AppBarMobileDrawer";
+import LocalizationComponent from "../Localization/LocalizationComponent";
 
 const AppBarContentComponent = (): React.ReactNode => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
@@ -24,6 +25,8 @@ const AppBarContentComponent = (): React.ReactNode => {
           {/*─────────────────── 🔎 Botones visibles en desktop 🔎 ───────────────────*/}
           <AppBarMenu handleDrawerToggle={ () => handleDrawerToggle({setMobileOpen})} navItems={navItems} />
 
+          {/*─────────────────── 🔎 Localización 🔎 ───────────────────*/}
+          <LocalizationComponent />
           {/*─────────────────── 🔎 Modo nocturno 🔎 ───────────────────*/}
           <LightModeComponent />
       </Box>

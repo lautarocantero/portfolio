@@ -35,6 +35,16 @@ export interface handleToggleThemeInterface {
     setAppTheme: Dispatch<SetStateAction<boolean>>
 }
 
+export interface FlagsLanguageInterface {
+    lang: string,
+    flagSrc: string,
+    alt: string,
+}
+
+export interface handleToggleLanguageInterface {
+    lng: string,
+}1
+
 {/*─────────────────── 🔎 Experiencia 🔎 ───────────────────*/}
 
 export type ExperienceItemInterface = Pick<

@@ -36,10 +36,12 @@ const AppBarMenu = ({ navItems, handleDrawerToggle }: AppBarMenuProps): React.Re
         }}
       >
         <Tooltip title={"Lautaro Cantero Logo"}>
-          <Box
-            component={'img'}
-            src={logoUrl}
-          />
+          <ThemedLink key={logoUrl} to={"Inicio"}>
+            <Box
+              component={'img'}
+              src={logoUrl}
+            />
+          </ThemedLink>
         </Tooltip>
         {navItems.map((item: string) => (
           <ThemedLink key={item} to={item}>

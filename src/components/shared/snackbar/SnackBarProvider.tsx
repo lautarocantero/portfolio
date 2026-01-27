@@ -1,7 +1,7 @@
 import { useState, type PropsWithChildren } from "react";
 import { SnackBarContext } from "./SnackBarContext";
 import type { SnackBarState } from "../../../typings/reactComponents";
-import { AlertColor } from "../../../typings/types/types";
+import { AlertColor } from "../../../typings/types/enums";
 
 const SnackBarProvider = ({ children }: PropsWithChildren): React.ReactNode => {
   const [snackBar, setSnackBar] = useState<SnackBarState>({
