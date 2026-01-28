@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
 import PresentationButtoncomponent from "./PresentationButton";
-import { downloadCv } from "../../helpers/shared/downloadCv";
+import { handleDownloadCv } from "../../helpers/Presentation/handleCvDownload";
 
 const PresentationButtonscomponent = ():React.ReactNode => {
+
     return(
         <Box
             sx={{
@@ -21,7 +22,7 @@ const PresentationButtonscomponent = ():React.ReactNode => {
             <PresentationButtoncomponent 
                 text={'Descargar CV'} 
                 icon={"/icons/cv-file-interface-symbol-svgrepo-com.svg"} 
-                onClick={downloadCv}
+                onClick={handleDownloadCv}
             />
         </Box>
     )

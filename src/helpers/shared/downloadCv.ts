@@ -1,9 +1,11 @@
+import type { downloadCvInterface } from "../../typings/types";
 
-export const downloadCv = (): void => {
-  const pdfPath: string = "/cv/cv-Lautaro-Cantero-2026-.pdf";
+export const downloadCv = ({currentLanguage}: downloadCvInterface) : void => {
+  console.log(currentLanguage.toUpperCase());
+  const pdfPath: string = `cv/Lautaro-Cantero-CV-Full-Stack-2026-${currentLanguage.toUpperCase()}.pdf`;
   const link: HTMLAnchorElement = document.createElement("a");
   link.href = pdfPath;
-  link.download = "cv-Lautaro-Cantero-2026.pdf";
+  link.download = `Lautaro-Cantero-CV-Full-Stack-2026-${currentLanguage.toUpperCase()}.pdf`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

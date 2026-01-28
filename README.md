@@ -66,7 +66,7 @@ Full Stack Developer
 to do:
 
 --------------------
--Agregar i18n 
+-Localizar todos los textos
     -Agregar descarga de cv en ingles
 --------------------
 -En el modo claro aplicar letra blanca en areas donde sea necesario.

@@ -43,7 +43,13 @@ export interface FlagsLanguageInterface {
 
 export interface handleToggleLanguageInterface {
     lng: string,
-}1
+};
+
+{/*─────────────────── 🔎 Presentación 🔎 ───────────────────*/}
+
+export interface downloadCvInterface {
+    currentLanguage: string;
+}
 
 {/*─────────────────── 🔎 Experiencia 🔎 ───────────────────*/}
 
