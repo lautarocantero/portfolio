@@ -1,7 +1,9 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
 import type { TaskCapsuleProps } from "../../../typings/reactComponents";
+import { useTranslation } from "react-i18next";
 
 const TaskCapsuleComponent = ({task}: TaskCapsuleProps ):React.ReactNode => {
+    const { t } = useTranslation();
     const {text, icon}: {text: string, icon: string} = task;
 
     return(
@@ -46,7 +48,7 @@ const TaskCapsuleComponent = ({task}: TaskCapsuleProps ):React.ReactNode => {
                     fontSize: theme?.typography?.body2?.fontSize,
                 })}
             >
-                {text}
+                {t(text)}
             </Typography>
         </Grid>
     )

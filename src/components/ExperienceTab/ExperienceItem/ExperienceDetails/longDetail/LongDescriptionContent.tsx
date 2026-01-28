@@ -1,8 +1,11 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import StackListComponent from "../../../../shared/stack/StackListComponent";
 import type { LongDescriptionContentProps } from "../../../../../typings/reactComponents";
+import { useTranslation } from "react-i18next";
 
 const LongDescriptionContent = ({title, text, stack}: LongDescriptionContentProps ):React.ReactNode => {
+    const { t } = useTranslation();
+
     return(
         <Box
             sx={() => ({
@@ -25,7 +28,7 @@ const LongDescriptionContent = ({title, text, stack}: LongDescriptionContentProp
                         textAlign: 'center',
                     })}
                 >
-                    {title}
+                    {t(title)}
                 </Typography>
             </Box>
             <Typography
@@ -35,7 +38,7 @@ const LongDescriptionContent = ({title, text, stack}: LongDescriptionContentProp
                     textAlign: 'start',
                 })}
             >
-                {text}
+                {t(text)}
             </Typography>
             <StackListComponent stacks={stack} />
         </Box>

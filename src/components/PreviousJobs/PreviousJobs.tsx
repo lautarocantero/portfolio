@@ -1,9 +1,11 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import PreviousJobsExhibitorComponent from "./PreviousJobsExhibitor";
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 
 const PreviousJobs = ():React.ReactNode => {
+    const { t } = useTranslation();
+
     return(
         <Box
             sx={(theme: Theme) => ({
@@ -30,7 +32,7 @@ const PreviousJobs = ():React.ReactNode => {
                     mt: '1em',
                 })}
             >
-                Empresas para las que he 
+                {t("section.previousJobs")}
                 <Typography 
                     component={'span'} 
                     sx={(theme: Theme) => ({ 
@@ -42,7 +44,7 @@ const PreviousJobs = ():React.ReactNode => {
                         },
                         ml: '0.3em'
                     })}> 
-                    trabajado
+                    {t("section.job")}
                 </Typography>
             </Typography>     
             <PreviousJobsExhibitorComponent />

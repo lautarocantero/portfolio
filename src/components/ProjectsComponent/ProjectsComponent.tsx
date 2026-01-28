@@ -1,8 +1,11 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import ProjectExhibitorcomponent from "./ProjectExhibitor";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const ProjectsComponent = (): React.ReactNode => {
+    const { t } = useTranslation();
+
     return (
         <Element name="Proyectos">
         <Box>
@@ -15,7 +18,7 @@ const ProjectsComponent = (): React.ReactNode => {
                     mt: { xs: '5em' },
                 })}
             >
-                Proyectos
+                {t("projects.title")}
             </Typography>
             <Box
                 sx={(theme: Theme) => ({

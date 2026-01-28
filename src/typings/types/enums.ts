@@ -2,20 +2,20 @@
 //─────────────────────────────── Tareas ───────────────────────────────//
 
 export enum TaskEnum {
-  CorreccionEstilosRotos = "Corrección de estilos",
-  ReestructuracionVistas = "Reestructuración de vistas",
-  ValidacionFormularios = "Validación de formularios",
-  OrganizacionComponentes = "Organización",
-  DocumentacionComponentes = "Documentación",
-  CreacionEndpoints = "Creación de endpoints",
-  OptimizacionNavegacion = "Optimización",
-  CreacionNuevasRutas = "Creación de nuevas rutas",
-  ImplementacionComponentes = "Creación de componentes",
-  ImplementacionHooks = "Creación de hooks",
-  UtilizacionI18n = "Utilización de i18n",
-  ImplementacionPruebasUnitarias = "Implementación de testing",
-  ImplementacionTablas = "Creacion de tablas",
-  CRUDsAxios = "Gestión de datos",
+  FixBrokenStyles = "task.fixStyles",
+  RestructureViews = "task.restructureViews",
+  FormValidation = "task.formValidation",
+  ComponentOrganization = "task.componentOrganization",
+  ComponentDocumentation = "task.componentDocumentation",
+  EndpointCreation = "task.endpointCreation",
+  NavigationOptimization = "task.navigationOptimization",
+  NewRoutesCreation = "task.newRoutesCreation",
+  ComponentImplementation = "task.componentImplementation",
+  HooksImplementation = "task.hooksImplementation",
+  UseOfI18n = "task.useOfI18n",
+  UnitTestingImplementation = "task.unitTestingImplementation",
+  TableImplementation = "task.tableImplementation",
+  AxiosCRUDs = "task.axiosCRUDs",
 }
 
 //─────────────────────────────── Alert color ───────────────────────────────//

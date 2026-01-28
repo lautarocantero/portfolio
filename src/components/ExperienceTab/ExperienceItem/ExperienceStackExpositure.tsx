@@ -2,8 +2,10 @@ import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceStackExpositureProps } from "../../../typings/reactComponents";
 import StackListComponent from "../../shared/stack/StackListComponent";
+import { useTranslation } from "react-i18next";
 
 const ExperienceStackExpositureComponent = ({stack}: ExperienceStackExpositureProps ):React.ReactNode => {
+    const { t } = useTranslation();
 
     return(
         <Box
@@ -18,7 +20,7 @@ const ExperienceStackExpositureComponent = ({stack}: ExperienceStackExpositurePr
                     marginTop: '1em',
                 })}
             >
-                Tecnologías utilizadas
+                {t("experience.tech")}
             </Typography>
             <StackListComponent stacks={stack}/>
         </Box>

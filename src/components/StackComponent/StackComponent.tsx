@@ -4,15 +4,18 @@ import type { Theme } from "@mui/material/styles";
 import StackExhibitorComponent from "./StackExhibitor";
 import { getStackList } from "../../helpers/Stack/getStackList";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
+
+const appliedStacks: string[] = [
+    'HTML5','CSS3','JavaScript','TypeScript',
+    'Bootstrap', 'Sass', "Tailwind", 'C#', 'React','Redux',
+    'Node.js','Firebase','MongoDB', 'PHP', 'Jest','Git',
+    'GitKraken','Figma',
+    'Linux'
+]
 
 const StackComponent = ():React.ReactNode => {
-    const appliedStacks: string[] = [
-        'HTML5','CSS3','JavaScript','TypeScript',
-        'Bootstrap', 'Sass', "Tailwind", 'C#', 'React','Redux',
-        'Node.js','Firebase','MongoDB', 'PHP', 'Jest','Git',
-        'GitKraken','Figma',
-        'Linux'
-    ]
+    const { t } = useTranslation();
     const stacks : StackInterface[]  = getStackList(appliedStacks);
 
     return(
@@ -36,7 +39,7 @@ const StackComponent = ():React.ReactNode => {
                         fontSize: theme?.typography?.h2?.fontSize,
                     })}
                 >
-                    Habilidades
+                    {t("skills.title")}
                 </Typography>
                 <StackExhibitorComponent stacks={stacks} />
             </Box>

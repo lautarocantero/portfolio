@@ -1,8 +1,12 @@
 import { Box, type Theme } from "@mui/material";
 import { Link } from "react-scroll";
 import type { ThemedLinkInterface } from "../../typings/reactComponents";
+import { useTranslation } from "react-i18next";
 
-const ThemedLink = ({ to, children }: ThemedLinkInterface ) => (
+const ThemedLink = ({ to, children }: ThemedLinkInterface ) => {
+  const { t } = useTranslation();
+
+  return (
   <Box
     component={Link}
     to={to}
@@ -19,8 +23,9 @@ const ThemedLink = ({ to, children }: ThemedLinkInterface ) => (
       },
     })}
   >
-    {children}
+    {typeof children === "string" ? t(children) : children}
   </Box>
 );
+} 
 
 export default ThemedLink;

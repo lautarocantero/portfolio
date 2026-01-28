@@ -2,6 +2,7 @@ import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceTaskExpositureProps } from "../../../typings/reactComponents";
 import TaskListComponent from "../../shared/tasks/TaskListComponent";
+import { t } from "i18next";
 
 const ExperienceTaskExpositurecomponent = ({tasks}: ExperienceTaskExpositureProps ):React.ReactNode => {
 
@@ -18,7 +19,7 @@ const ExperienceTaskExpositurecomponent = ({tasks}: ExperienceTaskExpositureProp
                         textAlign: 'center',
                     })}
                 >
-                    Tareas realizadas
+                    {t("experience.task.realized")}
                 </Typography>
             <TaskListComponent tasks={tasks} />
         </Box>

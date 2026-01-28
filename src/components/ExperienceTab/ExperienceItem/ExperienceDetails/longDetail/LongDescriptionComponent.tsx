@@ -5,8 +5,10 @@ import type { LongDescriptionInterface, StackInterface, Task } from "../../../..
 import LongDescriptionContent from "./LongDescriptionContent";
 import LongTaskComponent from "./LongTaskComponent";
 import LongObjectiveComponent from "./LongObjective";
+import { useTranslation } from "react-i18next";
 
 const LongDescriptionComponent = ({ experienceItem }: LongDescriptionProps): React.ReactNode => {
+    const { t } = useTranslation();
     const { stack, tasks, long_description } : 
     { stack: StackInterface[], tasks: Task[], long_description: LongDescriptionInterface } = experienceItem;
 
@@ -15,9 +17,9 @@ const LongDescriptionComponent = ({ experienceItem }: LongDescriptionProps): Rea
 
     return (
         <Box sx={{ width: '100%', }} >
-            <LongObjectiveComponent text={objective} />
-            <LongTaskComponent title="Participación" text={tasksDescription} tasks={tasks}/>
-            <LongDescriptionContent title="Tecnologías" text={technologiesDescription} stack={stack} />
+            <LongObjectiveComponent text={t(objective)} />
+            <LongTaskComponent title={t("experience.participation")} text={tasksDescription} tasks={tasks}/>
+            <LongDescriptionContent title={t("experience.tech.long")} text={technologiesDescription} stack={stack} />
         </Box>
     );
 };

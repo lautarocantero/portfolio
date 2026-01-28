@@ -1,9 +1,11 @@
 import { Box, Button, Typography, type Theme } from "@mui/material";
 import type { ExperienceItemButtonProps } from "../../../typings/reactComponents";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceItemButtonProps):React.ReactNode => {
-    
+    const { t } = useTranslation();
+
     return(
         <Box
             component={'div'}
@@ -35,7 +37,7 @@ const ExperienceItemButtonComponent = ({isExpanded, setIsExpanded}: ExperienceIt
                         textTransform: 'lowercase'
                     })}
                 >
-                    {isExpanded ? 'Ver menos' : 'Ver más'}
+                    {isExpanded ? t("experience.button.read.less") : t("experience.button.read.more")}
                 </Typography>
             </Button>
         </Box>

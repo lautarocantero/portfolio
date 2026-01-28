@@ -1,9 +1,12 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import ContactFormComponent from "./ContactForm";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 
 const ContactComponent = ():React.ReactNode => {
+    const { t } = useTranslation();
+
     return(
         <Element name="Contacto">
             <Box
@@ -43,7 +46,7 @@ const ContactComponent = ():React.ReactNode => {
                         fontWeight: 'bold',
                     })}
                 >
-                    Contacto
+                    {t("contact.title")}
                 </Typography>
                 <ContactFormComponent />
             </Box>

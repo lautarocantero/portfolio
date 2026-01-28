@@ -2,10 +2,12 @@ import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceDetailProps } from "../../../../typings/reactComponents";
 import ExperienceDetailHandlerComponent from "./ExperienceDetailHandler";
+import { useTranslation } from "react-i18next";
 
 const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceDetailProps):React.ReactNode => {
 
     const { title } : { title: string } = experienceItem;
+    const { t } = useTranslation();
 
     return(
         <Box
@@ -26,7 +28,7 @@ const ExperienceDetailcomponent = ({isExpanded, experienceItem }: ExperienceDeta
                     mt: '1em',
                 })}
             >
-                {title}
+                {t(title)}
             </Typography>
             
             <ExperienceDetailHandlerComponent isExpanded={isExpanded} experienceItem={experienceItem} />

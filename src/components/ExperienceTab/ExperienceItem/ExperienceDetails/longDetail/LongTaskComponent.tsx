@@ -1,8 +1,11 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import type { LongTasksProps } from "../../../../../typings/reactComponents";
 import LongTaskDescriptionComponent from "./LongTaskDescription";
+import { useTranslation } from "react-i18next";
 
 const LongTaskComponent = ({title, text, tasks}: LongTasksProps):React.ReactNode => {
+    const { t } = useTranslation();
+
     return(
         <Box
             sx={() => ({
@@ -25,7 +28,7 @@ const LongTaskComponent = ({title, text, tasks}: LongTasksProps):React.ReactNode
                         textAlign: 'center',
                     })}
                 >
-                    {title}
+                    {t(title)}
                 </Typography>
             </Box>
             <Typography
@@ -35,7 +38,7 @@ const LongTaskComponent = ({title, text, tasks}: LongTasksProps):React.ReactNode
                     textAlign: 'start',
                 })}
             >
-                {text}
+                {t(text)}
             </Typography>
             <LongTaskDescriptionComponent tasks={tasks} />
         </Box>

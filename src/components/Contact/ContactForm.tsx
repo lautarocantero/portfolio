@@ -3,8 +3,9 @@ import { useFormik } from "formik";
 import React, { useCallback, useContext, useState } from "react";
 import * as Yup from "yup";
 import { sendEmail } from "../../helpers/ContactForm/handleSendEmail";
-import type { ContactFormSubmitInterface, EmailContactFormInterface } from "../../typings/types";
+import type { EmailContactFormInterface } from "../../typings/types";
 import { SnackBarContext } from "../shared/snackbar/SnackBarContext";
+import { useTranslation } from "react-i18next";
 
 const getInitialValues = (): EmailContactFormInterface => ({
   name: "",
@@ -12,27 +13,26 @@ const getInitialValues = (): EmailContactFormInterface => ({
   message: "",
 });
 
-const getValidationSchema = () =>
+const getValidationSchema = (t: any) =>
   Yup.object({
     name: Yup.string()
       .trim()
-      .required("El nombre es obligatorio")
-      .min(2, "El nombre debe tener al menos 2 caracteres")
-      .max(50, "El nombre no puede superar los 50 caracteres"),
-
+      .required(t("contact.validation.nameRequired"))
+      .min(2, t("contact.validation.nameMin"))
+      .max(50, t("contact.validation.nameMax")),
     email: Yup.string()
       .trim()
-      .email("Debe ser un email válido")
-      .required("El email es obligatorio"),
-
+      .email(t("contact.validation.emailValid"))
+      .required(t("contact.validation.emailRequired")),
     message: Yup.string()
       .trim()
-      .required("El mensaje es obligatorio")
-      .min(10, "El mensaje debe tener al menos 10 caracteres")
-      .max(500, "El mensaje no puede superar los 500 caracteres"),
+      .required(t("contact.validation.messageRequired"))
+      .min(10, t("contact.validation.messageMin"))
+      .max(500, t("contact.validation.messageMax")),
   });
 
 const ContactFormComponent = (): React.ReactNode => {
+  const { t } = useTranslation();
   const [isLoadingSendEmail, setIsLoadingSendEmail] = useState<boolean>(false);
   const { showSnackBar } = useContext(SnackBarContext)!;
 
@@ -57,11 +57,11 @@ const ContactFormComponent = (): React.ReactNode => {
     errors,
     handleSubmit,
     setFieldValue,
-    isValid, 
+    isValid,
     dirty,
   } = useFormik({
     initialValues: getInitialValues(),
-    validationSchema: getValidationSchema(),
+    validationSchema: getValidationSchema(t),
     onSubmit: sendEmailMemorized,
   });
 
@@ -80,34 +80,34 @@ const ContactFormComponent = (): React.ReactNode => {
     >
       <TextField
         variant="filled"
-        label="Nombre"
+        label={t("contact.name")}
         name="name"
         value={values.name}
         onChange={(e) => setFieldValue("name", e.target.value)}
-        error={errors.name ? true : false}
+        error={!!errors.name}
         helperText={errors.name}
         sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
       <TextField
         variant="filled"
-        label="Email"
+        label={t("contact.email")}
         name="email"
         type="email"
         value={values.email}
         onChange={(e) => setFieldValue("email", e.target.value)}
-        error={errors.email ? true : false}
+        error={!!errors.email}
         helperText={errors.email}
         sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
       <TextField
-        label="Mensaje"
+        label={t("contact.message")}
         name="message"
         multiline
         rows={6}
         variant="filled"
         value={values.message}
         onChange={(e) => setFieldValue("message", e.target.value)}
-        error={errors.message ? true : false}
+        error={!!errors.message}
         helperText={errors.message}
         sx={(theme: Theme) => ({ backgroundColor: theme?.custom?.white })}
       />
@@ -131,7 +131,7 @@ const ContactFormComponent = (): React.ReactNode => {
             textTransform: "lowercase",
           })}
         >
-          {isLoadingSendEmail ? "Enviando..." : "Enviar"}
+          {isLoadingSendEmail ? t("contact.sending") : t("contact.send")}
         </Typography>
       </Button>
     </Box>

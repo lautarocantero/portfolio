@@ -2,8 +2,11 @@ import { Box, Typography, type Theme } from "@mui/material";
 import React from "react";
 import type { ExperienceDetailShortDescriptionProps } from "../../../../../typings/reactComponents";
 import ExperienceHandler from "./ExperienceHandler";
+import { useTranslation } from "react-i18next";
 
 const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: ExperienceDetailShortDescriptionProps ): React.ReactNode => {
+    const { t } = useTranslation();
+
     return (
         <Box component="div" sx={{ width: '100%', }} >
             <Box
@@ -24,7 +27,7 @@ const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: E
                         textAlign: 'center',
                     })}
                 >
-                    {short_description}
+                    {t(short_description)}
                 </Typography>
             </Box>
             <ExperienceHandler stack={stack} tasks={tasks} />

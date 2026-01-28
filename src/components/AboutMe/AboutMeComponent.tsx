@@ -2,9 +2,11 @@ import { Box, Typography, type Theme } from "@mui/material";
 import AboutIlustrationComponent from "./AboutIlustration";
 import AboutDescriptionComponent from "./AboutDescription";
 import { Element } from "react-scroll";
-
+import { useTranslation } from "react-i18next";
 
 const AboutMeComponent = ():React.ReactNode => {
+    const { t } = useTranslation();
+
     return(
         <Box>
         <Element name="Sobre mí">
@@ -17,7 +19,7 @@ const AboutMeComponent = ():React.ReactNode => {
                 mt: { xs: '2em' },
             })}
         >
-            Sobre mí
+            {t("about.title")}
         </Typography>
         
             <Box
