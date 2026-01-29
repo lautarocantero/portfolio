@@ -148,18 +148,6 @@ export type ProjectItemInterface = Pick<
     'title' | 'stack' | 'short_description' | 'gallery_urls'
 >
 
-export interface ProjectItemProps {
-    projectItem: ProjectItemInterface,
-}
-
-export type ProjectItemIlustrationProps = Pick<ProjectItemInterface, 'gallery_urls'>
-export type ProjectItemDataProps = Pick<ProjectItemInterface, 'title' | 'stack' | 'short_description'>
-export type ProjectItemStackExpositureProps = Pick<ProjectItemInterface, 'stack'>
-export type ProjectItemDescriptionProps = Pick<ProjectItemInterface, 'short_description'>
-export interface ProjectItemStackCapsuleProps {
-    stack: StackInterface,
-}
-
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 
 export interface StackExhibitorProps {
