@@ -74,7 +74,7 @@ export interface LogoExperienceInterface {
 
 export type ProjectItemInterface = Pick<
     BaseItemInterface,
-    '_id' | 'gallery_urls' | 'title' | 'stack' | 'short_description' | 'long_description'
+    '_id' | 'gallery_urls' | 'title' | 'stack' | 'tasks' | 'short_description' | 'long_description'
 > & {
     project_url?: string,
     repo_url?: string,

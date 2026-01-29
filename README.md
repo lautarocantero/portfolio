@@ -65,34 +65,62 @@ Full Stack Developer
 
 to do:
 
---------------------
--Localizar todos los textos
-    -Agregar descarga de cv en ingles
---------------------
--En el modo claro aplicar letra blanca en areas donde sea necesario.
-    -Poner iconos blancos donde sea necesario
---------------------
--Agregar animacion a medida que se baja en la pagina
--Agregar iconos de mouse y navegacion
---------------------
--Agregar descripcion de como hice los proyectos
-    -Agregar botones de ver codigo y ver proyecto desplegado
-    -Agregar los proyectos que falten
---------------------
--Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa
-    -Agregar boton descriptivo a Stack, para que gente no tecnica entienda que es lo que ve
---------------------
--Agregar informacion al 'ver mas' de sobre mi
-    -Agregar fotos mas profesionales
---------------------
--Agregar feedback
---------------------
--Agregar mis scripts de linux
---------------------
--Agregar transicion de modo de luz
---------------------
--Hacer que al clicker en ver menos me lleve el foco a experiencia.
---------------------
--Agregar lazy loading a las imagenes e imagen default
---------------------
--agregar sombras con sentido. es decirque sigan una direccion
+0. Agregar proyecto kisco a proyectos con 'en desarrollo'
+   0.1. Agregar descripción de cómo hice los proyectos  
+   0.2. Agregar botones de ver código y ver proyecto desplegado  
+   0.3. Agregar los proyectos que falten  
+
+1. Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa  
+    1.1 Modificar estilo para que parezca un portfolio/caja de herramientas
+    1.2. Agregar botón descriptivo a Stack, para que gente no técnica entienda qué es lo que ve:
+        Lenguajes: HTML5, CSS3, JavaScript, TypeScript, C#, PHP
+        Frameworks/Librerías UI: React, Bootstrap, Tailwind, Sass
+        Gestión de estado: Redux
+        Backend/DB: Node.js, MongoDB, Firebase
+        Testing: Jest
+        Herramientas: Git, GitKraken, Linux, Figma
+
+2. Agregar información al 'ver más' de sobre mí  
+   2.1. Agregar fotos más profesionales  
+
+3. Agregar lazy loading a las imágenes e imagen default  
+
+4. En el modo claro aplicar letra blanca en áreas donde sea necesario  
+   4.1. Poner iconos blancos donde sea necesario  
+
+5. Agregar animación a medida que se baja en la página  
+   5.1. Agregar iconos de mouse y navegación  
+
+6. Agregar feedback  
+
+7. Agregar mis scripts de Linux  
+
+8. Agregar transición de modo de luz  
+
+9. Hacer que al clickear en ver menos me lleve el foco a experiencia  
+
+10. Agregar sombras con sentido, es decir que sigan una dirección  
+
+11. Cambiar foto por una profesional.
+
+12. Incorporar logo nuevo.
+
+13. Incorporar dominio.
+
+14. Poner logo a la pagina, es decir, el que aparece en la ventana.
+
+15. cambiar diseño de presentacion (imagen)
+
+16. Hacer que pasen objetos por detras, como en pro ams.
+
+17. Agregar aws a codetria
+
+18. Enriquecer textos con diferentes etiquetas
+
+19. Comprobar accesibilidad y etiquetas semanticas correctas
+
+20. Agregar visor de imagenes
+
+
+
+

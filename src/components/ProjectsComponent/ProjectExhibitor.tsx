@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
-import ProjectItemcomponent from "./ProjectItem";
 import type { ProjectItemInterface } from "../../typings/types";
 import { getProjectItems } from "../../helpers/Projects/getProjectItems";
+import ExperienceItemComponent from "../ExperienceTab/ExperienceItem/ExperienceItemComponent";
 
 const ProjectExhibitorcomponent = ():React.ReactNode => {
     const experienceItem: ProjectItemInterface[] = getProjectItems();
@@ -18,7 +18,7 @@ const ProjectExhibitorcomponent = ():React.ReactNode => {
         >
             {
                 experienceItem.map((project: ProjectItemInterface) => (
-                    <ProjectItemcomponent projectItem={project} key={project._id}/>
+                    <ExperienceItemComponent experienceItem={project} key={project._id}/>
                 ))
             }
         </Grid>
