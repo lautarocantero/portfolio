@@ -5,6 +5,41 @@ import { getStackList } from "../Stack/getStackList";
 export const getExperienceItems = (): ExperienceItemInterface[] => {
   return [
     {
+      _id: "7f3a9c2d84b1e6f0c5d7a900",
+      title: "experience.extensionApp.title",
+      gallery_urls: [ 
+        "/images/experience/vilo/extension/clean_extension.png", 
+        "/images/experience/vilo/extension/extension.png", 
+        "/images/experience/vilo/extension/laptop-extension.png",
+      ],
+      short_description: "experience.extensionApp.description",
+      long_description: {
+        objective: "experience.extensionApp.objective",
+        tasksDescription: "experience.extensionApp.tasksDescription",
+        technologiesDescription: "experience.extensionApp.technologiesDescription",
+      },
+      stack: getStackList([
+        "HTML5",
+        "CSS3",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Git",
+      ]),
+      tasks: [
+        {
+          text: TaskEnum.HooksImplementation,
+          icon: "/icons/hook-svgrepo-com.svg",
+          description: "experience.extensionApp.task.hooks",
+        },
+        {
+          text: TaskEnum.ComponentDocumentation,
+          icon: "/icons/doc-svgrepo-com.svg",
+          description: "experience.extensionApp.task.documentation",
+        },
+      ],
+    },
+    {
       _id: "7f3a9c2d84b1e6f0c5d7a913",
       title: "experience.tennisApp.title",
       gallery_urls: [

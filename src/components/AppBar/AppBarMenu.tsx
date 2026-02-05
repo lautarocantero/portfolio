@@ -4,9 +4,11 @@ import React, { useContext } from "react";
 import type { AppBarMenuProps } from "../../typings/reactComponents";
 import ThemedLink from "../shared/ThemedLink";
 import { ThemeContext } from "../../theme/context/themeContext";
+import { useTranslation } from "react-i18next";
 
 const AppBarMenu = ({ navItems, handleDrawerToggle }: AppBarMenuProps): React.ReactNode => {
   const { appTheme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   const logoUrl: string = !appTheme ? 
   "public/icons/personal_logo.png" : 
@@ -44,7 +46,7 @@ const AppBarMenu = ({ navItems, handleDrawerToggle }: AppBarMenuProps): React.Re
           </ThemedLink>
         </Tooltip>
         {navItems.map((item: string) => (
-          <ThemedLink key={item} to={item}>
+          <ThemedLink key={item} to={t(item)}>
             {item}
           </ThemedLink>
         ))}

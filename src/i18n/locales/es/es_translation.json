@@ -1,4 +1,5 @@
 {
+  "nav.home": "Inicio",
   "nav.experience": "Experiencia",
   "nav.projects": "Proyectos",
   "nav.skills": "Habilidades",
@@ -41,6 +42,16 @@
   "task.tableImplementation": "Creación de tablas",
   "task.axiosCRUDs": "Gestión de datos",
 
+  "experience.extensionApp.title": "Extensión de YouTube",
+  "experience.extensionApp.description": "Extensión de YouTube que mejora la experiencia de escritorio proporcionando control detallado, opciones de personalización y características útiles que enriquecen la interacción con la plataforma.",
+  "experience.extensionApp.objective": "La extensión de YouTube busca transformar la experiencia de escritorio ofreciendo un control más detallado y flexible sobre su interfaz. Permite ocultar secciones innecesarias, personalizar la navegación y modificar comportamientos predeterminados para lograr una interacción más fluida y adaptada. Con estas funciones, la extensión brinda una experiencia más clara, organizada y eficiente, donde cada usuario puede ajustar la plataforma a sus necesidades específicas y disfrutar de un entorno optimizado para su uso diario.",
+  "experience.extensionApp.tasksDescription": "Durante mi participación en este proyecto, desarrollé funcionalidades que manipulaban el DOM de YouTube, como la ocultación condicional de elementos. También implementé y optimicé hooks para acelerar la incorporación de nuevas características, y documenté cada proceso para mantener un proyecto claro, escalable y fácil de mantener.",
+  "experience.extensionApp.technologiesDescription": "El proyecto fue desarrollado utilizando React, TypeScript y Tailwind, acompañado de Chrome Extensions API y @crxjs/vite-plugin para crear la extensión de navegador, aprovechando al máximo las capacidades modernas de desarrollo frontend y la integración con APIs de navegador.",
+  "experience.extensionApp.task.hooks": "Creé hooks especializados para manipular el DOM de YouTube, permitiendo ocultar elementos de forma condicional y personalizar la interfaz según las necesidades del usuario. Estos hooks facilitaron la reutilización de lógica en diferentes componentes, reduciendo el tiempo de desarrollo, mejorando la eficiencia del equipo y asegurando una implementación más ordenada y escalable.",
+  "experience.extensionApp.task.documentation": "Elaboré documentación clara y accesible para cada componente, detallando propiedades y ejemplos de uso en español e inglés, lo que permitió mantener la consistencia y facilitar la colaboración dentro del proyecto.",
+
+
+
   "experience.tennisApp.title": "Aplicación de Tenis",
   "experience.tennisApp.description": "Aplicación de tenis pensada para todos los niveles de habilidad, para contactar con entrenadores y reservar clases.",
   "experience.tennisApp.objective": "Plataforma accesible, clara y organizada, diseñada para que jugadores principiantes, intermedios y avanzados pudieran encontrar entrenadores adecuados y gestionar sus clases de manera sencilla.",
@@ -72,16 +83,9 @@
   "experience.hotelPlatform.task.navigation": "Optimicé la navegación interna para reducir tiempos de carga y mejorar la fluidez de uso, utilizando técnicas como lazy loading y memorización.",
 
   "projects.title": "Proyectos",
-  "projects.clothesMarket.title": "Market de Ropa",
-  "projects.clothesMarket.description": "Tienda online minimalista para comprar ropa.",
-  "projects.upgrade.title": "Upgrade",
-  "projects.upgrade.description": "E-commerce de productos electrónicos.",
-  "projects.festival.title": "Festival Musical",
-  "projects.festival.description": "Página web sobre un festival musical.",
-  "projects.coffeeBlog.title": "Blog de Café",
-  "projects.coffeeBlog.description": "Blog con cursos y recetas de café.",
-  "projects.barber.title": "Barbería",
-  "projects.barber.description": "Página web para una barbería.",
+  "projects.kiosco.title": "Kiosco App",
+  "projects.kiosco.description": "Gestor de tienda minorista. Especialmente util para mantener un control de productos vendidos y la venta de cada empleado",
+  "projects.kiosco.why.to.use": "Utiliza Kiosco y ...",
 
   "skills.title": "Habilidades",
 

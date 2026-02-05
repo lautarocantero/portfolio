@@ -4,9 +4,11 @@ import type { DrawerContentType } from "../../typings/reactComponents";
 import DrawerListComponent from "./DrawerList";
 import { ThemeContext } from "../../theme/context/themeContext";
 import ThemedLink from "../shared/ThemedLink";
+import { useTranslation } from "react-i18next";
 
 const DrawerContentComponent = ({ handleDrawerToggle, navItems} : DrawerContentType ):React.ReactNode => {
   const { appTheme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
   const logoUrl: string = !appTheme ? 
   "public/icons/personal_logo.png" : 
@@ -27,7 +29,7 @@ const DrawerContentComponent = ({ handleDrawerToggle, navItems} : DrawerContentT
           }
         })}
       >
-        <ThemedLink  key={logoUrl} to={"Inicio"}>
+        <ThemedLink  key={logoUrl} to={t("Inicio")}>
           <Box
             component={'img'}
             src={logoUrl}

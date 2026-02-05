@@ -1,5 +1,6 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, StackInterface, Task } from "../types";
+import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectItemInterface, StackInterface, Task } from "../types";
+import type { SetStateAction } from "react";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -46,6 +47,7 @@ export interface PresentationButtonProps {
 
 export interface CarouselProps {
     gallery_urls: string[];
+    bigScreen?: boolean;
 }
 
 {/*─────────────────── 🔎 Stack 🔎 ───────────────────*/}
@@ -143,10 +145,30 @@ export type  ExperienceItemButtonProps = Pick<ExperienceDetailProps, 'isExpanded
 
 {/*─────────────────── 🔎 Proyectos 🔎 ───────────────────*/}
 
-export type ProjectItemInterface = Pick<
+export type ProjectItemProps = Pick<
     BaseItemInterface,
     'title' | 'stack' | 'short_description' | 'gallery_urls'
 >
+
+export interface ProjectSelectedProps {
+    selectedItem: ProjectItemInterface,
+};
+
+export type ProjectSelectedGalleryProps = Pick<BaseItemInterface, 'gallery_urls'>
+
+export type ProjectDescriptionTitleProps = Pick<BaseItemInterface, 'title'>
+
+export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description'>
+
+export interface ProjectDescriptionItemProps {
+    text: string;
+    logo: string;
+}
+
+export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
+    onClick: () => void;
+    disabled?: boolean;
+}
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 

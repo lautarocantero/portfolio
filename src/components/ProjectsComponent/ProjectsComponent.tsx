@@ -1,5 +1,5 @@
 import { Box, Typography, type Theme } from "@mui/material";
-import ProjectExhibitorcomponent from "./ProjectExhibitor";
+import ProjectExhibitorcomponent from "./ProjectExhibitor/ProjectExhibitor";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
@@ -7,7 +7,7 @@ const ProjectsComponent = (): React.ReactNode => {
     const { t } = useTranslation();
 
     return (
-        <Element name="Proyectos">
+        <Element name={t("projects.title")}>
         <Box>
             <Typography
                 component={'h2'}
@@ -23,6 +23,8 @@ const ProjectsComponent = (): React.ReactNode => {
             <Box
                 sx={(theme: Theme) => ({
                     backgroundColor: theme?.palette?.primary?.main,
+                    height: 'auto',
+                    display: 'flex',
                 })}
             >
                 <ProjectExhibitorcomponent />

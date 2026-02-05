@@ -5,7 +5,7 @@ import React, { useCallback, useState } from "react";
 import { handleNext, handlePrev } from "../../helpers/shared/handleCarouselNavigation";
 import type { CarouselProps } from "../../typings/reactComponents";
 
-const CarouselComponent = ({ gallery_urls } : CarouselProps ): React.ReactNode => {
+const CarouselComponent = ({ gallery_urls, bigScreen } : CarouselProps ): React.ReactNode => {
   const [imageNumber, setImageNumber] = useState<number>(0);
 
     const memoizedHandlePrev = useCallback( 
@@ -35,8 +35,8 @@ const CarouselComponent = ({ gallery_urls } : CarouselProps ): React.ReactNode =
         src={gallery_urls[imageNumber]}
         sx={{
           borderRadius: "10px",
-          height: "13em",
-          maxHeight: "13em",
+          height: { xs: "13em", sm: !bigScreen ?  "13em" : '23em'},
+          maxHeight: !bigScreen ?  "13em" : '23em',
           objectFit: "contain",
           width: "100%",
         }}

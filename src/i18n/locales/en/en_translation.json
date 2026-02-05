@@ -1,4 +1,5 @@
 {
+  "nav.home": "Home",
   "nav.experience": "Experience",
   "nav.projects": "Projects",
   "nav.skills": "Skills",
@@ -56,6 +57,13 @@
   "TaskEnum.ImplementacionTablas": "Table implementation",
   "TaskEnum.CRUDsAxios": "Data management",
 
+  "experience.extensionApp.title": "YouTube Extension",
+  "experience.extensionApp.description": "YouTube Extension that enhances the desktop experience by providing detailed control, customization options, and useful features that enrich interaction with the platform.",
+  "experience.extensionApp.objective": "The YouTube Extension aims to transform the desktop experience by offering more detailed and flexible control over its interface. It allows users to hide unnecessary or distracting sections, customize navigation according to their preferences, and modify default platform behaviors to achieve a smoother and more adaptive interaction. With these features, the extension provides a clearer, more organized, and efficient experience, enabling each user to tailor the platform to their specific needs and enjoy an optimized environment for daily use.",
+  "experience.extensionApp.tasksDescription": "During my participation in this project, I developed functionalities that manipulated the YouTube DOM, such as conditional hiding of elements. I also implemented and optimized hooks to accelerate the integration of new features, and documented each process to maintain a clear, scalable, and easy-to-maintain project.",
+  "experience.extensionApp.technologiesDescription": "The project was developed using React, TypeScript, and Tailwind, along with the Chrome Extensions API and @crxjs/vite-plugin to build the browser extension, fully leveraging modern frontend development capabilities and integration with browser APIs.",
+  "experience.extensionApp.task.hooks": "I created specialized hooks to manipulate the YouTube DOM, enabling conditional hiding of elements and customizing the interface according to user needs. These hooks also facilitated logic reuse across different components, reducing development time, improving team efficiency, and ensuring a more organized and scalable implementation.",
+  "experience.extensionApp.task.documentation": "I produced clear and accessible documentation for each component, detailing properties and usage examples in both Spanish and English, which helped maintain consistency and facilitated collaboration within the project.",
 
   "experience.tennisApp.title": "Tennis Application",
   "experience.tennisApp.description": "Tennis app designed for all skill levels, to connect with coaches and book lessons.",
@@ -87,18 +95,10 @@
   "experience.hotelPlatform.task.crudAxios": "I developed functions to create, read, update, and delete data using Axios for backend communication, creating complete routes for entities such as users, reservations, and rooms.",
   "experience.hotelPlatform.task.navigation": "I optimized internal navigation to reduce load times and improve usability, using techniques like lazy loading and memoization.",
 
-
   "projects.title": "Projects",
-  "projects.clothesMarket.title": "Clothes Market",
-  "projects.clothesMarket.description": "Minimalist online store to buy clothes.",
-  "projects.upgrade.title": "Upgrade",
-  "projects.upgrade.description": "E-commerce for electronic products.",
-  "projects.festival.title": "Music Festival",
-  "projects.festival.description": "Website about a music festival.",
-  "projects.coffeeBlog.title": "Coffee Blog",
-  "projects.coffeeBlog.description": "Blog with coffee courses and recipes.",
-  "projects.barber.title": "Barbershop",
-  "projects.barber.description": "Website for a barbershop.",
+  "projects.kiosco.title": "Kiosco App",
+  "projects.kiosco.description": "Retail store manager. Especially useful for keeping track of products sold and the sales of each employee.",
+  "projects.kiosco.why.to.use": "Use Kiosco App to",
 
   "skills.title": "Skills",
 

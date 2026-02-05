@@ -3,10 +3,13 @@ import PresentationPhoto from "./PresentationPhoto";
 import PresentationInfo from "./PresentationInfo";
 import PresentationButtonscomponent from "./PresentationButtons";
 import { Element } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const PresentationComponent = () => {
+    const { t } = useTranslation();
+
     return (
-        <Element name="Inicio">
+        <Element name={t("nav.home")}>
             <Box
                 sx={{
                     paddingTop: '5em',

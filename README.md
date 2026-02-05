@@ -65,10 +65,12 @@ Full Stack Developer
 
 to do:
 
-0. Agregar proyecto kisco a proyectos con 'en desarrollo'
-   0.1. Agregar descripción de cómo hice los proyectos  
-   0.2. Agregar botones de ver código y ver proyecto desplegado  
-   0.3. Agregar los proyectos que falten  
+0.0. Agregar visor de imagenes
+
+0.1. Agregar a proyecto kisco 'en desarrollo'
+   0.0.1. Agregar descripción de cómo hice los proyectos  
+   0.0.2. Agregar botones de ver código y ver proyecto desplegado  
+   0.0.3. Agregar los proyectos que falten  
 
 1. Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa  
     1.1 Modificar estilo para que parezca un portfolio/caja de herramientas
@@ -113,13 +115,11 @@ to do:
 
 16. Hacer que pasen objetos por detras, como en pro ams.
 
-17. Agregar aws a codetria
+17. Agregar aws a codetria experience
 
 18. Enriquecer textos con diferentes etiquetas
 
 19. Comprobar accesibilidad y etiquetas semanticas correctas
-
-20. Agregar visor de imagenes
 
 
 

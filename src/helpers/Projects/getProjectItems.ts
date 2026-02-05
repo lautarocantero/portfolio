@@ -7,22 +7,23 @@ export const getProjectItems = (): ProjectItemInterface[] => {
         {
           _id: 'proj-kiosco-app',
           gallery_urls: [
-            'public/images/projects/clothes-market/market-ropa-index.png',
-            'public/images/projects/clothes-market/market-ropa-index-2.png',
-            'public/images/projects/clothes-market/market-ropa-index-3.png',
-            'public/images/projects/clothes-market/market-ropa-index-4.png',
+            'public/images/projects/kiosco/kiosco_login_dark.png',
+            'public/images/projects/kiosco/kiosco_cart.png',
+            'public/images/projects/kiosco/kiosco_header.png',
+            'public/images/projects/kiosco/kiosco_login_white.png',
+            'public/images/projects/kiosco/kiosco_product_dialog.png',
+            'public/images/projects/kiosco/kiosco_products_.png',
+            'public/images/projects/kiosco/kiosco_ticket.png',
           ],
-          title: 'Kiosco App',
+          title: 'projects.kiosco.title',
           stack: getStackList([
             "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Jest", 
             "Node.js", "Git", "Figma", "Redux"
           ]),
-          short_description: "Gestor de tienda minorista.",
+          short_description: "projects.kiosco.description",
           long_description: {
             objective: "Facilitar la gestión de productos, ventas e inventario en pequeños negocios y tiendas de abarrotes mediante una aplicación web simple y responsive, complementada con un backend robusto para autenticación y operaciones.",
-
             tasksDescription: "El sistema permitirá registrar y listar productos, controlar ventas diarias, gestionar inventario básico y, en futuras versiones, generar reportes y estadísticas. El backend provee una API RESTful para autenticación, gestión de vendedores, productos, proveedores y ventas, con validación de datos, hash de contraseñas y tokens JWT. Actualmente se encuentra en fase inicial, con arquitectura y primeras funcionalidades en construcción. El roadmap incluye integración con bases de datos (Firebase, Supabase o MongoDB), testing de endpoints y reportes avanzados.",
-
             technologiesDescription: "El frontend está desarrollado con React, TypeScript y MUI, siguiendo los principios de Screaming Architecture. El backend utiliza Node.js, Express y TypeScript, junto con bcrypt para seguridad, db-local como base de datos de desarrollo y JWT para autenticación. La estructura se organiza en torno al dominio (ventas, productos, inventario, usuarios) y no a las tecnologías, garantizando claridad y escalabilidad."
           },
           tasks: [
