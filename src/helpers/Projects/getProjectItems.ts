@@ -16,10 +16,43 @@ export const getProjectItems = (): ProjectItemInterface[] => {
             'public/images/projects/kiosco/kiosco_ticket.png',
           ],
           title: 'projects.kiosco.title',
-          stack: getStackList([
-            "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Jest", 
-            "Node.js", "Git", "Figma", "Redux"
-          ]),
+          stack: [
+            {
+              step: "Planteamiento inicial",
+              description: "Wireframes y conceptos de diseño",
+              stack: getStackList([
+                "Figma"
+              ])
+            },
+            {
+              step: "Creación del proyecto",
+              description: "Inicialización del repositorio y configuración del entorno",
+              stack: getStackList([
+                "Git"
+              ])
+            },
+            {
+              step: "Desarrollo Backend",
+              description: "Construcción de API",
+              stack: getStackList([
+                "Node.js"
+              ])
+            },
+            {
+              step: "Desarrollo Frontend",
+              description: "Creación de la interfaz e integración",
+              stack: getStackList([
+                "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Redux"
+              ])
+            },
+            {
+              step: "Testing y QA",
+              description: "Asegurar calidad y confiabilidad",
+              stack: getStackList([
+                "Jest"
+              ])
+            }
+          ],
           short_description: "projects.kiosco.description",
           long_description: {
             objective: "Facilitar la gestión de productos, ventas e inventario en pequeños negocios y tiendas de abarrotes mediante una aplicación web simple y responsive, complementada con un backend robusto para autenticación y operaciones.",

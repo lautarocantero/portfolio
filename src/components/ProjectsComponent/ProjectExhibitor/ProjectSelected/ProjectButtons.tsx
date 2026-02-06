@@ -13,8 +13,8 @@ const ProjectButtonsComponent = ():React.ReactNode => {
                 gap: '1em'
             }}
         >
-            <ProjectButtonComponent text="Ir a la pagina" onClick={() => {}} disabled/>
             <ProjectButtonComponent text="Ver más" onClick={() => {}} />
+            <ProjectButtonComponent text="Ir a la pagina" onClick={() => {}} disabled/>
         </Box>
     )
 };

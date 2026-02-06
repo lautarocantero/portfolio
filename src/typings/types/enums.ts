@@ -18,6 +18,11 @@ export enum TaskEnum {
   AxiosCRUDs = "task.axiosCRUDs",
 }
 
+export enum projectItemTypeEnum {
+  feature = 'feature',
+  benefit = 'benefit',
+}
+
 //─────────────────────────────── Alert color ───────────────────────────────//
 
 export enum AlertColor {

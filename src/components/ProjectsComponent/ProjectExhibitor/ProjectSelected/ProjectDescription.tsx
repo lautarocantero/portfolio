@@ -2,9 +2,10 @@ import { Box, Typography, type Theme } from "@mui/material";
 import type { ProjectDescriptionProps } from "../../../../typings/reactComponents";
 import { useTranslation } from "react-i18next";
 import ProjectDescriptionHandlerComponent from "./ProjectDescriptionHandler";
+import ProjectButtonsComponent from "./ProjectButtons";
 
 
-const ProjectDescription = ({short_description}: ProjectDescriptionProps ):React.ReactNode => {
+const ProjectDescription = ({short_description, stack}: ProjectDescriptionProps ):React.ReactNode => {
     const { t } = useTranslation();
 
     return(
@@ -30,7 +31,8 @@ const ProjectDescription = ({short_description}: ProjectDescriptionProps ):React
                     {t(short_description)}
                 </Typography>
             </Box>
-            <ProjectDescriptionHandlerComponent />
+            <ProjectDescriptionHandlerComponent stack={stack}/>
+            <ProjectButtonsComponent />
         </Box>
     )
 };

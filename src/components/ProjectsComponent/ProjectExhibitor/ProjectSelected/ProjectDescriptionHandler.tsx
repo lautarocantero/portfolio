@@ -2,17 +2,18 @@ import { useCallback, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ProjectDescriptionClientComponent from "./ProjectDescriptionClient";
-import ProjectDescriptionDevComponent from "./ProjectDescriptionDev";
+import ProjectDescriptionDevComponent from "./dev/ProjectDescriptionDev";
 import { handleNext, handlePrev } from "../../../../helpers/Experience/handleExperienceNavigation";
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
+import type { ProjectDescriptionHandlerProps } from "../../../../typings/reactComponents";
 
 
-const ProjectDescriptionHandlerComponent = ():React.ReactNode => {
+const ProjectDescriptionHandlerComponent = ({stack}: ProjectDescriptionHandlerProps ):React.ReactNode => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     const components: React.ReactNode[] = [
         <ProjectDescriptionClientComponent/>,
-        <ProjectDescriptionDevComponent />,
+        <ProjectDescriptionDevComponent stack={stack} />,
     ]
 
     const memoizedHandlePrev = useCallback( 
@@ -44,7 +45,7 @@ const ProjectDescriptionHandlerComponent = ():React.ReactNode => {
                  display: currentIndex === 0 ? "none" : "block",
                  left: { xs: "-0.3em", sm: "1em", md: '2em' },
                  position: "absolute",
-                 top: "1.7em",
+                 top: "1.2em",
                  transform: "translateY(-50%)",
                })}
              >
@@ -57,7 +58,7 @@ const ProjectDescriptionHandlerComponent = ():React.ReactNode => {
                  display: currentIndex === 0 ? "block" : "none",
                  position: "absolute",
                  right: { xs: "-0.3em", sm: "1em", md: '2em' },
-                 top: "1.7em",
+                 top: "1.2em",
                  transform: "translateY(-50%)",
                })}
              >

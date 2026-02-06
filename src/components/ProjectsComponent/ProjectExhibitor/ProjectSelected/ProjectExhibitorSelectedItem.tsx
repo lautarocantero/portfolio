@@ -7,7 +7,8 @@ import ProjectDescriptionTitleComponent from "./ProjectDescriptionTitle";
 
 
 const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):React.ReactNode => {
-    const { gallery_urls, short_description, title } = selectedItem;
+    const { gallery_urls, short_description, title, stack } = selectedItem;
+    console.log(selectedItem);
 
     return(
         <Box
@@ -20,7 +21,7 @@ const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):Rea
         >
             <CarouselComponent gallery_urls={gallery_urls} bigScreen />
             <ProjectDescriptionTitleComponent title={title}/>
-            <ProjectDescription short_description={short_description} />
+            <ProjectDescription short_description={short_description} stack={stack}/>
             <ProjectFooterComponent />
         </Box>
     )

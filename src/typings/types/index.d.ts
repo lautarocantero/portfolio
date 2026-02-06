@@ -72,12 +72,20 @@ export interface LogoExperienceInterface {
 
 {/*─────────────────── 🔎 Proyecto 🔎 ───────────────────*/}
 
+interface projectStackInterface {
+  step: string;       
+  description: string;
+  stack: StackInterface[]; 
+}
+
+
 export type ProjectItemInterface = Pick<
     BaseItemInterface,
-    '_id' | 'gallery_urls' | 'title' | 'stack' | 'tasks' | 'short_description' | 'long_description'
+    '_id' | 'gallery_urls' | 'title' | 'tasks' | 'short_description' | 'long_description'
 > & {
     project_url?: string,
     repo_url?: string,
+    stack: projectStackInterface[],
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}

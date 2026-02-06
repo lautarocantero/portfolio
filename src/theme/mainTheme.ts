@@ -79,7 +79,7 @@ export const darkTheme = createTheme({
     lightMain: '#8c60f1ff',
 
     //────────────── secondary ──────────────────//
-    darkSecondary: '#4a00f8ff',
+    darkSecondary: 'rgb(16, 1, 49)',
 
     //────────────── font ──────────────────//
     fontColor: '#eff0f8',

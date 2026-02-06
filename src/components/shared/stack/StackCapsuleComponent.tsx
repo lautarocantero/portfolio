@@ -1,15 +1,16 @@
 import { Box, Typography, type Theme } from "@mui/material";
 import type { StackCapsuleProps } from "../../../typings/reactComponents";
 
-const StackCapsuleComponent = ({stack}: StackCapsuleProps):React.ReactNode => {
+const StackCapsuleComponent = ({stack, flat}: StackCapsuleProps):React.ReactNode => {
 
     const {text, icon} : {text: string, icon: string} = stack;
 
     return(
         <Box
             sx={(theme: Theme) => ({
+                width: 'fit-content',
                 backgroundColor: theme?.custom?.backgroundLigth,
-                borderRadius: '10em',
+                borderRadius: flat ? 'none' : '10em',
                 display: 'flex',
                 flexDirection: 'row',
                 gap: { xs: '0.2em'},

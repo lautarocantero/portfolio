@@ -1,6 +1,7 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectItemInterface, StackInterface, Task } from "../types";
+import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectItemInterface, projectStackInterface, StackInterface, Task } from "../types";
 import type { SetStateAction } from "react";
+import type { projectItemTypeEnum } from "../types/enums";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -58,6 +59,7 @@ export interface StackListComponentProps {
 
 export interface StackCapsuleProps {
     stack: StackInterface,
+    flat?: boolean,
 }
 
 {/*─────────────────── 🔎 Tareas 🔎 ───────────────────*/}
@@ -158,16 +160,28 @@ export type ProjectSelectedGalleryProps = Pick<BaseItemInterface, 'gallery_urls'
 
 export type ProjectDescriptionTitleProps = Pick<BaseItemInterface, 'title'>
 
-export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description'>
+export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description'> & {
+    stack: projectStackInterface[],
+}
+
+export type ProjectDescriptionHandlerProps = Pick<ProjectItemInterface, 'stack'> 
 
 export interface ProjectDescriptionItemProps {
     text: string;
     logo: string;
+    type: projectItemTypeEnum;
 }
 
 export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
     onClick: () => void;
     disabled?: boolean;
+}
+
+export type ProjectDescriptionDevProps = Pick<ProjectItemInterface, 'stack'> 
+
+export interface HowWasMadeProps {
+    title: string,
+    stack: projectStackInterface,
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
