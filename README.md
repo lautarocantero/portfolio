@@ -121,6 +121,22 @@ to do:
 
 19. Comprobar accesibilidad y etiquetas semanticas correctas
 
+20. agregar persistencia de idioma
+
+21. alinear a mismo nivel logo e items.
+
+22. mejorar presentacion
+
+23. mover about me abajo de presentacion
+
+24. agregar texto mas descriptivo y vendible a experiencia, poner como agregue valor, no solo describir tareas.
+
+25. agregar seccion de herramientas a experiencia y proyectos.
+
+26. agregar mas espacio entre titulo de secciones y contenido
+
+27. 
+
 
 
 

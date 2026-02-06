@@ -12,8 +12,8 @@ const ExperienceHandler = ({ stack, tasks }: ExperienceHandlerProps): React.Reac
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const components = [
-    <ExperienceStackExpositure stack={stack} />,
     <ExperienceTaskExpositure tasks={tasks} />,
+    <ExperienceStackExpositure stack={stack} />,
   ];
 
   const memoizedHandlePrev = useCallback( 

@@ -11,7 +11,7 @@ const AppBarMenu = ({ navItems, handleDrawerToggle }: AppBarMenuProps): React.Re
   const { t } = useTranslation();
 
   const logoUrl: string = !appTheme ? 
-  "public/icons/personal_logo.png" : 
+  "public/icons/personal_logo_final_version.png" : 
   "public/icons/personal_logo_light.png";
 
   return (

@@ -18,6 +18,8 @@ const ThemedLink = ({ to, children }: ThemedLinkInterface ) => {
       textDecoration: "none",
       fontWeight: 100,
       transition: "color 0.3s ease",
+      display: 'flex',  // si algun estilo se rompe quitar esto
+      alignItems: 'center',   // si algun estilo se rompe quitar esto
       "&:hover": {
         color: theme.custom?.white,
       },
