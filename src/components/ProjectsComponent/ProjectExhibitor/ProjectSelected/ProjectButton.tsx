@@ -11,6 +11,7 @@ const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):R
                 color: theme?.custom?.white,
                 width: { xs: '90%', sm: '30%'},
                 fontSize: theme?.typography?.body2?.fontSize,
+                cursor: disabled ? 'default' : 'pointer',
                 m: '0 auto'
             })}
         >
@@ -21,7 +22,6 @@ const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):R
               alt={'locked_icon'}
               sx={{
                 height: '1.5em',
-                cursor: 'pointer',
                 mr: '1em'
               }}
             />
@@ -34,7 +34,6 @@ const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):R
                   alt={'locked_icon'}
                   sx={{
                     height: '1.5em',
-                    cursor: 'pointer',
                     ml: '1em'
                   }}
                 />
