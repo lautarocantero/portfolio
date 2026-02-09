@@ -1,5 +1,4 @@
 import type { ProjectItemInterface } from "../../typings/types"
-import { TaskEnum } from "../../typings/types/enums"
 import { getStackList } from "../Stack/getStackList"
 
 export const getProjectItems = (): ProjectItemInterface[] => {
@@ -212,7 +211,8 @@ export const getProjectItems = (): ProjectItemInterface[] => {
       icon: "/icons/time-quarter-past-svgrepo-com.svg",
       description: "experience.tennisApp.task.navigation"
     }
-  ]
+  ],
+  inDevelopment: true,
 }
 
     

@@ -31,6 +31,7 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
                 height: 'auto',
                 display: 'flex',
                 justifyContent: 'center',
+                pt: 1,
             })}
         >
             <Box
@@ -52,7 +53,7 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
         <Typography variant="h5" gutterBottom sx={{ textAlign: 'center', mt: 2 }}>
           {t(benefit.title)}
         </Typography>
-        <Typography variant="body2" sx={{ textAlign: 'center' }}>{t(benefit.desc)}</Typography>
+        <Typography variant="body2" sx={(theme: Theme) => ({ textAlign: 'center', borderBottom: `0.1em dotted ${theme?.custom?.white}` })}>{t(benefit.desc)}</Typography>
       </Paper>
     </Box>
   );

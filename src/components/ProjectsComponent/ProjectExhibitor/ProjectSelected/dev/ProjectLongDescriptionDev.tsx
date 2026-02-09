@@ -50,6 +50,7 @@ const ProjectLongDescriptionDevComponent = ({ long_description }: ProjectLongDes
           borderRadius: '1em',
           fontSize: theme?.typography?.body1?.fontSize,
           borderRight: `0.1em solid ${theme?.palette?.primary?.main}`,
+          boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
         }}
       >
         {t(long_description.objectiveDev)}

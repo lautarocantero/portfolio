@@ -9,10 +9,11 @@ const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):R
             sx={(theme: Theme) => ({
                 backgroundColor: disabled ? theme?.palette?.primary?.dark : theme?.palette?.primary?.main,
                 color: theme?.custom?.white,
-                width: { xs: '90%', sm: '30%'},
+                width: "auto",
                 fontSize: theme?.typography?.body2?.fontSize,
                 cursor: disabled ? 'default' : 'pointer',
-                m: '0 auto'
+                m: '0 auto',
+                boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
             })}
         >
             {disabled && 

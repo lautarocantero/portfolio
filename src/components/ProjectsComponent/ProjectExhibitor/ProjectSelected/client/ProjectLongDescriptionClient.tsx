@@ -51,6 +51,7 @@ const ProjectLongDescriptionClientComponent = ({ long_description } : ProjectLon
           borderRadius: '1em',
           fontSize: theme?.typography?.body1?.fontSize,
           borderLeft: `0.1em solid ${theme?.palette?.primary?.main}`,
+          boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
         }}
       >
         {t(long_description.objective)}

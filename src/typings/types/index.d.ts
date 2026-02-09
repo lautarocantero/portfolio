@@ -114,6 +114,7 @@ export type ProjectItemInterface = Pick<
   project_url?: string;
   repo_url?: string;
   stack: ProjectStackInterface[];
+  inDevelopment: boolean;
 };
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
