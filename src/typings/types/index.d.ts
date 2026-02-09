@@ -11,6 +11,7 @@ export type Task = Pick <StackInterface, 'text' | 'icon'> & {
 
 export interface LongDescriptionInterface {
     objective: string,
+    objectiveDev: string,
     tasksDescription: string,
     technologiesDescription: string,
 }
@@ -70,23 +71,50 @@ export interface LogoExperienceInterface {
     url: string,
 }
 
-{/*─────────────────── 🔎 Proyecto 🔎 ───────────────────*/}
+/*─────────────────── 🔎 Proyecto 🔎 ───────────────────*/
 
-interface projectStackInterface {
+import type { BaseItemInterface } from "../../typings/types";
+import type { StackInterface } from "../../typings/types/enums";
+
+export interface ProjectStackInterface {
   step: string;       
   description: string;
   stack: StackInterface[]; 
 }
 
+export interface BenefitInterface {
+  title: string;
+  desc: string;
+  logo: string;
+}
+
+export interface RoadmapStepInterface {
+  title: string;
+  desc: string;
+  gallery_urls: string[],
+}
+
+export interface LongDescriptionInterface {
+  title: string;
+  note: string;
+  objective: string;
+  tasksDescription: string;
+  technologiesDescription: string;
+  benefits?: BenefitInterface[]; 
+  reasons?: string[];
+  roadmap?: RoadmapStepInterface[];
+  project_url: string,
+  design_url: string,
+}
 
 export type ProjectItemInterface = Pick<
-    BaseItemInterface,
-    '_id' | 'gallery_urls' | 'title' | 'tasks' | 'short_description' | 'long_description'
+  BaseItemInterface,
+  "_id" | "gallery_urls" | "title" | "tasks" | "short_description" | "long_description"
 > & {
-    project_url?: string,
-    repo_url?: string,
-    stack: projectStackInterface[],
-}
+  project_url?: string;
+  repo_url?: string;
+  stack: ProjectStackInterface[];
+};
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 

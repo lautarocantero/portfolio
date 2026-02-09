@@ -1,20 +1,21 @@
 import { useCallback, useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ProjectDescriptionClientComponent from "./ProjectDescriptionClient";
-import ProjectDescriptionDevComponent from "./dev/ProjectDescriptionDev";
 import { handleNext, handlePrev } from "../../../../helpers/Experience/handleExperienceNavigation";
 import { Box, IconButton } from "@mui/material";
 import type { ProjectDescriptionHandlerProps } from "../../../../typings/reactComponents";
+import ProjectLongDescriptionClientComponent from "./client/ProjectLongDescriptionClient";
+import ProjectLongDescriptionDevComponent from "./dev/ProjectLongDescriptionDev";
 
 
-const ProjectDescriptionHandlerComponent = ({stack}: ProjectDescriptionHandlerProps ):React.ReactNode => {
+const ProjectDescriptionHandlerComponent = ({ long_description}: ProjectDescriptionHandlerProps ):React.ReactNode => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-    const components: React.ReactNode[] = [
-        <ProjectDescriptionClientComponent/>,
-        <ProjectDescriptionDevComponent stack={stack} />,
-    ]
+    const components: React.ReactNode[] =  
+    [
+      <ProjectLongDescriptionClientComponent long_description={long_description}/>,
+      <ProjectLongDescriptionDevComponent long_description={long_description}/>
+    ];
 
     const memoizedHandlePrev = useCallback( 
       () => handlePrev({ setCurrentIndex, components }
@@ -45,7 +46,7 @@ const ProjectDescriptionHandlerComponent = ({stack}: ProjectDescriptionHandlerPr
                  display: currentIndex === 0 ? "none" : "block",
                  left: { xs: "-0.3em", sm: "1em", md: '2em' },
                  position: "absolute",
-                 top: "1.2em",
+                 top: "4em",
                  transform: "translateY(-50%)",
                })}
              >
@@ -58,7 +59,7 @@ const ProjectDescriptionHandlerComponent = ({stack}: ProjectDescriptionHandlerPr
                  display: currentIndex === 0 ? "block" : "none",
                  position: "absolute",
                  right: { xs: "-0.3em", sm: "1em", md: '2em' },
-                 top: "1.2em",
+                 top: "4em",
                  transform: "translateY(-50%)",
                })}
              >

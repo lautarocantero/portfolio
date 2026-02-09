@@ -4,101 +4,219 @@ import { getStackList } from "../Stack/getStackList"
 
 export const getProjectItems = (): ProjectItemInterface[] => {
     return [
-        {
-          _id: 'proj-kiosco-app',
-          gallery_urls: [
-            'public/images/projects/kiosco/kiosco_login_dark.png',
-            'public/images/projects/kiosco/kiosco_cart.png',
-            'public/images/projects/kiosco/kiosco_header.png',
-            'public/images/projects/kiosco/kiosco_login_white.png',
-            'public/images/projects/kiosco/kiosco_product_dialog.png',
-            'public/images/projects/kiosco/kiosco_products_.png',
-            'public/images/projects/kiosco/kiosco_ticket.png',
-          ],
-          title: 'projects.kiosco.title',
-          stack: [
-            {
-              step: "Planteamiento inicial",
-              description: "Wireframes y conceptos de diseño",
-              stack: getStackList([
-                "Figma"
-              ])
-            },
-            {
-              step: "Creación del proyecto",
-              description: "Inicialización del repositorio y configuración del entorno",
-              stack: getStackList([
-                "Git"
-              ])
-            },
-            {
-              step: "Desarrollo Backend",
-              description: "Construcción de API",
-              stack: getStackList([
-                "Node.js"
-              ])
-            },
-            {
-              step: "Desarrollo Frontend",
-              description: "Creación de la interfaz e integración",
-              stack: getStackList([
-                "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Redux"
-              ])
-            },
-            {
-              step: "Testing y QA",
-              description: "Asegurar calidad y confiabilidad",
-              stack: getStackList([
-                "Jest"
-              ])
-            }
-          ],
-          short_description: "projects.kiosco.description",
-          long_description: {
-            objective: "Facilitar la gestión de productos, ventas e inventario en pequeños negocios y tiendas de abarrotes mediante una aplicación web simple y responsive, complementada con un backend robusto para autenticación y operaciones.",
-            tasksDescription: "El sistema permitirá registrar y listar productos, controlar ventas diarias, gestionar inventario básico y, en futuras versiones, generar reportes y estadísticas. El backend provee una API RESTful para autenticación, gestión de vendedores, productos, proveedores y ventas, con validación de datos, hash de contraseñas y tokens JWT. Actualmente se encuentra en fase inicial, con arquitectura y primeras funcionalidades en construcción. El roadmap incluye integración con bases de datos (Firebase, Supabase o MongoDB), testing de endpoints y reportes avanzados.",
-            technologiesDescription: "El frontend está desarrollado con React, TypeScript y MUI, siguiendo los principios de Screaming Architecture. El backend utiliza Node.js, Express y TypeScript, junto con bcrypt para seguridad, db-local como base de datos de desarrollo y JWT para autenticación. La estructura se organiza en torno al dominio (ventas, productos, inventario, usuarios) y no a las tecnologías, garantizando claridad y escalabilidad."
-          },
-          tasks: [
-            {
-              text: TaskEnum.FixBrokenStyles,
-              icon: "/icons/repair-svgrepo-com.svg",
-              description: "experience.tennisApp.task.fixStyles",
-            },
-            {
-              text: TaskEnum.RestructureViews,
-              icon: "/icons/eye-svgrepo-com.svg",
-              description: "experience.tennisApp.task.restructureViews",
-            },
-            {
-              text: TaskEnum.FormValidation,
-              icon: "/icons/design-validation-svgrepo-com.svg",
-              description: "experience.tennisApp.task.formValidation",
-            },
-            {
-              text: TaskEnum.ComponentDocumentation,
-              icon: "/icons/doc-svgrepo-com.svg",
-              description: "experience.tennisApp.task.documentation",
-            },
-            {
-              text: TaskEnum.UseOfI18n,
-              icon: "icons/lang-svgrepo-com.svg",
-              description: "experience.tennisApp.task.i18n",
-            },
-            {
-              text: TaskEnum.EndpointCreation,
-              icon: "/icons/link-alt-1-svgrepo-com.svg",
-              description: "experience.tennisApp.task.endpoints",
-            },
-            {
-              text: TaskEnum.NavigationOptimization,
-              icon: "/icons/time-quarter-past-svgrepo-com.svg",
-              description: "experience.tennisApp.task.navigation",
-            },
-          ],
-          project_url: "https://github.com/lautarocantero/KioscoApp/tree/main",
-        },
-        // {
+      {
+  _id: "proj-kiosco-app",
+  gallery_urls: [
+    "public/images/projects/kiosco/kiosco_login_dark.png",
+    "public/images/projects/kiosco/kiosco_cart.png",
+    "public/images/projects/kiosco/kiosco_header.png",
+    "public/images/projects/kiosco/kiosco_login_white.png",
+    "public/images/projects/kiosco/kiosco_product_dialog.png",
+    "public/images/projects/kiosco/kiosco_products_.png",
+    "public/images/projects/kiosco/kiosco_ticket.png"
+  ],
+  title: "projects.kiosco.title",
+  stack: [
+    {
+      step: "Planteamiento inicial",
+      description: "projects.kiosco.stack.planteamiento",
+      stack: getStackList(["Figma"])
+    },
+    {
+      step: "Creación del proyecto",
+      description: "projects.kiosco.stack.creacion",
+      stack: getStackList(["Git"])
+    },
+    {
+      step: "Desarrollo Backend",
+      description: "projects.kiosco.stack.backend",
+      stack: getStackList(["Node.js"])
+    },
+    {
+      step: "Desarrollo Frontend",
+      description: "projects.kiosco.stack.frontend",
+      stack: getStackList([
+        "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Redux"
+      ])
+    },
+    {
+      step: "Testing y QA",
+      description: "projects.kiosco.stack.testing",
+      stack: getStackList(["Jest"])
+    }
+  ],
+  short_description: "projects.kiosco.description",
+  long_description: {
+    title: "projects.kiosco.title",
+    objective: "projects.kiosco.long.objective",
+    objectiveDev: "projects.kiosco.long.objectiveDev",
+    note: "projects.kiosco.long.note",
+    tasksDescription: "projects.kiosco.long.tasksDescription",
+    technologiesDescription: "projects.kiosco.long.technologiesDescription",
+    benefits: [
+      {
+        title: "projects.kiosco.benefit.products",
+        desc: "projects.kiosco.benefit.products.desc",
+        logo: "/icons/product-svgrepo-com.svg"
+      },
+      {
+        title: "projects.kiosco.benefit.sales",
+        desc: "projects.kiosco.benefit.sales.desc",
+        logo: "/icons/money-svgrepo-com (1).svg"
+      },
+      {
+        title: "projects.kiosco.benefit.inventory",
+        desc: "projects.kiosco.benefit.inventory.desc",
+        logo: "/icons/stock-svgrepo-com (1).svg"
+      },
+      {
+        title: "projects.kiosco.benefit.access",
+        desc: "projects.kiosco.benefit.access.desc",
+        logo: "/icons/device-phone-computer-svgrepo-com.svg"
+      },
+      {
+        title: "projects.kiosco.benefit.ui",
+        desc: "projects.kiosco.benefit.ui.desc",
+        logo: "/icons/basic-ui-computer-17-svgrepo-com.svg"
+      }
+    ],
+    reasons: [
+      "projects.kiosco.reason.smallBusiness",
+      "projects.kiosco.reason.saveTime",
+      "projects.kiosco.reason.clearInfo",
+      "projects.kiosco.reason.scalable"
+    ],
+    roadmap: [
+      {
+        title: "projects.kiosco.roadmap.design.title",
+        desc: "projects.kiosco.roadmap.design.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/first-design-1.png",
+          "/images/projects/kiosco/dev/first-design-2.png",
+          "/images/projects/kiosco/dev/first-design-3.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.model.title",
+        desc: "projects.kiosco.roadmap.model.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/database-1.png",
+          "/images/projects/kiosco/dev/database-2.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.endpoints.title",
+        desc: "projects.kiosco.roadmap.endpoints.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/first-endpoints-1.png",
+          "/images/projects/kiosco/dev/first-endpoints-2.png",
+          "/images/projects/kiosco/dev/first-endpoints-3.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.frontend.title",
+        desc: "projects.kiosco.roadmap.frontend.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/kiosco_header.png",
+          "/images/projects/kiosco/kiosco_products_.png",
+          "/images/projects/kiosco/kiosco_cart.png",
+          "/images/projects/kiosco/kiosco_ticket.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.auth.title",
+        desc: "projects.kiosco.roadmap.auth.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Jwt-1.png",
+          "/images/projects/kiosco/dev/Jwt-2.png",
+          "/images/projects/kiosco/dev/Jwt-3.png",
+          "/images/projects/kiosco/dev/Jwt-4.png",
+          "/images/projects/kiosco/kiosco_login_dark.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.api.title",
+        desc: "projects.kiosco.roadmap.api.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Api-1.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.screens.title",
+        desc: "projects.kiosco.roadmap.screens.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Other-screens-1.png",
+          "/images/projects/kiosco/dev/Other-screens-2.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.docs.title",
+        desc: "projects.kiosco.roadmap.docs.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Documentation-1.png",
+          "/images/projects/kiosco/dev/Documentation-2.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.testing.title",
+        desc: "projects.kiosco.roadmap.testing.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Testing-1.png",
+          "/images/projects/kiosco/dev/Testing-2.png"
+        ]
+      },
+      {
+        title: "projects.kiosco.roadmap.deploy.title",
+        desc: "projects.kiosco.roadmap.deploy.desc",
+        gallery_urls: [
+          "/images/projects/kiosco/dev/Deploy-1.png"
+        ]
+      }
+    ],
+    project_url: "https://github.com/lautarocantero/KioscoApp/tree/main",
+    design_url: "https://www.figma.com/site/6FSXyXcr6KnPZryIMJcvpT/Kiosco-App?node-id=0-1&p=f&t=DQAjdt0TelYNF8sS-0"
+  },
+  tasks: [
+    {
+      text: "TaskEnum.FixBrokenStyles",
+      icon: "/icons/repair-svgrepo-com.svg",
+      description: "experience.tennisApp.task.fixStyles"
+    },
+    {
+      text: "TaskEnum.RestructureViews",
+      icon: "/icons/eye-svgrepo-com.svg",
+      description: "experience.tennisApp.task.restructureViews"
+    },
+    {
+      text: "TaskEnum.FormValidation",
+      icon: "/icons/design-validation-svgrepo-com.svg",
+      description: "experience.tennisApp.task.formValidation"
+    },
+    {
+      text: "TaskEnum.ComponentDocumentation",
+      icon: "/icons/doc-svgrepo-com.svg",
+      description: "experience.tennisApp.task.documentation"
+    },
+    {
+      text: "TaskEnum.UseOfI18n",
+      icon: "icons/lang-svgrepo-com.svg",
+      description: "experience.tennisApp.task.i18n"
+    },
+    {
+      text: "TaskEnum.EndpointCreation",
+      icon: "/icons/link-alt-1-svgrepo-com.svg",
+      description: "experience.tennisApp.task.endpoints"
+    },
+    {
+      text: "TaskEnum.NavigationOptimization",
+      icon: "/icons/time-quarter-past-svgrepo-com.svg",
+      description: "experience.tennisApp.task.navigation"
+    }
+  ]
+}
+
+    
+      
             // _id: 'proj-market-ropa',
             // gallery_urls: [
                 // 'public/images/projects/clothes-market/market-ropa-index.png',

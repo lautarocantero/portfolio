@@ -160,11 +160,26 @@ export type ProjectSelectedGalleryProps = Pick<BaseItemInterface, 'gallery_urls'
 
 export type ProjectDescriptionTitleProps = Pick<BaseItemInterface, 'title'>
 
-export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description'> & {
+export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description' | 'long_description' > & {
     stack: projectStackInterface[],
 }
 
-export type ProjectDescriptionHandlerProps = Pick<ProjectItemInterface, 'stack'> 
+export type ProjectDescriptionHandlerProps = Pick<ProjectItemInterface, 'stack' | 'long_description'>
+
+export interface BenefitInterface {
+  title: string;
+  desc: string;
+  logo: string;
+}
+
+
+export interface BenefitCardProps {
+  benefit: BenefitInterface;
+}
+
+export interface ProjectButtonsProps {
+    long_description: LongDescriptionInterface;
+}
 
 export interface ProjectDescriptionItemProps {
     text: string;
@@ -182,6 +197,10 @@ export type ProjectDescriptionDevProps = Pick<ProjectItemInterface, 'stack'>
 export interface HowWasMadeProps {
     title: string,
     stack: projectStackInterface,
+}
+
+export interface ProjectLongDescriptionDevProps {
+  long_description: LongDescriptionInterface;
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
