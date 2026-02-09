@@ -65,6 +65,10 @@ Full Stack Developer
 
 to do:
 
+0.-2 Refactorizar project exhibitor
+
+0.-1 Agregar al titulo de devCard, logos de que se usa, por ejemplo, si es solo la planeacion de figma, poner logo de figma
+
 0.0. Agregar visor de imagenes
 
 0.1. Agregar a proyecto kisco 'en desarrollo'
