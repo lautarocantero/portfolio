@@ -107,7 +107,7 @@
 "projects.kiosco.long.objective": "Facilitates product, sales, and inventory management in small businesses and convenience stores through a simple web application",
 "projects.kiosco.long.objectiveDev": "KioscoApp was conceived as a web application so that anyone, even those without a desktop computer, could access it from their phone or tablet. The roadmap reflects how the idea evolved from the first sketches to the full integration of frontend and backend, always aiming to provide an accessible and scalable solution.",
 "projects.kiosco.long.note": "Soon you will be able to enjoy our application on your desktop!",
-"projects.kiosco.long.tasksDescription": "The system will allow registering and listing products...",
+"projects.kiosco.long.tasksDescription": "The system will allow registering and listing products, managing real-time sales, administering users and providers, and generating detailed reports.",
 "projects.kiosco.long.technologiesDescription": "The frontend is developed with React...",
 "projects.kiosco.benefit.products": "Full control of your products",
 "projects.kiosco.benefit.products.desc": "Register and organize your merchandise in seconds: prices, categories, and stock always up to date.",
