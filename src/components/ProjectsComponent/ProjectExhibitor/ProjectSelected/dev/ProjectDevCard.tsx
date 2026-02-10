@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Paper, Typography, useTheme} from "@mui/material";
-import type { RoadmapStepInterface } from "../../../../../typings/types";
+import type { RoadmapStepType } from "../../../../../typings/types";
 import CarouselComponent from "../../../../shared/CarouselComponent";
 import { useTranslation } from "react-i18next";
 
 interface DevelopmentCardProps {
-  development: RoadmapStepInterface;
+  development: RoadmapStepType;
   index: number;
 }
 

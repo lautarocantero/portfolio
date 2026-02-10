@@ -18,7 +18,7 @@ export enum TaskEnum {
   AxiosCRUDs = "task.axiosCRUDs",
 }
 
-export enum projectItemTypeEnum {
+export enum ProjectEntryTypeEnum {
   feature = 'feature',
   benefit = 'benefit',
 }

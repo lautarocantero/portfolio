@@ -4,7 +4,7 @@ import CarouselComponent from "../../../shared/CarouselComponent";
 import ProjectDescription from "./ProjectDescription";
 
 const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):React.ReactNode => {
-    const { gallery_urls, short_description,long_description, stack, inDevelopment } = selectedItem;
+    const { gallery_urls,long_description, stack, inDevelopment } = selectedItem;
 
     return(
         <Box
@@ -34,7 +34,6 @@ const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):Rea
         >
           <CarouselComponent gallery_urls={gallery_urls} bigScreen />
           <ProjectDescription
-            short_description={short_description}
             long_description={long_description}
             stack={stack}
           />

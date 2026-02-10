@@ -1,7 +1,7 @@
-import type { ProjectItemInterface } from "../../typings/types"
+import type { ProjectEntryType } from "../../typings/types"
 import { getStackList } from "../Stack/getStackList"
 
-export const getProjectItems = (): ProjectItemInterface[] => {
+export const getProjectEntrys = (): ProjectEntryType[] => {
     return [
       {
         _id: "proj-kiosco-app",
@@ -44,7 +44,6 @@ export const getProjectItems = (): ProjectItemInterface[] => {
             stack: getStackList(["Jest"])
           }
         ],
-        short_description: "projects.kiosco.description",
         long_description: {
           title: "projects.kiosco.title",
           objective: "projects.kiosco.long.objective",
@@ -250,7 +249,6 @@ export const getProjectItems = (): ProjectItemInterface[] => {
             // stack: getStackList(["Jest"])
           // }
         // ],
-        // short_description: "Tienda online minimalista para comprar ropa.",
         // long_description: {
           // title: "Market de Ropa",
           // objective: "Ofrecer una experiencia simple y clara para comprar ropa online.",

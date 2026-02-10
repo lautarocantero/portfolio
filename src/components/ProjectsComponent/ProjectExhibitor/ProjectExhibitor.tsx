@@ -1,16 +1,16 @@
 import { Box, type Theme } from "@mui/material";
-import { getProjectItems } from "../../../helpers/Projects/getProjectItems";
-import type { ProjectItemInterface } from "../../../typings/types";
+import { getProjectEntrys } from "../../../helpers/Projects/getProjectItems";
+import type { ProjectEntryType } from "../../../typings/types";
 import ProjectExhibitorSelectedItem from "./ProjectSelected/ProjectExhibitorSelectedItem";
 
 
 const ProjectExhibitorcomponent = ():React.ReactNode => {
-    const projectsEntries: ProjectItemInterface[] = getProjectItems();
+    const projectsEntries: ProjectEntryType[] = getProjectEntrys();
 
     return(
         <>
             {
-                projectsEntries?.map((project: ProjectItemInterface) => (
+                projectsEntries?.map((project: ProjectEntryType) => (
                     <Box
                         component={'div'}
                         sx={(theme: Theme) => ({

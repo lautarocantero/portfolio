@@ -1,4 +1,6 @@
 import type { StackInterface } from "../reactComponents";
+import type { BaseItemInterface } from "../../typings/types";
+import type { StackInterface } from "../../typings/types/enums";
 
 export interface StackInterface {
     text: string,
@@ -73,44 +75,46 @@ export interface LogoExperienceInterface {
 
 /*─────────────────── 🔎 Proyecto 🔎 ───────────────────*/
 
-import type { BaseItemInterface } from "../../typings/types";
-import type { StackInterface } from "../../typings/types/enums";
-
-export interface ProjectStackInterface {
+interface ProjectStackInterface {
   step: string;       
   description: string;
   stack: StackInterface[]; 
 }
 
-export interface BenefitInterface {
-  title: string;
-  desc: string;
-  logo: string;
+export type BenefitType = Pick<LogoExperienceInterface, 
+    'title' | 
+    'logo' >  & {
+        desc: string;
 }
 
-export interface RoadmapStepInterface {
-  title: string;
-  desc: string;
-  gallery_urls: string[],
+export type RoadmapStepType = Pick<BaseItemInterface,  
+    "title" | 
+    "gallery_urls"> & {
+        desc: string;
 }
 
-export interface LongDescriptionInterface {
-  title: string;
-  note: string;
-  objective: string;
-  tasksDescription: string;
-  technologiesDescription: string;
-  benefits?: BenefitInterface[]; 
-  reasons?: string[];
-  roadmap?: RoadmapStepInterface[];
-  project_url: string,
-  design_url: string,
+export type ProjectLongDescriptionType  = Pick <LongDescriptionInterface, 
+    "objective" | 
+    "tasksDescription" | 
+    "technologiesDescription"> & {
+        title: string;
+        objectiveDev: string;
+        note: string;
+        benefits?: BenefitType[]; 
+        reasons?: string[];
+        roadmap?: RoadmapStepType[];
+        project_url: string,
+        design_url: string,
 }
 
-export type ProjectItemInterface = Pick<
+export type ProjectEntryType = Pick<
   BaseItemInterface,
-  "_id" | "gallery_urls" | "title" | "tasks" | "short_description" | "long_description"
+  "_id" | 
+  "gallery_urls" | 
+  "title" | 
+  "tasks"
 > & {
+  long_description: ProjectLongDescriptionType;
   project_url?: string;
   repo_url?: string;
   stack: ProjectStackInterface[];

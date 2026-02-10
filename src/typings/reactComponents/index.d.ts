@@ -1,7 +1,7 @@
 import type React from "react";
-import type { AboutLinkInterface, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectItemInterface, projectStackInterface, StackInterface, Task } from "../types";
+import type { AboutLinkInterface, BenefitType, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectEntryType, ProjectLongDescriptionType, projectStackInterface, StackInterface, Task } from "../types";
 import type { SetStateAction } from "react";
-import type { projectItemTypeEnum } from "../types/enums";
+import type { ProjectEntryTypeEnum } from "../types/enums";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
 
@@ -147,44 +147,33 @@ export type  ExperienceItemButtonProps = Pick<ExperienceDetailProps, 'isExpanded
 
 {/*─────────────────── 🔎 Proyectos 🔎 ───────────────────*/}
 
-export type ProjectItemProps = Pick<
-    BaseItemInterface,
-    'title' | 'stack' | 'short_description' | 'gallery_urls'
->
-
 export interface ProjectSelectedProps {
-    selectedItem: ProjectItemInterface,
+    selectedItem: ProjectEntryType,
 };
 
 export type ProjectSelectedGalleryProps = Pick<BaseItemInterface, 'gallery_urls'>
 
 export type ProjectDescriptionTitleProps = Pick<BaseItemInterface, 'title'>
 
-export type ProjectDescriptionProps = Pick<BaseItemInterface , 'short_description' | 'long_description' > & {
+export type ProjectDescriptionProps = Pick<BaseItemInterface , 'long_description' > & {
     stack: projectStackInterface[],
 }
 
-export type ProjectDescriptionHandlerProps = Pick<ProjectItemInterface, 'stack' | 'long_description'>
-
-export interface BenefitInterface {
-  title: string;
-  desc: string;
-  logo: string;
-}
+export type ProjectDescriptionHandlerProps = Pick<ProjectEntryType, 'stack' | 'long_description'>
 
 
 export interface BenefitCardProps {
-  benefit: BenefitInterface;
+  benefit: BenefitType;
 }
 
 export interface ProjectButtonsProps {
-    long_description: LongDescriptionInterface;
+    long_description: ProjectLongDescriptionType;
 }
 
 export interface ProjectDescriptionItemProps {
     text: string;
     logo: string;
-    type: projectItemTypeEnum;
+    type: ProjectEntryTypeEnum;
 }
 
 export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
@@ -192,15 +181,10 @@ export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
     disabled?: boolean;
 }
 
-export type ProjectDescriptionDevProps = Pick<ProjectItemInterface, 'stack'> 
-
-export interface HowWasMadeProps {
-    title: string,
-    stack: projectStackInterface,
-}
+export type ProjectDescriptionDevProps = Pick<ProjectEntryType, 'stack'> 
 
 export interface ProjectLongDescriptionDevProps {
-  long_description: LongDescriptionInterface;
+  long_description: ProjectLongDescriptionType;
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
