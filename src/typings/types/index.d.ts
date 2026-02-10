@@ -105,6 +105,7 @@ export type ProjectLongDescriptionType  = Pick <LongDescriptionInterface,
         roadmap?: RoadmapStepType[];
         project_url: string,
         design_url: string,
+        deploy_url: string,
 }
 
 export type ProjectEntryType = Pick<
@@ -120,6 +121,12 @@ export type ProjectEntryType = Pick<
   stack: ProjectStackInterface[];
   inDevelopment: boolean;
 };
+
+export type ProjectButtonType = {
+    text: string,
+    onClick: () => void,
+    disabled?: boolean,
+}
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 

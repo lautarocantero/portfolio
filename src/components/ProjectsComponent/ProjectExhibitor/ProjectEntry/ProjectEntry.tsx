@@ -4,8 +4,9 @@ import type { ProjectSelectedProps } from "../../../../typings/reactComponents";
 import type { ProjectLongDescriptionType } from "../../../../typings/types";
 import CarouselComponent from "../../../shared/CarouselComponent";
 import ProjectDescription from "./ProjectDescription";
+import ProjectButtonsComponent from "./ProjectButtons";
 
-const ProjectExhibitorSelectedItem = ({projectSelected}: ProjectSelectedProps ):React.ReactNode => {
+const ProjectEntry = ({projectSelected}: ProjectSelectedProps ):React.ReactNode => {
     const { t } = useTranslation();
 
     const 
@@ -43,8 +44,9 @@ const ProjectExhibitorSelectedItem = ({projectSelected}: ProjectSelectedProps ):
           <ProjectDescription
             long_description={long_description}
           />
+          <ProjectButtonsComponent long_description={long_description}/>
         </Box>
     )
 };
         
-export default ProjectExhibitorSelectedItem;
+export default ProjectEntry;

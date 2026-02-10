@@ -133,9 +133,9 @@
   "projects.kiosco.roadmap.deploy.desc": "Con las pruebas y validaciones completadas, el siguiente objetivo es preparar el despliegue de la aplicación. Aunque el proyecto aún se encuentra en desarrollo, la arquitectura ya está lista para ser publicada en un entorno productivo. Muy pronto podrá ser deployado, ofreciendo a los usuarios una solución accesible desde cualquier dispositivo.",
   "projects.kiosco.why.choose": "¿Por qué elegir",
   "projects.kiosco.long.historyDev": "Historia y desarrollo",
-  "projects.kiosco.buttons.code": "Ver código",
-  "projects.kiosco.buttons.design": "Ver diseño en Figma",
-  "projects.kiosco.buttons.page": "Ir a la página",
+  "projects.buttons.code": "Ver código",
+  "projects.buttons.design": "Ver diseño en Figma",
+  "projects.buttons.page": "Ir a la página",
 
 
 

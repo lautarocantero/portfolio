@@ -1,18 +1,12 @@
 import { Box, type Theme } from "@mui/material";
 import type { ProjectDescriptionProps } from "../../../../typings/reactComponents";
-import ProjectButtonsComponent from "./ProjectButtons";
 import ProjectDescriptionHandlerComponent from "./ProjectDescriptionHandler";
 
 
 const ProjectDescription = ({ long_description }: ProjectDescriptionProps ):React.ReactNode => {
 
     return(
-        <Box 
-            component="div" 
-            sx={{ 
-                minHeight: '20em',
-                width: '100%', 
-            }} >
+        <>
             <Box
                 component={'div'}
                 sx={(theme: Theme) => ({
@@ -24,8 +18,7 @@ const ProjectDescription = ({ long_description }: ProjectDescriptionProps ):Reac
             >
             </Box>
             <ProjectDescriptionHandlerComponent long_description={long_description} />
-            <ProjectButtonsComponent long_description={long_description}/>
-        </Box>
+        </>
     )
 };
         

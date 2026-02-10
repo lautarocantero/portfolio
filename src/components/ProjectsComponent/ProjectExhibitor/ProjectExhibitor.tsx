@@ -1,7 +1,7 @@
 import { Box, type Theme } from "@mui/material";
 import { getProjectEntrys } from "../../../helpers/Projects/getProjectItems";
 import type { ProjectEntryType } from "../../../typings/types";
-import ProjectExhibitorSelectedItem from "./ProjectSelected/ProjectExhibitorSelectedItem";
+import ProjectEntry from "./ProjectEntry/ProjectEntry";
 
 
 const ProjectExhibitorcomponent = ():React.ReactNode => {
@@ -21,7 +21,7 @@ const ProjectExhibitorcomponent = ():React.ReactNode => {
                             width: '95%',
                         })}
                     >
-                        <ProjectExhibitorSelectedItem projectSelected={project}/>
+                        <ProjectEntry projectSelected={project}/>
                     </Box>
                 ))
             }

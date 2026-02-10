@@ -172,7 +172,8 @@ export const getProjectEntrys = (): ProjectEntryType[] => {
             }
           ],
           project_url: "https://github.com/lautarocantero/KioscoApp/tree/main",
-          design_url: "https://www.figma.com/site/6FSXyXcr6KnPZryIMJcvpT/Kiosco-App?node-id=0-1&p=f&t=DQAjdt0TelYNF8sS-0"
+          design_url: "https://www.figma.com/site/6FSXyXcr6KnPZryIMJcvpT/Kiosco-App?node-id=0-1&p=f&t=DQAjdt0TelYNF8sS-0",
+          deploy_url: ""
         },
         tasks: [
           {

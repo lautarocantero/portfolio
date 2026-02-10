@@ -146,9 +146,9 @@
   "projects.kiosco.roadmap.deploy.desc": "With tests and validations completed, the next goal is to prepare the application deployment. Although the project is still in development, the architecture is already ready to be published in a production environment. Very soon it will be deployed, offering users a solution accessible from any device.",
   "projects.kiosco.why.choose": "Why choose",
   "projects.kiosco.long.historyDev": "History and development",
-  "projects.kiosco.buttons.code": "View code",
-  "projects.kiosco.buttons.design": "View design in Figma",
-  "projects.kiosco.buttons.page": "Go to page",
+  "projects.buttons.code": "View code",
+  "projects.buttons.design": "View design in Figma",
+  "projects.buttons.page": "Go to page",
 
 
   "skills.title": "Skills",
