@@ -4,7 +4,7 @@ import ContactComponent from "../components/Contact/ContactComponent";
 import ExperienceTab from "../components/ExperienceTab/ExperienceTab";
 import PresentationComponent from "../components/Presentation/Presentation";
 import PreviousJobs from "../components/PreviousJobs/PreviousJobs";
-import ProjectsComponent from "../components/ProjectsComponent/ProjectsComponent";
+import ProjectsSection from "../components/ProjectsComponent/ProjectsSection";
 import SimpleSnackbar from "../components/shared/snackbar/SnackBarComponent";
 import SimpleDialog from "../components/SimpleDialog/SimpleDialog";
 import StackComponent from "../components/StackComponent/StackComponent";
@@ -18,7 +18,7 @@ const PortfolioPage = () => {
             <PresentationComponent />
             <PreviousJobs />
             <ExperienceTab />
-            <ProjectsComponent />
+            <ProjectsSection />
             <StackComponent />
             <AboutMeComponent />
             <ContactComponent />

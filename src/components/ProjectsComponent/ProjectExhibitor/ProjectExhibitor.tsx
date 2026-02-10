@@ -5,12 +5,12 @@ import ProjectExhibitorSelectedItem from "./ProjectSelected/ProjectExhibitorSele
 
 
 const ProjectExhibitorcomponent = ():React.ReactNode => {
-    const projectsItems: ProjectItemInterface[] = getProjectItems();
+    const projectsEntries: ProjectItemInterface[] = getProjectItems();
 
     return(
         <>
             {
-                projectsItems?.map((project: ProjectItemInterface) => (
+                projectsEntries?.map((project: ProjectItemInterface) => (
                     <Box
                         component={'div'}
                         sx={(theme: Theme) => ({

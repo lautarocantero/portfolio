@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import ProjectExhibitorcomponent from "./ProjectExhibitor/ProjectExhibitor";
 
-const ProjectsComponent = (): React.ReactNode => {
+const ProjectsSection = (): React.ReactNode => {
     const { t } = useTranslation();
 
     return (
@@ -41,4 +41,4 @@ const ProjectsComponent = (): React.ReactNode => {
     )
 }
 
-export default ProjectsComponent;
+export default ProjectsSection;
