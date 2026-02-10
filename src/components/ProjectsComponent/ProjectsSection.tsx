@@ -2,9 +2,12 @@ import { Box, Typography, type Theme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Element } from "react-scroll";
 import ProjectExhibitorcomponent from "./ProjectExhibitor/ProjectExhibitor";
+import { useMemo } from "react";
 
 const ProjectsSection = (): React.ReactNode => {
     const { t } = useTranslation();
+
+    const title = useMemo(() => t("projects.title"), [t]);
 
     return (
         <Box
@@ -23,7 +26,7 @@ const ProjectsSection = (): React.ReactNode => {
                         textAlign: 'center',
                     })}
                 >
-                    {t("projects.title")}
+                    {title}
                 </Typography>
                 <Box    /*─────────────────── 🔎 Fondo violeta de la sección 🔎 ───────────────────*/
                     sx={(theme: Theme) => ({

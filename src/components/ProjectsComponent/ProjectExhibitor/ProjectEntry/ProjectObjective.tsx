@@ -1,4 +1,4 @@
-import { minor, Typography, type Theme } from "@mui/material";
+import { Typography, type Theme } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import type { ProjectObjectiveProps } from "../../../../typings/reactComponents";
 
