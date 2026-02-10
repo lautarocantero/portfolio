@@ -1,6 +1,6 @@
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { Box, IconButton, type Theme } from "@mui/material";
+import { alpha, Box, IconButton, type Theme } from "@mui/material";
 import React, { useCallback, useState } from "react";
 import { handleNext, handlePrev } from "../../helpers/shared/handleCarouselNavigation";
 import type { CarouselProps } from "../../typings/reactComponents";
@@ -47,7 +47,7 @@ const CarouselComponent = ({ gallery_urls, bigScreen } : CarouselProps ): React.
         onClick={memoizedHandlePrev}
         sx={(theme: Theme) => ({
           "&:hover": { backgroundColor: "rgba(0,0,0,0.6)" },
-          backgroundColor: theme?.palette?.primary.main,
+          backgroundColor: alpha(theme?.custom?.backgroundDark,0.10),
           color: "white",
           left: "0.5em",
           position: "absolute",
@@ -63,7 +63,7 @@ const CarouselComponent = ({ gallery_urls, bigScreen } : CarouselProps ): React.
         onClick={memoizedHandleNext}
         sx={(theme: Theme) => ({
           "&:hover": { backgroundColor: "rgba(0,0,0,0.6)" },
-          backgroundColor: theme?.palette?.primary.main,
+          backgroundColor: alpha(theme?.custom?.backgroundDark,0.10),
           color: "white",
           position: "absolute",
           right: "0.5em",

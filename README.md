@@ -63,83 +63,46 @@ yarn dev
 Lautaro Nicolás Cantero  
 Full Stack Developer
 
-to do:
+# To Do
 
-0.-2 Refactorizar project exhibitor
+- [1] Refactorizar project exhibitor  
+- [2] Agregar al título de devCard los logos de las herramientas usadas (ej: si es solo planeación en Figma, poner logo de Figma)  
+- [3] Agregar visor de imágenes  
+- [4] Hacer que el stack funcione, filtrando proyectos y experiencia según tecnologías usadas  
+  - [4.1] Modificar estilo para que parezca un portfolio/caja de herramientas  
+  - [4.2] Agregar botón descriptivo a Stack para que gente no técnica entienda qué ve:  
+    - Lenguajes: HTML5, CSS3, JavaScript, TypeScript, C#, PHP  
+    - Frameworks/Librerías UI: React, Bootstrap, Tailwind, Sass  
+    - Gestión de estado: Redux  
+    - Backend/DB: Node.js, MongoDB, Firebase  
+    - Testing: Jest  
+    - Herramientas: Git, GitKraken, Linux, Figma  
+- [5] Agregar información al “ver más” de sobre mí  
+  - [5.1] Agregar fotos más profesionales  
+- [6] Agregar lazy loading a las imágenes e imagen default  
+- [7] En modo claro aplicar letra blanca en áreas necesarias  
+  - [7.1] Poner íconos blancos donde sea necesario  
+- [8] Agregar animación al hacer scroll  
+  - [8.1] Agregar íconos de mouse y navegación  
+- [9] Agregar feedback  
+- [10] Agregar mis scripts de Linux  
+- [11] Agregar transición de modo de luz  
+- [12] Hacer que al clickear en “ver menos” lleve el foco a experiencia  
+- [13] Agregar sombras con sentido (dirección coherente)  
+- [14] Cambiar foto por una profesional  
+- [15] Incorporar dominio  
+- [16] Cambiar diseño de presentación (imagen)  
+- [17] Hacer que pasen objetos por detrás, como en pro ams  
+- [18] Agregar AWS a Codetria experience  
+- [19] Enriquecer textos con diferentes etiquetas  
+- [20] Comprobar accesibilidad y etiquetas semánticas correctas  
+- [21] Agregar persistencia de idioma  
+- [22] Mejorar presentación  
+- [23] Mover “about me” debajo de presentación  
+- [24] Agregar texto más descriptivo y vendible a experiencia (cómo agregaste valor, no solo tareas)  
+- [25] Agregar sección de herramientas a experiencia y proyectos  
+- [26] Agregar más espacio entre título de secciones y contenido  
 
-0.-1 Agregar al titulo de devCard, logos de que se usa, por ejemplo, si es solo la planeacion de figma, poner logo de figma
-
-0.0. Agregar visor de imagenes
-
-0.1. Agregar a proyecto kisco 'en desarrollo'
-   0.0.1. Agregar descripción de cómo hice los proyectos  
-   0.0.2. Agregar botones de ver código y ver proyecto desplegado  
-   0.0.3. Agregar los proyectos que falten  
-
-1. Hacer que el stack funcione, es decir, me filtre en proyectos y experiencia aquellos en donde se usa  
-    1.1 Modificar estilo para que parezca un portfolio/caja de herramientas
-    1.2. Agregar botón descriptivo a Stack, para que gente no técnica entienda qué es lo que ve:
-        Lenguajes: HTML5, CSS3, JavaScript, TypeScript, C#, PHP
-        Frameworks/Librerías UI: React, Bootstrap, Tailwind, Sass
-        Gestión de estado: Redux
-        Backend/DB: Node.js, MongoDB, Firebase
-        Testing: Jest
-        Herramientas: Git, GitKraken, Linux, Figma
-
-2. Agregar información al 'ver más' de sobre mí  
-   2.1. Agregar fotos más profesionales  
-
-3. Agregar lazy loading a las imágenes e imagen default  
-
-4. En el modo claro aplicar letra blanca en áreas donde sea necesario  
-   4.1. Poner iconos blancos donde sea necesario  
-
-5. Agregar animación a medida que se baja en la página  
-   5.1. Agregar iconos de mouse y navegación  
-
-6. Agregar feedback  
-
-7. Agregar mis scripts de Linux  
-
-8. Agregar transición de modo de luz  
-
-9. Hacer que al clickear en ver menos me lleve el foco a experiencia  
-
-10. Agregar sombras con sentido, es decir que sigan una dirección  
-
-11. Cambiar foto por una profesional.
-
-12. Incorporar logo nuevo.
-
-13. Incorporar dominio.
-
-14. Poner logo a la pagina, es decir, el que aparece en la ventana.
-
-15. cambiar diseño de presentacion (imagen)
-
-16. Hacer que pasen objetos por detras, como en pro ams.
-
-17. Agregar aws a codetria experience
-
-18. Enriquecer textos con diferentes etiquetas
-
-19. Comprobar accesibilidad y etiquetas semanticas correctas
-
-20. agregar persistencia de idioma
-
-21. alinear a mismo nivel logo e items.
-
-22. mejorar presentacion
-
-23. mover about me abajo de presentacion
-
-24. agregar texto mas descriptivo y vendible a experiencia, poner como agregue valor, no solo describir tareas.
-
-25. agregar seccion de herramientas a experiencia y proyectos.
-
-26. agregar mas espacio entre titulo de secciones y contenido
-
-27. 
 
 
 
