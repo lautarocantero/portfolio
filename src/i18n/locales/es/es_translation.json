@@ -83,6 +83,7 @@
   "experience.hotelPlatform.task.navigation": "Optimicé la navegación interna para reducir tiempos de carga y mejorar la fluidez de uso, utilizando técnicas como lazy loading y memorización.",
 
   "projects.title": "Proyectos",
+  "projects.in.development": "En desarrollo",
   "projects.kiosco.title": "Kiosco App",
   "projects.kiosco.description": "Gestor de tienda minorista. Especialmente útil para mantener un control de productos vendidos y la venta de cada empleado",
   "projects.kiosco.why.to.use": "Utiliza Kiosco y ...",

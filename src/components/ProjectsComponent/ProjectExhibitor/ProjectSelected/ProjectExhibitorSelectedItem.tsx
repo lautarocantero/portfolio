@@ -1,10 +1,17 @@
 import { Box, type Theme } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import type { ProjectSelectedProps } from "../../../../typings/reactComponents";
+import type { ProjectLongDescriptionType } from "../../../../typings/types";
 import CarouselComponent from "../../../shared/CarouselComponent";
 import ProjectDescription from "./ProjectDescription";
 
 const ProjectExhibitorSelectedItem = ({projectSelected}: ProjectSelectedProps ):React.ReactNode => {
-    const { gallery_urls,long_description, inDevelopment } = projectSelected;
+    const { t } = useTranslation();
+
+    const 
+      { gallery_urls,long_description, inDevelopment } : 
+      {gallery_urls: string[], long_description: ProjectLongDescriptionType, inDevelopment: boolean} 
+    = projectSelected;
 
     return(
         <Box
@@ -12,22 +19,22 @@ const ProjectExhibitorSelectedItem = ({projectSelected}: ProjectSelectedProps ):
           sx={(theme: Theme) => ({
             display: "flex",
             flexDirection: { xs: "column" },
-            width: "100%",
-            position: "relative",
             overflow: "hidden",
+            position: "relative",
+            width: "100%",
             "&::before": inDevelopment
               ? {
-                  content: '"En desarrollo"',
-                  position: "absolute",
-                  top: "2em",
-                  right: "-3em",
                   backgroundColor: theme.palette.primary.main,
                   color: theme.custom?.white,
-                  fontWeight: "bold",
-                  padding: "0.3em 2em",
-                  transform: "rotate(45deg)",
+                  content: `"${t("projects.in.development")}"`,
                   fontSize: theme.typography.body2.fontSize,
+                  fontWeight: "bold",
                   letterSpacing: "1px",
+                  padding: "0.3em 2em",
+                  position: "absolute",
+                  right: "-3em",
+                  top: "2em",
+                  transform: "rotate(45deg)",
                 }
               : {},
           })}
