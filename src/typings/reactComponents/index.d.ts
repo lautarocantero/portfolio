@@ -148,18 +148,12 @@ export type  ExperienceItemButtonProps = Pick<ExperienceDetailProps, 'isExpanded
 {/*─────────────────── 🔎 Proyectos 🔎 ───────────────────*/}
 
 export interface ProjectSelectedProps {
-    selectedItem: ProjectEntryType,
+    projectSelected: ProjectEntryType,
 };
 
-export type ProjectSelectedGalleryProps = Pick<BaseItemInterface, 'gallery_urls'>
+export type ProjectDescriptionProps = Pick<ProjectEntryType , 'long_description' >
 
-export type ProjectDescriptionTitleProps = Pick<BaseItemInterface, 'title'>
-
-export type ProjectDescriptionProps = Pick<BaseItemInterface , 'long_description' > & {
-    stack: projectStackInterface[],
-}
-
-export type ProjectDescriptionHandlerProps = Pick<ProjectEntryType, 'stack' | 'long_description'>
+export type ProjectDescriptionHandlerProps = Pick<ProjectEntryType, 'long_description'>
 
 
 export interface BenefitCardProps {
@@ -180,8 +174,6 @@ export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
     onClick: () => void;
     disabled?: boolean;
 }
-
-export type ProjectDescriptionDevProps = Pick<ProjectEntryType, 'stack'> 
 
 export interface ProjectLongDescriptionDevProps {
   long_description: ProjectLongDescriptionType;

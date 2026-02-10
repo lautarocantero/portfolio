@@ -21,7 +21,7 @@ const ProjectExhibitorcomponent = ():React.ReactNode => {
                             width: '95%',
                         })}
                     >
-                        <ProjectExhibitorSelectedItem selectedItem={project}/>
+                        <ProjectExhibitorSelectedItem projectSelected={project}/>
                     </Box>
                 ))
             }

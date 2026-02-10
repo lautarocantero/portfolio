@@ -4,7 +4,7 @@ import ProjectDescriptionHandlerComponent from "./ProjectDescriptionHandler";
 import ProjectButtonsComponent from "./ProjectButtons";
 
 
-const ProjectDescription = ({long_description, stack}: ProjectDescriptionProps ):React.ReactNode => {
+const ProjectDescription = ({ long_description }: ProjectDescriptionProps ):React.ReactNode => {
 
     return(
         <Box component="div" sx={{ width: '100%', minHeight: '20em' }} >
@@ -18,7 +18,7 @@ const ProjectDescription = ({long_description, stack}: ProjectDescriptionProps )
                 })} 
             >
             </Box>
-            <ProjectDescriptionHandlerComponent stack={stack} long_description={long_description} />
+            <ProjectDescriptionHandlerComponent long_description={long_description} />
             <ProjectButtonsComponent long_description={long_description}/>
         </Box>
     )

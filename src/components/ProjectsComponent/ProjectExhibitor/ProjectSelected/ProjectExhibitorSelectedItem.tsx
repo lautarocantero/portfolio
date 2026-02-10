@@ -3,8 +3,8 @@ import type { ProjectSelectedProps } from "../../../../typings/reactComponents";
 import CarouselComponent from "../../../shared/CarouselComponent";
 import ProjectDescription from "./ProjectDescription";
 
-const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):React.ReactNode => {
-    const { gallery_urls,long_description, stack, inDevelopment } = selectedItem;
+const ProjectExhibitorSelectedItem = ({projectSelected}: ProjectSelectedProps ):React.ReactNode => {
+    const { gallery_urls,long_description, inDevelopment } = projectSelected;
 
     return(
         <Box
@@ -35,7 +35,6 @@ const ProjectExhibitorSelectedItem = ({selectedItem}: ProjectSelectedProps ):Rea
           <CarouselComponent gallery_urls={gallery_urls} bigScreen />
           <ProjectDescription
             long_description={long_description}
-            stack={stack}
           />
         </Box>
     )
