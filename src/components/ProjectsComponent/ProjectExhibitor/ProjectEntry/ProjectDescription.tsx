@@ -1,6 +1,6 @@
 import { Box, type Theme } from "@mui/material";
 import type { ProjectDescriptionProps } from "../../../../typings/reactComponents";
-import ProjectDescriptionHandlerComponent from "./ProjectDescriptionHandler";
+import ProjectDescriptionContentHandlerComponent from "./ProjectDescriptionContentHandler";
 
 
 const ProjectDescription = ({ long_description }: ProjectDescriptionProps ):React.ReactNode => {
@@ -17,7 +17,7 @@ const ProjectDescription = ({ long_description }: ProjectDescriptionProps ):Reac
                 })} 
             >
             </Box>
-            <ProjectDescriptionHandlerComponent long_description={long_description} />
+            <ProjectDescriptionContentHandlerComponent long_description={long_description} />
         </>
     )
 };

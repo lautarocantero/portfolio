@@ -160,14 +160,37 @@ export interface BenefitCardProps {
   benefit: BenefitType;
 }
 
-export interface ProjectButtonsProps {
-    long_description: ProjectLongDescriptionType;
-}
-
-export interface ProjectDescriptionItemProps {
+interface ProjectDescriptionItemProps {
     text: string;
     logo: string;
     type: ProjectEntryTypeEnum;
+}
+
+export interface ProjectTitleProps {
+  title: string;
+}
+
+export interface ProjectObjectiveProps {
+  objective: string;
+  development?: boolean;
+}
+
+export interface ProjectNoteProps {
+  note: string;
+}
+
+export interface ProjectBenefitsProps {
+    benefits: BenefitType[];
+}
+
+export type ProjectReasonsProps = Pick<ProjectTitleProps , title> &  {
+    reasons: string[];
+}
+
+export type ProjectSummaryProps = Pick<LongDescriptionInterface, 'tasksDescription'> 
+
+export interface ProjectButtonsProps {
+    long_description: ProjectLongDescriptionType;
 }
 
 export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
@@ -176,6 +199,10 @@ export type ProjectButtonProps  = Pick <ProjectDescriptionItemProps, 'text'> & {
 }
 
 export interface ProjectLongDescriptionDevProps {
+  long_description: ProjectLongDescriptionType;
+}
+
+export interface ProjectLongDescriptionClientProps {
   long_description: ProjectLongDescriptionType;
 }
 

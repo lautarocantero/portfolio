@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Paper, Typography, useTheme, type Theme } from "@mui/material";
-import type { BenefitCardProps } from "../../../../typings/reactComponents";
+import type { BenefitCardProps } from "../../../../../typings/reactComponents";
 import { useTranslation } from "react-i18next";
 
 
