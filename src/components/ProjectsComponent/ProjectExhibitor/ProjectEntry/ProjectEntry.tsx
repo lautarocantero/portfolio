@@ -14,6 +14,7 @@ const ProjectEntry = ({projectSelected}: ProjectSelectedProps ):React.ReactNode 
       {gallery_urls: string[], long_description: ProjectLongDescriptionType, inDevelopment: boolean} 
     = projectSelected;
 
+
     return(
         <Box
           component="div"
