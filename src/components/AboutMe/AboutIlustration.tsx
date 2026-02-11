@@ -1,13 +1,22 @@
 import { Box, type Theme } from "@mui/material";
+import { useContext } from "react";
+import { ThemeContext } from "../../theme/context/themeContext";
 
 
 const AboutIlustrationComponent = ():React.ReactNode => {
+    const { appTheme } = useContext(ThemeContext);
+
+
     return(
         <Box
             component={'div'}
             sx={(theme: Theme) => ({
                 alignItems: 'center', 
-                background: theme?.palette?.primary?.main,
+                backgroundImage: !appTheme 
+                  ? 'url("/ideas/abstract-background-purple-texture-grainy_474888-5042-2233225676.jpg")' 
+                  : 'url("/ideas/abstract-background-cian.png")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 display: 'flex', 
                 flexDirection: 'column',
                 height: '9.5em',

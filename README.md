@@ -99,6 +99,7 @@ Full Stack Developer
 - [23] Mover “about me” debajo de presentación  
 - [24] Agregar texto más descriptivo y vendible a experiencia (cómo agregaste valor, no solo tareas)  
 - [25] Agregar sección de herramientas a experiencia y proyectos  
+- [26] Agregar en about me, que mi cara este frente a una luna modo noche, un sol modo dia.
 
 
 
