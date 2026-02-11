@@ -1,6 +1,7 @@
 import './App.css'
 import { ImageDialogProvider } from './components/ImageDialog/ImageDialogProvider'
 import SnackBarProvider from './components/shared/snackbar/SnackBarProvider'
+import { SimpleDialogProvider } from './components/SimpleDialog/SimpleDialogProvider'
 import PortfolioPage from './pages/PortfolioPage'
 import { AppTheme } from './theme/AppTheme'
 import { ThemeProvider } from './theme/context/ThemeProvider'
@@ -12,7 +13,9 @@ const PortfolioApp = () => {
       <SnackBarProvider>
         <AppTheme>
           <ImageDialogProvider>
-            <PortfolioPage />
+            <SimpleDialogProvider>
+              <PortfolioPage />
+            </SimpleDialogProvider>
           </ImageDialogProvider>
         </AppTheme>
       </SnackBarProvider>

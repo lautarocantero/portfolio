@@ -185,6 +185,11 @@ export interface DialogContextType {
     setSelectedImage: (value: string | null) => void;
 }
 
+export interface SimpleDialogContextType {
+    showModal: boolean;
+    setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
 //─────────────────────────────── 📷 Carrusel de Imagenes 📷 ───────────────────────────────//
 
 interface handleImages {
