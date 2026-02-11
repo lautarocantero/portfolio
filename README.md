@@ -67,7 +67,6 @@ Full Stack Developer
 
 - [1] Refactorizar project exhibitor  
 - [2] Agregar al título de devCard los logos de las herramientas usadas (ej: si es solo planeación en Figma, poner logo de Figma)  
-- [3] Agregar visor de imágenes  
 - [4] Hacer que el stack funcione, filtrando proyectos y experiencia según tecnologías usadas  
   - [4.1] Modificar estilo para que parezca un portfolio/caja de herramientas  
   - [4.2] Agregar botón descriptivo a Stack para que gente no técnica entienda qué ve:  
@@ -96,12 +95,10 @@ Full Stack Developer
 - [18] Agregar AWS a Codetria experience  
 - [19] Enriquecer textos con diferentes etiquetas  
 - [20] Comprobar accesibilidad y etiquetas semánticas correctas  
-- [21] Agregar persistencia de idioma  
 - [22] Mejorar presentación  
 - [23] Mover “about me” debajo de presentación  
 - [24] Agregar texto más descriptivo y vendible a experiencia (cómo agregaste valor, no solo tareas)  
 - [25] Agregar sección de herramientas a experiencia y proyectos  
-- [26] Agregar más espacio entre título de secciones y contenido  
 
 
 
