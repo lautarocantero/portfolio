@@ -1,13 +1,13 @@
 import { alpha, Box, Tooltip, type Theme } from "@mui/material";
 import type { AboutLinkProps } from "../../typings/reactComponents";
 import handleAboutLinkAction from "../../helpers/About/handleButtonsAction";
-import { DialogContext } from "../SimpleDialog/DialogContext";
+import { ImageDialogContext } from "../ImageDialog/ImageDialogContext";
 import { useContext } from "react";
 
 
 const AboutLinkComponent = ({link}: AboutLinkProps):React.ReactNode => {
     const {text, icon, url, action}: {text: string, icon: string, url?: string, action: string} = link;
-    const { setShowModal } =  useContext(DialogContext)!;
+    const { setShowModal } =  useContext(ImageDialogContext)!;
 
     return(
         <Tooltip title={text}>

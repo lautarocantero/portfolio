@@ -1,5 +1,5 @@
 import type { handleAboutLinkActionInterface } from "../../typings/types";
-import { downloadCv } from "../shared/downloadCv";
+import { handleDownloadCv } from "../Presentation/handleCvDownload";
 
 
 const handleAboutLinkAction = ({action, url, setShowModal}: handleAboutLinkActionInterface) => {
@@ -12,10 +12,10 @@ const handleAboutLinkAction = ({action, url, setShowModal}: handleAboutLinkActio
             setShowModal(true);
             break;
         case 'cv':
-            downloadCv();
+            handleDownloadCv();
             break;
         default:
-            downloadCv();
+            handleDownloadCv();
             break;
     }
 

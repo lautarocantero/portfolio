@@ -6,7 +6,7 @@ import PresentationComponent from "../components/Presentation/Presentation";
 import PreviousJobs from "../components/PreviousJobs/PreviousJobs";
 import ProjectsSection from "../components/ProjectsComponent/ProjectsSection";
 import SimpleSnackbar from "../components/shared/snackbar/SnackBarComponent";
-import SimpleDialog from "../components/SimpleDialog/SimpleDialog";
+import ImageDialog from "../components/ImageDialog/ImageDialog";
 import StackComponent from "../components/StackComponent/StackComponent";
 import PortfolioLayout from "../layout/PortfolioLayout";
 
@@ -22,7 +22,7 @@ const PortfolioPage = () => {
             <StackComponent />
             <AboutMeComponent />
             <ContactComponent />
-            <SimpleDialog />
+            <ImageDialog />
             <SimpleSnackbar />
         </PortfolioLayout>
     )
