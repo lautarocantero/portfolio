@@ -27,7 +27,7 @@ const AboutMeComponent = ():React.ReactNode => {
                     width: { xs: '100%', md: '60%'},
                     backgroundColor: theme?.custom?.backgroundLigth,
                     height: 'auto',
-                    margin: '0 auto'
+                    margin: '2em auto 0'
                 })}
             >
                 <AboutIlustrationComponent />

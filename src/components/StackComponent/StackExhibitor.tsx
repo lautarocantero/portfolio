@@ -8,7 +8,7 @@ const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode
         <Box
             component={'div'}
             sx={{
-                margin: '0.5em',
+                margin: '2em 0.5em 0',
                 display: "grid",
                 gridTemplateColumns: { 
                     xs: "repeat(3, 1fr)", 

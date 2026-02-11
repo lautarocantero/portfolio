@@ -14,6 +14,7 @@ const ExperienceExhibitorcomponent = () : React.ReactNode => {
                 display: 'flex',
                 flexDirection: { xs: 'column', sm: 'row'},
                 width: '100%',
+                mt: "2em",
             })}
         >
             {
