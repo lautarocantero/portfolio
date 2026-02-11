@@ -183,7 +183,6 @@ export interface DialogContextType {
     setShowModal: Dispatch<SetStateAction<boolean>>;
     selectedImage: string | null; 
     setSelectedImage: (value: string | null) => void;
-    isEmail?: boolean;
 }
 
 //─────────────────────────────── 📷 Carrusel de Imagenes 📷 ───────────────────────────────//
