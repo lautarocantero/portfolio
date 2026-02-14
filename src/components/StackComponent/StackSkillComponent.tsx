@@ -1,44 +1,40 @@
-import { alpha, Box, Tooltip, Typography, type Theme } from "@mui/material";
+import { Box, Tooltip, type Theme } from "@mui/material";
 import type { StackSkillProps } from "../../typings/reactComponents";
+import MorphingBlobComponent from "./StackMorphingBlob";
+import StackContentComponent from "./StackContent";
 
-const StackSkillComponent = ({stack}: StackSkillProps ):React.ReactNode => {
+const StackSkillComponent = ({stack}: StackSkillProps ): React.ReactNode => {
     const { text, icon, iconGif }: {text: string, icon: string, iconGif: string} = stack;
+
     return(
         <Tooltip title={text}>
             <Box
                 component={'div'}
                 sx={(theme: Theme) => ({
                     width: '100%',
-                    height: '100%',
-                    backgroundColor: alpha(theme.palette.secondary.main, 0.3),
-                    backdropFilter: 'blur(50px)',
-                    boxShadow: `0 0 20px 5px ${alpha(theme.palette.secondary.main, 0.3)}`,
-                    borderRadius: '0.4em',
-                    p: '0.2em',
+                    aspectRatio: '1',
+                    position: 'relative',
+                    cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
-                    margin: 'auto'
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'transform 0.3s ease',
+                    mt: '2em',
+                    '&:hover': {
+                        transform: 'scale(1.05)',
+                        '& .blob-shape': {
+                            animationPlayState: 'paused',
+                            boxShadow: `0 25px 80px ${theme?.palette?.primary?.main}CC`,
+                        }
+                    }
                 })}
             >
-                <Box
-                    component={'img'}
-                    src={iconGif !== "" ? iconGif : icon}
-                    sx={{
-                        width: '100%',
-                        height: '100%',
-                    }}
-                />
-                <Typography
-                    sx={(theme: Theme) => ({
-                        textAlign: 'center',
-                        color: theme?.custom?.fontColor,
-                        fontSize: '0.5em',
-                        pt: '0.2em'
-                    })}
-                >
-                    {text}
-                </Typography>
-            </Box>
+                {/* Morphing Blob Background */}
+                <MorphingBlobComponent />
+                {/* Content */}
+                <StackContentComponent icon={icon} iconGif={iconGif} text={text} />
+            </Box>    
         </Tooltip>
     )
 };

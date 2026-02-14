@@ -11,10 +11,10 @@ const StackExhibitorComponent = ({stacks}: StackExhibitorProps ):React.ReactNode
                 margin: '2em 0.5em 0',
                 display: "grid",
                 gridTemplateColumns: { 
-                    xs: "repeat(3, 1fr)", 
-                    sm: "repeat(8, 1fr)",
-                    md: "repeat(12, 1fr)",
-                    lg: "repeat(14, 1fr)",
+                    xs: "repeat(2, 1fr)", 
+                    sm: "repeat(5, 1fr)",
+                    md: "repeat(6, 1fr)",
+                    lg: "repeat(8, 1fr)",
                 },
                 gap: "1em",
             }}
