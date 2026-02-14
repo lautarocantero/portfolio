@@ -14,6 +14,7 @@ const ProjectSummaryComponent = ({tasksDescription}: ProjectSummaryProps ):React
           p: 2,
           textAlign: "center",
           width: '100%',
+          boxShadow: `10px 10px 10px ${theme?.custom?.backgroundDark}`,
           '& p': {
             borderBottom: `1px solid ${theme?.custom?.white}`,
             borderTop: `1px solid ${theme?.custom?.white}`,

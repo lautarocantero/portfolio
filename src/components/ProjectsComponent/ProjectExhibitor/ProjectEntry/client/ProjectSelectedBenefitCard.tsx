@@ -21,7 +21,7 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
           p: 3,
           flexGrow: 1,
           backgroundColor: theme.palette.primary.main,
-          boxShadow: `5px 5px 1px ${theme.palette.secondary.main}`,
+          boxShadow: `3px 3px 1px ${theme.palette.secondary.main}`,
           color: theme.custom.white,
         }}
       >

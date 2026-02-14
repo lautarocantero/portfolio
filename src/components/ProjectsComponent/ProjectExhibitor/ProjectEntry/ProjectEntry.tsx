@@ -38,6 +38,7 @@ const ProjectEntry = ({projectSelected}: ProjectSelectedProps ):React.ReactNode 
                   right: "-3em",
                   top: "2em",
                   transform: "rotate(45deg)",
+                  boxShadow: `5px 5px 10px ${theme?.custom?.backgroundDark}`
                 }
               : {},
           })}

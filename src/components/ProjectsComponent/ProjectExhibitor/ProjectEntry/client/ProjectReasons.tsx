@@ -16,7 +16,7 @@ const ProjectReasonsComponent = ({title, reasons}: ProjectReasonsProps ):React.R
             sx={(theme: Theme) => ({
               backgroundColor: theme.palette.primary.main,
               borderRadius: 2,
-              boxShadow: `5px 5px 1px ${theme.palette.secondary.main}`,
+              boxShadow: `3px 3px 1px ${theme.palette.secondary.main}`,
               color: theme.custom.white,
               fontSize: theme?.typography?.body2?.fontSize,
               p: 2,
