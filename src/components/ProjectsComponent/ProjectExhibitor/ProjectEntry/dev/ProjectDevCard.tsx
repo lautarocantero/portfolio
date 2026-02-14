@@ -1,17 +1,19 @@
 import React from "react";
 import { Box, Paper, Typography, useTheme} from "@mui/material";
-import type { RoadmapStepType } from "../../../../../typings/types";
 import CarouselComponent from "../../../../shared/CarouselComponent";
 import { useTranslation } from "react-i18next";
+import type { DevelopmentCardProps } from "../../../../../typings/reactComponents";
 
-interface DevelopmentCardProps {
-  development: RoadmapStepType;
-  index: number;
-}
 
-const DevelopmentCard: React.FC<DevelopmentCardProps> = ({ development, index }) => {
+const DevelopmentCard = ({ development, index }: DevelopmentCardProps): React.ReactNode => {
   const theme = useTheme();
   const { t } = useTranslation();
+  const { title,desc,gallery_urls }: 
+  {
+    title: string;
+    desc: string;
+    gallery_urls: string[],
+  } = development;
 
   return (
     <Box
@@ -31,16 +33,16 @@ const DevelopmentCard: React.FC<DevelopmentCardProps> = ({ development, index })
         }}
       >
         <Typography variant="h5" gutterBottom sx={{p: 3, border: `1px dotted ${theme?.custom?.backgroundDark}` }}>
-          {t(development.title)}
+          {t(title)}
         </Typography>
-        <Typography variant="body2" sx={{p: 3 }}>{t(development.desc)}</Typography>
+        <Typography variant="body2" sx={{p: 3 }}>{t(desc)}</Typography>
         <Box
             sx={{
                 width: "100%",
                 margin: { xs: '0 auto', md: '0 auto 1em'}
             }}
         >
-            <CarouselComponent gallery_urls={development?.gallery_urls} />
+            <CarouselComponent gallery_urls={gallery_urls} />
         </Box>
         
       </Paper>
@@ -48,4 +50,4 @@ const DevelopmentCard: React.FC<DevelopmentCardProps> = ({ development, index })
   );
 };
 
-export default DevelopmentCard;
+export default React.memo(DevelopmentCard);

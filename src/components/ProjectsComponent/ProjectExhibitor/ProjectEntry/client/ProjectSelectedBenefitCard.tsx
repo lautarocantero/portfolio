@@ -26,7 +26,7 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
         }}
       >
         <Box
-            sx={(theme: Theme) => ({
+            sx={() => ({
                 width: '100%',
                 height: 'auto',
                 display: 'flex',
@@ -37,7 +37,7 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
             <Box
                 component={'img'}
                 src={benefit?.logo}
-                sx={(theme: Theme) => ({
+                sx={() => ({
                     width: 'auto',
                     height: '3em',
                     p: 0.1,
@@ -59,4 +59,4 @@ const ProjectSelectedBenefitCard = ({ benefit }: BenefitCardProps): React.ReactN
   );
 };
 
-export default ProjectSelectedBenefitCard;
+export default React.memo(ProjectSelectedBenefitCard);

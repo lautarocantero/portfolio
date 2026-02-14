@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import type { ProjectButtonsProps } from "../../../../typings/reactComponents";
 import ProjectButtonComponent from "./ProjectButton";
 import type { ProjectButtonType } from "../../../../typings/types";
+import React, { useMemo } from "react";
 
 
 const ProjectButtonsComponent = ({ long_description }: ProjectButtonsProps ):React.ReactNode => {
@@ -13,11 +14,11 @@ const ProjectButtonsComponent = ({ long_description }: ProjectButtonsProps ):Rea
     = long_description;
 
 
-    const ProjectButtonProperties: ProjectButtonType[] = [
+    const ProjectButtonProperties: ProjectButtonType[] = useMemo(() => [
         { text: "projects.buttons.code", onClick: () => { window.open(project_url, "_blank") }},
         { text: "projects.buttons.design", onClick: () => { window.open(design_url, "_blank") }},
         { text: "projects.buttons.page", onClick: () => { window.open(deploy_url, "_blank")}, disabled: deploy_url?.length <= 0},
-    ]
+    ], [project_url, design_url, deploy_url]);
 
     return(
         <Box
@@ -43,4 +44,4 @@ const ProjectButtonsComponent = ({ long_description }: ProjectButtonsProps ):Rea
     )
 };
         
-export default ProjectButtonsComponent;
+export default React.memo(ProjectButtonsComponent);

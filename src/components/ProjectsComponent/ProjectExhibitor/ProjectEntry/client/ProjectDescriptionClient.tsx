@@ -8,6 +8,7 @@ import ProjectObjectiveComponent from "../ProjectObjective";
 import ProjectReasonsComponent from "./ProjectReasons";
 import ProjectSummaryComponent from "./ProjectSummary";
 import ProjectTitleComponent from "../ProjectTitle";
+import React from "react";
 
 const ProjectDescriptionClient = ({ long_description } : ProjectLongDescriptionClientProps ) => {
   const { t } = useTranslation();
@@ -44,4 +45,4 @@ const ProjectDescriptionClient = ({ long_description } : ProjectLongDescriptionC
   );
 };
 
-export default ProjectDescriptionClient;
+export default React.memo(ProjectDescriptionClient);

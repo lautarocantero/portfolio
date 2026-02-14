@@ -1,10 +1,16 @@
 import { Box } from "@mui/material";
 import type { ProjectBenefitsProps } from "../../../../../typings/reactComponents";
 import ProjectSelectedBenefitCard from "./ProjectSelectedBenefitCard";
+import React, { useMemo } from "react";
 
 
 const ProjectBenefitsComponent = ({benefits}: ProjectBenefitsProps ):React.ReactNode => {
 
+    const benefitCards = useMemo(() => 
+      benefits.map((benefit, index) => (
+        <ProjectSelectedBenefitCard key={index} benefit={benefit} />
+      ))
+    ,[benefits]);
 
     return(
       <Box
@@ -15,11 +21,9 @@ const ProjectBenefitsComponent = ({benefits}: ProjectBenefitsProps ):React.React
           justifyContent: "center",
         }}
       >
-        {benefits.map((benefit, index) => (
-          <ProjectSelectedBenefitCard key={index} benefit={benefit} />
-        ))}
+        {benefitCards}
       </Box>
     )
 };
         
-export default ProjectBenefitsComponent;
+export default React.memo(ProjectBenefitsComponent);

@@ -1,11 +1,16 @@
 import { Box } from "@mui/material";
-import React from "react";
+import React, { useMemo } from "react";
 import type { ProjectLongDescriptionDevProps } from "../../../../../typings/reactComponents";
 import DevelopmentCard from "./ProjectDevCard";
 
 
 const ProjectRoadMap = ({ long_description }: ProjectLongDescriptionDevProps ) : React.ReactNode => {
 
+  const roadmapMap = useMemo( () => 
+    long_description.roadmap?.map((development, index) => (
+      <DevelopmentCard development={development} index={index}/>
+    ))
+  ,[long_description])
   
   return (
       <Box
@@ -16,11 +21,9 @@ const ProjectRoadMap = ({ long_description }: ProjectLongDescriptionDevProps ) :
           justifyContent: "center",
         }}
       >
-        {long_description.roadmap?.map((development, index) => (
-          <DevelopmentCard development={development} index={index}/>
-        ))}
+        {roadmapMap}
       </Box>
   );
 };
 
-export default ProjectRoadMap;
+export default React.memo(ProjectRoadMap);

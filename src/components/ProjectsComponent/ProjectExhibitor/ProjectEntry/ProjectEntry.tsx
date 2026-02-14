@@ -5,6 +5,7 @@ import type { ProjectLongDescriptionType } from "../../../../typings/types";
 import CarouselComponent from "../../../shared/CarouselComponent";
 import ProjectDescription from "./ProjectDescription";
 import ProjectButtonsComponent from "./ProjectButtons";
+import React from "react";
 
 const ProjectEntry = ({projectSelected}: ProjectSelectedProps ):React.ReactNode => {
     const { t } = useTranslation();
@@ -50,4 +51,4 @@ const ProjectEntry = ({projectSelected}: ProjectSelectedProps ):React.ReactNode 
     )
 };
         
-export default ProjectEntry;
+export default React.memo(ProjectEntry);

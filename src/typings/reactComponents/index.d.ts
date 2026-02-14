@@ -183,6 +183,11 @@ export interface ProjectBenefitsProps {
     benefits: BenefitType[];
 }
 
+export interface DevelopmentCardProps {
+  development: RoadmapStepType;
+  index: number;
+}
+
 export type ProjectReasonsProps = Pick<ProjectTitleProps , title> &  {
     reasons: string[];
 }

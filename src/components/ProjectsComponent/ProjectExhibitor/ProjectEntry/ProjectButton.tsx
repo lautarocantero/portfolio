@@ -1,6 +1,7 @@
 import { Button, type Theme } from "@mui/material";
 import type { ProjectButtonProps } from "../../../../typings/reactComponents";
 import LockOutlineIcon from '@mui/icons-material/LockOutline';
+import React from "react";
 
 
 const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):React.ReactNode => {
@@ -41,4 +42,4 @@ const ProjectButtonComponent = ({text, onClick, disabled}: ProjectButtonProps):R
     )
 };
         
-export default ProjectButtonComponent;
+export default React.memo(ProjectButtonComponent);

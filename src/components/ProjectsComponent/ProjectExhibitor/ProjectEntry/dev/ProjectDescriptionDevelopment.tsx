@@ -33,4 +33,4 @@ const ProjectDescriptionDevelopment = ({ long_description }: ProjectLongDescript
   );
 };
 
-export default ProjectDescriptionDevelopment;
+export default React.memo(ProjectDescriptionDevelopment);
