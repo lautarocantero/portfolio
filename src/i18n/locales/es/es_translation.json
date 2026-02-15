@@ -26,6 +26,7 @@
   "experience.tech.long": "Tecnologías utilizadas",
   "experience.button.read.more": "ver más",
   "experience.button.read.less": "ver menos",
+  "experience.empty.title": "Tu selección no coincide con ningún proyecto. Probá con otro stack!",
 
   "task.fixStyles": "Corrección de estilos",
   "task.restructureViews": "Reestructuración de vistas",
@@ -138,8 +139,18 @@
   "projects.buttons.page": "Ir a la página",
 
 
-
   "skills.title": "Habilidades",
+  "skills.markup.title": "Lenguajes de Marcado",
+  "skills.style.title": "Lenguajes de Estilos",
+  "skills.language.title": "Lenguajes de Programación",
+  "skills.framework.title": "Frameworks y Librerías",
+  "skills.backend.title": "Backend y Servicios",
+  "skills.database.title": "Bases de Datos",
+  "skills.testing.title": "Testing y Calidad",
+  "skills.versioning.title": "Control de Versiones y Colaboración",
+  "skills.design.title": "Diseño y Prototipado",
+  "skills.system.title": "Sistemas Operativos y Entornos",
+
 
   "about.title": "Sobre mí",
   "about.greeting": "¡Hola! ¿Qué tal?, mi nombre es",

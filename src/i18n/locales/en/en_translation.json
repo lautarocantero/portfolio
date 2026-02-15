@@ -26,6 +26,7 @@
   "experience.tech.long": "Technologies implemented",
   "experience.button.read.more": "Read more",
   "experience.button.read.less": "Read less",
+  "experience.empty.title": "Your selection does not match any project. Try another stack!",
 
   "task.fixStyles": "Fixing broken styles",
   "task.restructureViews": "Restructuring views",
@@ -152,6 +153,17 @@
 
 
   "skills.title": "Skills",
+  "skills.markup.title": "Markup Languages",
+  "skills.style.title": "Style Languages",
+  "skills.language.title": "Programming Languages",
+  "skills.framework.title": "Frameworks and Libraries",
+  "skills.backend.title": "Backend and Services",
+  "skills.database.title": "Databases",
+  "skills.testing.title": "Testing and Quality",
+  "skills.versioning.title": "Version Control and Collaboration",
+  "skills.design.title": "Design and Prototyping",
+  "skills.system.title": "Operating Systems and Environments",
+
 
   "about.title": "About me",
   "about.greeting": "Hello! How are you? My name is",

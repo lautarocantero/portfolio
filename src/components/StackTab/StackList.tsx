@@ -1,8 +1,9 @@
 import { groupStacksByType } from "../../helpers/Stack/getStackList";
-import type { StackInterface, StackSkillType } from "../../typings/types";
+import type { StackSkillType } from "../../typings/types";
 import StackSkillComponent from "./StackItem/StackSkillComponent";
 import { Box, Typography, type Theme } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface StackGridProps {
   stacks: StackSkillType[];
@@ -14,31 +15,32 @@ interface sectionInterface {
 }
 
 const StackListComponent = ({ stacks }: StackGridProps): React.ReactNode => {
-    const sections: sectionInterface[] = [
-      { title: "Lenguajes de Marcado", type: "markup" },
-      { title: "Lenguajes de Estilos", type: "style" },
-      { title: "Lenguajes de Programación", type: "language" },
-      { title: "Frameworks y Librerías", type: "framework" },
-      { title: "Backend y Servicios", type: "backend" },
-      { title: "Bases de Datos", type: "database" },
-      { title: "Testing y Calidad", type: "testing" },
-      { title: "Control de Versiones y Colaboración", type: "versioning" },
-      { title: "Diseño y Prototipado", type: "design" },
-      { title: "Sistemas Operativos y Entornos", type: "system" },
-    ];
+  const { t } = useTranslation();
 
+  const sections: sectionInterface[] = [
+    { title: "skills.markup.title", type: "markup" },
+    { title: "skills.style.title", type: "style" },
+    { title: "skills.language.title", type: "language" },
+    { title: "skills.framework.title", type: "framework" },
+    { title: "skills.backend.title", type: "backend" },
+    { title: "skills.database.title", type: "database" },
+    { title: "skills.testing.title", type: "testing" },
+    { title: "skills.versioning.title", type: "versioning" },
+    { title: "skills.design.title", type: "design" },
+    { title: "skills.system.title", type: "system" },
+  ];
 
   return (
-    <Box 
-        component={motion.div}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        sx={{ 
-            display: "flex", 
-            flexDirection: "column", 
-            width: "100%" 
-        }}
+    <Box
+      component={motion.div}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+      }}
     >
       {sections.map((section: sectionInterface) => {
         const filteredStacks = groupStacksByType(stacks, section.type);
@@ -52,7 +54,7 @@ const StackListComponent = ({ stacks }: StackGridProps): React.ReactNode => {
                 color: theme?.custom?.white,
               })}
             >
-              {section.title}
+              {t(section.title)}
             </Typography>
             <Box
               component={"div"}
@@ -68,7 +70,7 @@ const StackListComponent = ({ stacks }: StackGridProps): React.ReactNode => {
                 gap: "1em",
               }}
             >
-              {filteredStacks.map((stackItem: StackInterface) => (
+              {filteredStacks.map((stackItem: StackSkillType) => (
                 <StackSkillComponent stack={stackItem} key={stackItem.text} />
               ))}
             </Box>
@@ -80,4 +82,3 @@ const StackListComponent = ({ stacks }: StackGridProps): React.ReactNode => {
 };
 
 export default StackListComponent;
- 

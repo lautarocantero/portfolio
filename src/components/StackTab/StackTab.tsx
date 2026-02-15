@@ -1,10 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import type { Theme } from "@mui/material/styles";
 import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { getStackList } from "../../helpers/Stack/getStackList";
 import StackExhibitorComponent from "./StackExhibitor";
-import type { StackInterface } from "../../typings/types";
+import type { StackSkillType } from "../../typings/types";
 import StackButtonComponent from "./StackButton/StackButton";
 import { useState } from "react";
 
@@ -18,7 +18,7 @@ const appliedStacks: string[] = [
 
 const StackTab = ():React.ReactNode => {
     const { t } = useTranslation();
-    const stacks : StackInterface[]  = getStackList(appliedStacks);
+    const stacks : StackSkillType[]  = getStackList(appliedStacks);
     const [isDetailedList, setIsDetailedList] = useState<boolean>(false);
 
     return(

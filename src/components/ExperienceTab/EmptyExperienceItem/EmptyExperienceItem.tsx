@@ -1,8 +1,9 @@
 import { Box, Grid, Typography, type Theme } from "@mui/material";
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const EmptyExperienceItemcomponent = (): React.ReactNode => {
-
+  const { t } = useTranslation();
   const [isExpanded] = useState<boolean>(false);
 
   return (
@@ -35,7 +36,7 @@ const EmptyExperienceItemcomponent = (): React.ReactNode => {
                 },
             })}
         >
-            Tu selección no coincide con ningún proyecto. Probá con otro stack!
+            {t("experience.empty.title")}
         </Typography>
         <Box
             component={"img"}
