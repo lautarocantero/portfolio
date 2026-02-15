@@ -13,9 +13,12 @@ export type Task = Pick <StackInterface, 'text' | 'icon'> & {
 
 export interface LongDescriptionInterface {
     objective: string,
-    objectiveDev: string,
     tasksDescription: string,
     technologiesDescription: string,
+}
+
+export type LongDescriptionProjectInterface = Pick<LongDescriptionInterface, 'objective' | 'tasksDescription' | 'technologiesDescription'> & {
+    objectiveDev: string,
 }
 
 interface BaseItemInterface {
@@ -26,6 +29,10 @@ interface BaseItemInterface {
     short_description: string,
     long_description: LongDescriptionInterface,
     tasks: Task[],
+}
+
+type BaseItemProjectInterface = Pick <BaseItemInterface, '_id' | 'gallery_urls' | 'title' | 'stack' | 'tasks'> & {
+    long_description: LongDescriptionProjectInterface,
 }
 
 {/*─────────────────── 🔎 Appbar 🔎 ───────────────────*/}
@@ -87,7 +94,7 @@ export type BenefitType = Pick<LogoExperienceInterface,
         desc: string;
 }
 
-export type RoadmapStepType = Pick<BaseItemInterface,  
+export type RoadmapStepType = Pick<BaseItemProjectInterface,  
     "title" | 
     "gallery_urls"> & {
         desc: string;
@@ -109,7 +116,7 @@ export type ProjectLongDescriptionType  = Pick <LongDescriptionInterface,
 }
 
 export type ProjectEntryType = Pick<
-  BaseItemInterface,
+  BaseItemProjectInterface,
   "_id" | 
   "gallery_urls" | 
   "title" | 
@@ -129,6 +136,11 @@ export type ProjectButtonType = {
 }
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
+
+export interface StackContextInterface {
+    filteredStacks: string[];
+    setFilteredStacks: Dispatch<SetStateAction<string[]>>;
+}
 
 export type StackSkillType = Pick<StackInterface, 'text' | 'icon'> & {
     iconGif: string,

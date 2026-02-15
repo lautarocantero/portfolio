@@ -1,5 +1,5 @@
 import type React from "react";
-import type { AboutLinkInterface, BenefitType, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectEntryType, ProjectLongDescriptionType, projectStackInterface, StackInterface, Task } from "../types";
+import type { AboutLinkInterface, BenefitType, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectEntryType, ProjectLongDescriptionType, projectStackInterface, StackInterface, StackSkillType, Task } from "../types";
 import type { SetStateAction } from "react";
 import type { ProjectEntryTypeEnum } from "../types/enums";
 

@@ -28,7 +28,6 @@ const StackListComponent = ({ stacks }: StackGridProps): React.ReactNode => {
     ];
 
 
-
   return (
     <Box 
         component={motion.div}
