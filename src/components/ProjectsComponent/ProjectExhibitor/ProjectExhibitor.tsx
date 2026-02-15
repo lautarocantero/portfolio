@@ -1,8 +1,8 @@
 import { Box, type Theme } from "@mui/material";
-import { getProjectEntrys } from "../../../helpers/Projects/getProjectItems";
 import type { ProjectEntryType } from "../../../typings/types";
 import ProjectEntry from "./ProjectEntry/ProjectEntry";
-import React, { useMemo } from "react";
+import React from "react";
+import { useProjectEntrys } from "../../../helpers/Projects/useProjectItems";
 
 const renderProjectEntries = (projects: ProjectEntryType[]) =>
   projects.map((project: ProjectEntryType) => (
@@ -23,7 +23,7 @@ const renderProjectEntries = (projects: ProjectEntryType[]) =>
   ));
 
 const ProjectExhibitorcomponent = (): React.ReactNode => {
-  const projectsEntries: ProjectEntryType[] = useMemo(() => getProjectEntrys(), []);
+  const projectsEntries: ProjectEntryType[] = useProjectEntrys();
 
   return <>{renderProjectEntries(projectsEntries)}</>;
 };

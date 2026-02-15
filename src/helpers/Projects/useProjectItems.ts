@@ -1,8 +1,15 @@
+import { useContext } from "react";
 import type { ProjectEntryType } from "../../typings/types"
 import { getStackList } from "../Stack/getStackList"
+import { StackContext } from "../../components/StackTab/context/StackContext";
 
-export const getProjectEntrys = (): ProjectEntryType[] => {
-    return [
+export const useProjectEntrys = (): ProjectEntryType[] => {
+    const { filteredStacks } = useContext(StackContext)!;
+
+    console.log('filteredStacks', filteredStacks);
+
+
+    const items: ProjectEntryType[] = [
       {
         _id: "proj-kiosco-app",
         gallery_urls: [
@@ -463,4 +470,12 @@ export const getProjectEntrys = (): ProjectEntryType[] => {
       // project_url: "https://barberia-lau.netlify.app"
   // },
     ]
+
+      if (filteredStacks.length === 0) return items; 
+  
+      return items.filter(item => 
+        item.stack.some(step => 
+          step.stack.some(s => filteredStacks.includes(s.text)) 
+        )
+      );
 }

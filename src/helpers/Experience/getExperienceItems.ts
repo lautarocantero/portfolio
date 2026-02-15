@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import type { ExperienceItemInterface } from "../../typings/types";
 import { TaskEnum } from "../../typings/types/enums"; // ahora con los valores en inglés
 import { getStackList } from "../Stack/getStackList";
+import { StackContext } from "../../components/StackTab/context/StackContext";
 
 export const getExperienceItems = (): ExperienceItemInterface[] => {
-  return [
+  const { filteredStacks } = useContext(StackContext)!;
+  
+
+  const items: ExperienceItemInterface[] =  [
     {
       _id: "7f3a9c2d84b1e6f0c5d7a900",
       title: "experience.extensionApp.title",
@@ -189,4 +194,8 @@ export const getExperienceItems = (): ExperienceItemInterface[] => {
       ],
     },
   ];
+
+  if (filteredStacks.length === 0) return items; 
+  
+  return items.filter(item => item.stack.some(stack => filteredStacks.includes(stack.text)) );
 };
