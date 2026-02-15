@@ -10,7 +10,11 @@ const ExperienceStackExpositureComponent = ({stack}: ExperienceStackExpositurePr
     return(
         <Box
             component={'div'}
-            sx={{ width: '90%', marginBottom: '1em' }}
+            sx={{ 
+                width: '90%', 
+                marginBottom: '1em',
+                minHeight: { xs: '10em', sm: '16em'}, 
+            }}
         >
             <Typography
                 component={'h6'}

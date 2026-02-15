@@ -16,6 +16,10 @@ const ExperienceDetailShortDescription = ({ stack, tasks, short_description }: E
                  margin: '1em auto',
                  padding: '1em',
                  width: '100%',
+                 minHeight: '7em',
+                 display: 'flex',
+                 flexDirection: 'column',
+                 justifyContent: 'center',
                 })} 
             >
                 <Typography

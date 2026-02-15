@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { getExperienceItems } from "../../helpers/Experience/getExperienceItems";
 import type { ExperienceItemInterface } from "../../typings/types";
 import ExperienceItemcomponent from "./ExperienceItem/ExperienceItemComponent";
+import EmptyExperienceItemcomponent from "./EmptyExperienceItem/EmptyExperienceItem";
 
 const ExperienceExhibitorcomponent = () : React.ReactNode => {
     const experienceItems: ExperienceItemInterface[] = getExperienceItems();
@@ -18,6 +19,9 @@ const ExperienceExhibitorcomponent = () : React.ReactNode => {
             })}
         >
             {
+                experienceItems?.length === 0 ? (
+                    <EmptyExperienceItemcomponent />
+                ) : 
                 experienceItems.map((experience: ExperienceItemInterface) => (
                     <ExperienceItemcomponent experienceItem={experience} key={experience._id}/>
                 ))

@@ -35,6 +35,7 @@ const StackInnerCircleComponent = ({
         component="img"
         src={iconGif !== "" ? iconGif : icon}
         alt={text}
+        draggable={false}
         sx={{
           width: "80%",
           height: "80%",
@@ -42,7 +43,7 @@ const StackInnerCircleComponent = ({
           filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15))",
         }}
       />
-    </Box>
+      </Box>
   );
 };
 

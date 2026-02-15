@@ -68,6 +68,7 @@ export const getExperienceItems = (): ExperienceItemInterface[] => {
         "React",
         "TypeScript",
         "Sass",
+        "Node.js",
         "MongoDB",
         "Git",
       ]),

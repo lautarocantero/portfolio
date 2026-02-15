@@ -21,7 +21,7 @@ const ExperienceItemcomponent = ( {experienceItem} : ExperienceItemProps): React
           display: "flex",
           flexDirection: "column",
           height: { xs: "auto"},
-          minHeight: { sm: isExpanded ? "60em" : "40em", md: isExpanded ? "70em" : "37em" },
+          minHeight: { sm: isExpanded ? "60em" : "47em", md: isExpanded ? "70em" : "37em" },
           margin: "1em auto 0",
           position: "relative",
           transition: "all 0.3s ease-in-out",

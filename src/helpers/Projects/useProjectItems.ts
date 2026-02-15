@@ -6,9 +6,6 @@ import { StackContext } from "../../components/StackTab/context/StackContext";
 export const useProjectEntrys = (): ProjectEntryType[] => {
     const { filteredStacks } = useContext(StackContext)!;
 
-    console.log('filteredStacks', filteredStacks);
-
-
     const items: ProjectEntryType[] = [
       {
         _id: "proj-kiosco-app",

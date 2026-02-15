@@ -3,6 +3,7 @@ import type { ProjectEntryType } from "../../../typings/types";
 import ProjectEntry from "./ProjectEntry/ProjectEntry";
 import React from "react";
 import { useProjectEntrys } from "../../../helpers/Projects/useProjectItems";
+import EmptyProjectEntry from "./EmptyProjectEntry/EmptyProjectEntry";
 
 const renderProjectEntries = (projects: ProjectEntryType[]) =>
   projects.map((project: ProjectEntryType) => (
@@ -24,6 +25,10 @@ const renderProjectEntries = (projects: ProjectEntryType[]) =>
 
 const ProjectExhibitorcomponent = (): React.ReactNode => {
   const projectsEntries: ProjectEntryType[] = useProjectEntrys();
+
+  if (projectsEntries.length === 0) {
+    return (<EmptyProjectEntry />);
+  }
 
   return <>{renderProjectEntries(projectsEntries)}</>;
 };

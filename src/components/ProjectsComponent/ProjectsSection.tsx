@@ -35,6 +35,7 @@ const ProjectsSection = (): React.ReactNode => {
                         flexDirection: 'column',
                         height: 'auto',
                         mt: "2em",
+                        minHeight: "103em",
                     })}
                 >
                     <ProjectExhibitorcomponent />
