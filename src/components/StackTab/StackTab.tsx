@@ -22,7 +22,7 @@ const StackTab = ():React.ReactNode => {
     const [isDetailedList, setIsDetailedList] = useState<boolean>(false);
 
     return(
-        <Element name="Habilidades">
+        <Element name={t("nav.skills")}>
             <Box
                 component={'div'}
                 sx={() => ({

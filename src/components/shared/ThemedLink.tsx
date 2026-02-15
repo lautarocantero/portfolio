@@ -20,6 +20,7 @@ const ThemedLink = ({ to, children }: ThemedLinkInterface ) => {
       transition: "color 0.3s ease",
       display: 'flex',  // si algun estilo se rompe quitar esto
       alignItems: 'center',   // si algun estilo se rompe quitar esto
+      userSelect: "none",
       "&:hover": {
         color: theme.custom?.white,
       },

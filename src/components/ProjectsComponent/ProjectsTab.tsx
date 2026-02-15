@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 import ProjectExhibitorcomponent from "./ProjectExhibitor/ProjectExhibitor";
 import { useMemo } from "react";
 
-const ProjectsSection = (): React.ReactNode => {
+const ProjectsTab = (): React.ReactNode => {
     const { t } = useTranslation();
 
     const title = useMemo(() => t("projects.title"), [t]);
@@ -46,4 +46,4 @@ const ProjectsSection = (): React.ReactNode => {
     )
 }
 
-export default ProjectsSection;
+export default ProjectsTab;

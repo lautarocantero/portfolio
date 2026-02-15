@@ -4,7 +4,7 @@ import ContactComponent from "../components/Contact/ContactComponent";
 import ExperienceTab from "../components/ExperienceTab/ExperienceTab";
 import PresentationComponent from "../components/Presentation/Presentation";
 import PreviousJobs from "../components/PreviousJobs/PreviousJobs";
-import ProjectsSection from "../components/ProjectsComponent/ProjectsSection";
+import ProjectsSection from "../components/ProjectsComponent/ProjectsTab";
 import SimpleSnackbar from "../components/shared/snackbar/SnackBarComponent";
 import ImageDialog from "../components/ImageDialog/ImageDialog";
 import SimpleDialog from "../components/SimpleDialog/SimpleDialog";

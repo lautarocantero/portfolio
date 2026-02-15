@@ -8,7 +8,7 @@ const ContactComponent = ():React.ReactNode => {
     const { t } = useTranslation();
 
     return(
-        <Element name="Contacto">
+        <Element name={t("nav.contact")}>
             <Box
                 component={'div'}
                 sx={(theme: Theme) => ({ 

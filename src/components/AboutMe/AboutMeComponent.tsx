@@ -9,7 +9,7 @@ const AboutMeComponent = ():React.ReactNode => {
 
     return(
         <Box>
-        <Element name="Sobre mí">
+        <Element name={t("nav.about")}>
         <Typography
             component={'h2'}
             sx={(theme: Theme) => ({

@@ -7,7 +7,7 @@ const ExperienceTab = (): React.ReactNode => {
     const { t } = useTranslation();
     return (
         <Box component="section"  sx={{mt: '3em'}}>
-            <Element name="Experiencia">
+            <Element name={t("nav.experience")}>
                     <Typography
                         component={'h2'}
                         sx={(theme: Theme) => ({
