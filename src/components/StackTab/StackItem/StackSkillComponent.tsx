@@ -1,7 +1,7 @@
 import { Box, Tooltip, type Theme } from "@mui/material";
-import type { StackSkillProps } from "../../typings/reactComponents";
 import MorphingBlobComponent from "./StackMorphingBlob";
 import StackContentComponent from "./StackContent";
+import type { StackSkillProps } from "../../../typings/reactComponents";
 
 const StackSkillComponent = ({stack}: StackSkillProps ): React.ReactNode => {
     const { text, icon, iconGif }: {text: string, icon: string, iconGif: string} = stack;

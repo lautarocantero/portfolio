@@ -132,6 +132,7 @@ export type ProjectButtonType = {
 
 export type StackSkillType = Pick<StackInterface, 'text' | 'icon'> & {
     iconGif: string,
+    type: string,
 }
 
 {/*─────────────────── 🔎 Sobre mi 🔎 ───────────────────*/}

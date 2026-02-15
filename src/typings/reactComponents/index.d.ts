@@ -213,8 +213,14 @@ export interface ProjectLongDescriptionClientProps {
 
 {/*─────────────────── 🔎 Habilidades 🔎 ───────────────────*/}
 
+export interface StackButtonProps {
+    setIsDetailedList: Dispatch<SetStateAction<boolean>>;
+    isDetailedList: boolean;
+}
+
 export interface StackExhibitorProps {
     stacks: StackSkillType[],
+    isDetailedList: boolean,
 }
 
 export interface StackSkillProps {

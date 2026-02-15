@@ -8,8 +8,8 @@ import ProjectsSection from "../components/ProjectsComponent/ProjectsSection";
 import SimpleSnackbar from "../components/shared/snackbar/SnackBarComponent";
 import ImageDialog from "../components/ImageDialog/ImageDialog";
 import SimpleDialog from "../components/SimpleDialog/SimpleDialog";
-import StackComponent from "../components/StackComponent/StackComponent";
 import PortfolioLayout from "../layout/PortfolioLayout";
+import StackTab from "../components/StackTab/StackTab";
 
 const PortfolioPage = () => {
 
@@ -20,7 +20,7 @@ const PortfolioPage = () => {
             <PreviousJobs />
             <ExperienceTab />
             <ProjectsSection />
-            <StackComponent />
+            <StackTab />
             <AboutMeComponent />
             <ContactComponent />
             <ImageDialog />
