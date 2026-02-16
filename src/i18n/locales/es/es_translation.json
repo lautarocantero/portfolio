@@ -142,6 +142,8 @@
   "skills.title": "Habilidades",
   "skills.button.grid": "Cambiar a vista de cuadrícula",
   "skills.button.list": "Cambiar a vista de lista",
+  "skills.message.filtered": "Mostrando proyectos y experiencias que contienen {{stacks}}",
+  "skills.message.noFilters": "Mostrando todos los proyectos y experiencias",
   "skills.markup.title": "Lenguajes de Marcado",
   "skills.style.title": "Lenguajes de Estilos",
   "skills.language.title": "Lenguajes de Programación",
