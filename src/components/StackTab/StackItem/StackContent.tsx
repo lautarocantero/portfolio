@@ -1,21 +1,24 @@
 import { Box } from "@mui/material"
 import StackInnerCircleComponent from "./StackInnerCircle";
 import StackLabel from "./StackLabel";
+import type { StackContentProps } from "../../../typings/reactComponents";
 
 
-const StackContentComponent = ({iconGif,icon,text,}: {iconGif: string; icon: string; text: string;}):React.ReactNode => {
+const StackContentComponent = ({iconGif,icon,text,}: StackContentProps ):React.ReactNode => {
+
+
     return(
         <Box
             component={'div'}
             sx={{
-                position: 'relative',
-                zIndex: 2,
+                alignItems: 'center',
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '70%',
                 height: '70%',
+                justifyContent: 'center',
+                position: 'relative',
+                width: '70%',
+                zIndex: 2,
             }}
         >
             {/* Inner Circle with Icon */}

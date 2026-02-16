@@ -153,6 +153,8 @@
 
 
   "skills.title": "Skills",
+  "skills.button.grid": "Switch to grid view",
+  "skills.button.list": "Switch to list view",
   "skills.markup.title": "Markup Languages",
   "skills.style.title": "Style Languages",
   "skills.language.title": "Programming Languages",

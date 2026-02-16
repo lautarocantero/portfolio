@@ -1,12 +1,17 @@
 import { Box, Tooltip, type Theme } from "@mui/material";
-import MorphingBlobComponent from "./StackMorphingBlob";
-import StackContentComponent from "./StackContent";
+import React, { useContext } from "react";
 import type { StackSkillProps } from "../../../typings/reactComponents";
-import { useContext } from "react";
 import { StackContext } from "../context/StackContext";
+import StackContentComponent from "./StackContent";
+import MorphingBlobComponent from "./StackMorphingBlob";
 
 const StackSkillComponent = ({stack}: StackSkillProps ): React.ReactNode => {
-    const { text, icon, iconGif }: {text: string, icon: string, iconGif: string} = stack;
+    const { text, icon, iconGif }: 
+    {
+        text: string, 
+        icon: string, 
+        iconGif: string
+    } = stack;
     const { filteredStacks, setFilteredStacks } = useContext(StackContext)!;
 
     return(
@@ -21,16 +26,16 @@ const StackSkillComponent = ({stack}: StackSkillProps ): React.ReactNode => {
                   )
                 }
                 sx={(theme: Theme) => ({
-                    width: '100%',
+                    alignItems: 'center',
                     aspectRatio: '1',
-                    position: 'relative',
                     cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
                     justifyContent: 'center',
-                    transition: 'transform 0.3s ease',
                     mt: '2em',
+                    position: 'relative',
+                    transition: 'transform 0.3s ease',
+                    width: '100%',
                     '&:hover': {
                         transform: 'scale(1.05)',
                         '& .blob-shape': {
@@ -49,4 +54,4 @@ const StackSkillComponent = ({stack}: StackSkillProps ): React.ReactNode => {
     )
 };
     
-export default StackSkillComponent;
+export default React.memo(StackSkillComponent);

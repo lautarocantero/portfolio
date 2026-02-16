@@ -1,3 +1,4 @@
+import React from "react";
 import type { StackExhibitorProps } from "../../typings/reactComponents";
 import StackGridComponent from "./StackGrid";
 import StackListComponent from "./StackList";
@@ -15,4 +16,4 @@ const StackExhibitorComponent = ({stacks, isDetailedList}: StackExhibitorProps )
     )
 };
         
-export default StackExhibitorComponent;
+export default React.memo(StackExhibitorComponent);

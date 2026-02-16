@@ -147,6 +147,11 @@ export type StackSkillType = Pick<StackInterface, 'text' | 'icon'> & {
     type: string,
 }
 
+export interface sectionInterface {
+  title: string;
+  type: string;
+}
+
 {/*─────────────────── 🔎 Sobre mi 🔎 ───────────────────*/}
 
 export interface AboutLinkInterface {

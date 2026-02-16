@@ -1,5 +1,3 @@
-
-
 import { useState, type PropsWithChildren } from "react";
 import { StackContext } from "./StackContext";
 

@@ -140,6 +140,8 @@
 
 
   "skills.title": "Habilidades",
+  "skills.button.grid": "Cambiar a vista de cuadrícula",
+  "skills.button.list": "Cambiar a vista de lista",
   "skills.markup.title": "Lenguajes de Marcado",
   "skills.style.title": "Lenguajes de Estilos",
   "skills.language.title": "Lenguajes de Programación",

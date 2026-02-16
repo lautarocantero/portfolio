@@ -1,34 +1,27 @@
 import { Box, type Theme } from "@mui/material";
+import type { StackInnerCircleProps } from "../../../typings/reactComponents";
 
-const StackInnerCircleComponent = ({
-  iconGif,
-  icon,
-  text,
-}: {
-  iconGif: string;
-  icon: string;
-  text: string;
-}): React.ReactNode => {
+const StackInnerCircleComponent = ({iconGif,icon,text,}: StackInnerCircleProps): React.ReactNode => {
   return (
     <Box
       component="div"
-      sx={(theme: Theme) => ({
-        fontFamily: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
-        color: "white",
-        margin: 0,
-        padding: 0,
+      sx={() => ({
+        alignItems: "center",
+        borderRadius: "100%",
+        boxShadow: "0 5px 20px rgba(0, 0, 0, 0.2)",
         boxSizing: "border-box",
-        position: "relative",
-        height: "250px",
+        color: "white",
+        cursor: "pointer",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        fontFamily: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`,
+        height: "250px",
         justifyContent: "center",
-        cursor: "pointer",
-        width: "100%",
-        borderRadius: "100%",
+        margin: 0,
         overflow: "hidden",
-        boxShadow: "0 5px 20px rgba(0, 0, 0, 0.2)",
+        padding: 0,
+        position: "relative",
+        width: "100%",
       })}
     >
       <Box
@@ -36,12 +29,12 @@ const StackInnerCircleComponent = ({
         src={iconGif !== "" ? iconGif : icon}
         alt={text}
         draggable={false}
-        sx={{
-          width: "80%",
+        sx={(theme: Theme) => ({
+          filter: `drop-shadow(0 2px 8px ${theme?.custom?.backgroundDark})`,
           height: "80%",
           objectFit: "contain",
-          filter: "drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15))",
-        }}
+          width: "80%",
+        })}
       />
       </Box>
   );

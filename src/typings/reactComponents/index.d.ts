@@ -1,6 +1,6 @@
 import type React from "react";
-import type { AboutLinkInterface, BenefitType, LogoExperienceInterface, LongDescriptionInterface, LongDescriptionItem, ProjectEntryType, ProjectLongDescriptionType, projectStackInterface, StackInterface, StackSkillType, Task } from "../types";
 import type { SetStateAction } from "react";
+import type { AboutLinkInterface, BenefitType, LogoExperienceInterface, LongDescriptionInterface, ProjectEntryType, ProjectLongDescriptionType, StackInterface, StackSkillType, Task } from "../types";
 import type { ProjectEntryTypeEnum } from "../types/enums";
 
 {/*─────────────────── 🔎 Navbar 🔎 ───────────────────*/}
@@ -51,7 +51,7 @@ export interface CarouselProps {
     bigScreen?: boolean;
 }
 
-{/*─────────────────── 🔎 Stack 🔎 ───────────────────*/}
+{/*─────────────────── 🔎 Stack (exp-proyecto) 🔎 ───────────────────*/}
 
 export interface StackListComponentProps {
     stacks: StackInterface[],
@@ -223,9 +223,25 @@ export interface StackExhibitorProps {
     isDetailedList: boolean,
 }
 
+export interface StackGridProps {
+    stacks: StackSkillType[]
+}
+
+export type StackListProps = Pick <StackGridProps, 'stacks'>
+
 export interface StackSkillProps {
     stack: StackSkillType,
 }
+
+export interface StackContentProps {
+    iconGif: string; 
+    icon: string; 
+    text: string;
+}
+
+export type StackInnerCircleProps = Pick<StackContentProps, 'icon' | 'iconGif' | 'text'>
+
+export type StackLabelProps = Pick<StackContentProps, 'text'>
 
 {/*─────────────────── 🔎 Sobre mi 🔎 ───────────────────*/}
 

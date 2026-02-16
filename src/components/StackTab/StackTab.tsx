@@ -1,25 +1,28 @@
 import { Box, Typography } from "@mui/material";
 import type { Theme } from "@mui/material/styles";
-import { Element } from "react-scroll";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Element } from "react-scroll";
 import { getStackList } from "../../helpers/Stack/getStackList";
-import StackExhibitorComponent from "./StackExhibitor";
 import type { StackSkillType } from "../../typings/types";
 import StackButtonComponent from "./StackButton/StackButton";
-import { useState } from "react";
+import StackExhibitorComponent from "./StackExhibitor";
 
 const appliedStacks: string[] = [
     'HTML5','CSS3','JavaScript','TypeScript',
     'Bootstrap', 'Sass', "Tailwind", 'C#', 'React','Redux',
     'Node.js','Firebase','MongoDB', 'PHP', 'Jest','Git',
-    'GitKraken','Figma',
-    'Linux'
+    'GitKraken','Figma','Linux'
 ]
 
 const StackTab = ():React.ReactNode => {
     const { t } = useTranslation();
-    const stacks : StackSkillType[]  = getStackList(appliedStacks);
     const [isDetailedList, setIsDetailedList] = useState<boolean>(false);
+
+    const stacks : StackSkillType[]  = useMemo(() => 
+    getStackList(appliedStacks)
+    ,[appliedStacks]);
+    
 
     return(
         <Element name={t("nav.skills")}>
@@ -36,19 +39,19 @@ const StackTab = ():React.ReactNode => {
             >
                 <Box
                     sx={{
+                        alignItems: 'center',
                         display: 'flex',
                         flexDirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
                         gap: '1em',
+                        justifyContent: 'center',
                     }}
                 >
                     <Typography
                         component={'h2'}
                         sx={(theme: Theme) => ({
                             color: theme?.custom?.fontColor,
-                            textAlign: 'center',
                             fontSize: theme?.typography?.h2?.fontSize,
+                            textAlign: 'center',
                         })}
                     >
                         {t("skills.title")}
@@ -61,4 +64,4 @@ const StackTab = ():React.ReactNode => {
     )
 };
         
-export default StackTab;
+export default React.memo(StackTab);
