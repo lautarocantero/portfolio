@@ -16,7 +16,7 @@ const PortfolioLayout = ( {children} : PortfolioLayoutInterface ) => {
           "&::before": {
             content: '""',
             position: "absolute",
-            top: '70em',
+            top: '120em',
             left: "50%",
             width: "200vw",
             height: "20em",

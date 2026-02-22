@@ -37,7 +37,7 @@ const AboutIlustrationComponent = ():React.ReactNode => {
             >
                 <Box
                     component={'img'}
-                    src="/images/foto_perfil/foto_perfil1_about_me_2.png"
+                    src="public/images/foto_perfil/profile_image_wb.png"
                     sx={{
                         borderRadius: '50%',
                         height: '10em',
