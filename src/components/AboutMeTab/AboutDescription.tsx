@@ -6,17 +6,14 @@ const AboutDescriptionComponent = (): React.ReactNode => {
   const { t } = useTranslation();
 
   return (
-    <Box sx={{ margin: "1em" }}>
-      <Typography
-        sx={(theme: Theme) => ({
-          color: theme?.custom?.fontColor,
-          fontSize: theme?.typography?.body2.fontSize,
-          mt: "2em",
-          textAlign: "center",
-        })}
-      >
-        {t("about.greeting")}
-      </Typography>
+    <Box 
+      sx={(theme: Theme) => ({ 
+        minWidth: '33em',
+        maxWidth: '33em',
+        boxShadow: `5px 5px 10px ${theme?.custom?.backgroundDark}`,
+        p: 1,
+      })}
+    >
 
       <Typography
         sx={(theme: Theme) => ({
@@ -34,28 +31,39 @@ const AboutDescriptionComponent = (): React.ReactNode => {
           fontSize: theme?.typography?.body2.fontSize,
           textAlign: "center",
           fontStyle: "italic",
+          minHeight: '5em',
+          borderBottom: `0.1em dotted ${theme?.custom?.fontColor}`,
         })}
       >
         {t("about.role")}
       </Typography>
 
-      <AboutLinksButtonsExhibitorComponent />
+      <Typography
+        sx={(theme: Theme) => ({
+          color: theme?.custom?.fontColor,
+          fontSize: theme?.typography?.body2.fontSize,
+          mt: "2em",
+          textAlign: "center",
+        })}
+      >
+        {t("about.experience")}
+      </Typography>
 
       <Typography
         sx={(theme: Theme) => ({
           color: theme?.custom?.fontColor,
           fontSize: theme?.typography?.body2.fontSize,
-          mt: "3em",
+          mt: "2em",
           textAlign: "center",
         })}
       >
-        {t("about.experience")} {t("about.focus")}
+        {t("about.focus")}
       </Typography>
 
       <Typography
         variant="subtitle1"
         sx={(theme: Theme) => ({
-          color: theme.palette.primary.main,
+          color: theme?.custom?.fontColor,
           fontWeight: "bold",
           textAlign: "center",
           fontSize: theme?.typography?.body2.fontSize,
@@ -64,6 +72,9 @@ const AboutDescriptionComponent = (): React.ReactNode => {
       >
         {t("about.contact")}
       </Typography>
+
+      <AboutLinksButtonsExhibitorComponent />
+
     </Box>
   );
 };

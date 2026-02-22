@@ -21,6 +21,7 @@ const LangButtonComponent = (): React.ReactNode => {
           : theme?.custom?.blackTranslucid,
         height: '0.8em',
         cursor: 'pointer',
+        userSelect: "none",
       })}
     />
   );

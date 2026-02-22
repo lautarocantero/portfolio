@@ -15,6 +15,14 @@
   "buttons.downloadCV": "Descargar CV",
   "buttons.seeMore": "Ver más",
 
+  "about.title": "Sobre mí",
+  "about.greeting": "¿Quién es?",
+  "about.name": "Lautaro Nicolas Cantero",
+  "about.role": "Programador full stack con más de 3 años de experiencia, autodidacta y en constante crecimiento a través de estudios independientes y proyectos personales.",
+  "about.focus": "He trabajado junto a equipos profesionales y actualmente me desempeño como freelancer, aprovechando la experiencia técnica y una versátil adaptabilidad para cooperar en diferentes proyectos. Hoy sigo mejorando con cada proyecto que tomo.",
+  "about.experience": "Comencé mi carrera trabajando como desarrollador front end en un entorno formal, donde aprendí cómo es el flujo de trabajo con otros desarrolladores y la importancia de escribir código limpio, escalable y, sobre todo, fácil de entender. A partir de ahí, decidí profundizar en diseño y en la construcción de aplicaciones escalables: componentes atómicos, arquitecturas bien estructuradas, separación clara de responsabilidades y documentación que facilite el trabajo en equipo.",
+  "about.contact": "¿Tenés un proyecto? Escribime",
+
   "section.previousJobs": "Empresas para las que he",
   "section.job": "trabajado",
   "jobs.vilotech": "Vilotech",
@@ -155,15 +163,6 @@
   "skills.versioning.title": "Control de Versiones y Colaboración",
   "skills.design.title": "Diseño y Prototipado",
   "skills.system.title": "Sistemas Operativos y Entornos",
-
-
-  "about.title": "Sobre mí",
-  "about.greeting": "¡Hola! ¿Qué tal?, mi nombre es",
-  "about.name": "Lautaro Nicolas Cantero",
-  "about.role": "programador full stack de 25 años, apasionado por la tecnología y el diseño.",
-  "about.experience": "Trabajé más de 3 años como Front End Developer y actualmente me desempeño como freelancer full stack, mis principales habilidades incluyen React, Node.js y TypeScript.",
-  "about.focus": "Enfocado en aprender nuevas tecnologías",
-  "about.contact": "Si quieres contactarme",
 
   "contact.title": "Contacto",
   "contact.name": "Nombre",

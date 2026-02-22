@@ -15,7 +15,7 @@ const fillBackground = keyframes`
 const PresentationPhoto = (): React.ReactNode => {
   const { t } = useTranslation();
 
-  const photoUrl: string = "/images/foto_perfil/profile_image.png"
+  const photoUrl: string = "/images/profile_photo/profile_image_2.png"
 
   return (
     <Box

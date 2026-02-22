@@ -15,6 +15,14 @@
   "buttons.downloadCV": "Download CV",
   "buttons.seeMore": "See more",
 
+  "about.title": "About me",
+  "about.greeting": "Who is he?",
+  "about.name": "Lautaro Nicolas Cantero",
+  "about.role": "Full stack developer with over 3 years of experience, self-taught and continuously growing through independent studies and personal projects.",
+  "about.focus": "I have worked alongside professional teams and currently work as a freelancer, leveraging technical experience and versatile adaptability to collaborate on different projects. I keep improving with every project I take on.",
+  "about.experience": "I started my career working as a front end developer in a formal environment, where I learned how the workflow with other developers works and the importance of writing clean, scalable, and above all, easy-to-understand code. From there, I decided to deepen my skills in design and building scalable applications: atomic components, well-structured architectures, clear separation of responsibilities, and documentation that makes teamwork easier.",
+  "about.contact": "Got a project? Let's talk",
+  
   "section.previousJobs": "Companies I have",
   "section.job": "worked for",
   "jobs.vilotech": "Vilotech",
@@ -169,14 +177,6 @@
   "skills.design.title": "Design and Prototyping",
   "skills.system.title": "Operating Systems and Environments",
 
-
-  "about.title": "About me",
-  "about.greeting": "Hello! How are you? My name is",
-  "about.name": "Lautaro Nicolas Cantero",
-  "about.role": "25-year-old full stack developer, passionate about technology and design.",
-  "about.experience": "I worked for more than 3 years as a Front End Developer and currently work as a full stack freelancer. My main skills include React, Node.js, and TypeScript.",
-  "about.focus": "Focused on learning new technologies",
-  "about.contact": "If you want to contact me",
 
   "contact.title": "Contact",
   "contact.name": "Name",

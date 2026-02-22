@@ -159,6 +159,7 @@ export interface AboutLinkInterface {
     icon: string,
     url?: string,
     action: string,
+    bgColor: string,
 }
 
 export interface handleAboutLinkActionInterface {
