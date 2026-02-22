@@ -1,18 +1,21 @@
-import { Box, keyframes, type Theme } from "@mui/material";
-import { ThemeContext } from "../../theme/context/themeContext";
-import { useContext } from "react";
+import { Box, keyframes, Tooltip, type Theme } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import PresentationPortraitComponent from "./PresentationPortrait";
 
-const rotateSlow = keyframes`
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+// Animación de transición
+const fillBackground = keyframes`
+  0% {
+    background-color: var(--bg-light);
+  }
+  100% {
+    background-color: var(--bg-primary);
+  }
 `;
 
 const PresentationPhoto = (): React.ReactNode => {
-  const { appTheme } = useContext(ThemeContext);
+  const { t } = useTranslation();
 
-  const photoUrl: string = appTheme
-    ? "public/images/foto_perfil/profile_image.png"
-    : "public/images/foto_perfil/profile_image.png";
+  const photoUrl: string = "/images/foto_perfil/profile_image.png"
 
   return (
     <Box
@@ -23,65 +26,33 @@ const PresentationPhoto = (): React.ReactNode => {
         margin: "auto",
       }}
     >
-      {/*─────────────────── 🔎 capas animadas 🔎 ───────────────────*/}
-      <Box
-        component="div"
-        sx={(theme: Theme) => ({
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          borderRadius: "50%",
-          zIndex: 0,
-          backgroundColor: theme?.palette?.primary?.main,
-          boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
-        })}
-      />
-
-      <Box
-        sx={(theme: Theme) => ({
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          background: theme?.custom?.backgroundDark,
-          borderRadius: "25%",
-          zIndex: 0,
-          animation: `${rotateSlow} 30s linear infinite reverse`,
-          boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
-        })}
-      />
-
-      <Box
-        sx={(theme: Theme) => ({
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          background: theme?.custom?.backgroundDark,
-          borderRadius: "25%",
-          zIndex: 0,
-          animation: `${rotateSlow} 40s linear infinite`,
-          boxShadow: "15px 10px 10px rgba(0, 0, 0, 0.36)",
-        })}
-      />
-
-      {/*─────────────────── 🔎 Foto principal 🔎 ───────────────────*/}
-      <Box
-        key={photoUrl}
-        component="img"
-        src={photoUrl}
-        alt="Foto de perfil"
-        className={`animate__animated animate__pulse`}
-        sx={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          borderRadius: "50%",
-          objectFit: "cover",
-          zIndex: 1,
-          overflow: 'hidden',
-          p: 1,
-        }}
-      />
-    </Box>
+      <PresentationPortraitComponent />
+      {/* 🔎 Foto principal con animación paulatina de fondo */}
+        <Tooltip title={t("hero.photo.alt")}>
+          <Box
+            key={photoUrl}
+            component="img"
+            src={photoUrl}
+            alt="Foto de perfil"
+            loading="lazy"
+            sx={(theme: Theme) => ({
+              "--bg-light": theme?.custom?.backgroundLigth,
+              "--bg-primary": theme?.palette?.primary?.main,
+              animation: `${fillBackground} 40s linear forwards`,
+              backgroundColor: theme?.custom?.backgroundLigth,
+              borderRadius: "50%",
+              height: "100%",
+              objectFit: "cover",
+              overflow: "hidden",
+              p: 0.3,
+              position: "relative",
+              width: "100%",
+              zIndex: 1,
+            })}
+          />
+        </Tooltip>
+      </Box>
+    
   );
 };
 

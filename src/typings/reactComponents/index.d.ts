@@ -38,6 +38,14 @@ export interface PortfolioLayoutInterface {
 
 {/*─────────────────── 🔎 Presentacion 🔎 ───────────────────*/}
 
+export interface PresentationTextProps {
+    text: string,
+    remarked?: boolean,
+    size: string,
+    className?: string,
+    title?: boolean,
+}
+
 export interface PresentationButtonProps {
     text: string,
     icon: string;

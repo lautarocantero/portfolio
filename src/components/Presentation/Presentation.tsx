@@ -1,11 +1,11 @@
 import { Box } from "@mui/material";
-import PresentationPhoto from "./PresentationPhoto";
-import PresentationInfo from "./PresentationInfo";
-import PresentationButtonscomponent from "./PresentationButtons";
-import { Element } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { Element } from "react-scroll";
+import PresentationButtonscomponent from "./PresentationButtons";
+import PresentationInfo from "./PresentationInfo";
+import PresentationPhoto from "./PresentationPhoto";
 
-const PresentationComponent = () => {
+const PresentationTab = () => {
     const { t } = useTranslation();
 
     return (
@@ -27,4 +27,4 @@ const PresentationComponent = () => {
     )
 } 
 
-export default PresentationComponent;
+export default PresentationTab;

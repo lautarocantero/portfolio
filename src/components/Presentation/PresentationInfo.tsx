@@ -2,6 +2,7 @@ import { Box, type Theme } from "@mui/material"
 import PresentationText from "./PresentationText";
 import 'animate.css';
 import { useTranslation } from "react-i18next";
+import { TitleSizeEnum } from "../../typings/types/enums";
 
 const PresentationInfo = ():React.ReactNode => {
     const {t} = useTranslation();
@@ -13,9 +14,9 @@ const PresentationInfo = ():React.ReactNode => {
                 color: theme?.custom?.fontColor,
             })}
         >
-            <PresentationText text={t("hero.name")} size="large" title/>
-            <PresentationText text={t("hero.role")} remarked size="large"/>
-            <PresentationText text={t("hero.welcome")} size="small" className={'animate__animated animate__zoomIn'}/>
+            <PresentationText text={t("hero.name")} size={TitleSizeEnum?.large} title/>
+            <PresentationText text={t("hero.role")} remarked size={TitleSizeEnum?.large}/>
+            <PresentationText text={t("hero.welcome")} size={TitleSizeEnum?.small} className={'animate__animated animate__zoomIn'}/>
         </Box>
     )
 };

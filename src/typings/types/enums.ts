@@ -1,4 +1,30 @@
 
+//─────────────────────────────── Alert color ───────────────────────────────//
+
+
+export enum AlertColor {
+  Success = 'success',
+  Error = 'error',
+  Warning = 'warning',
+  Info = 'info',
+}
+
+
+//─────────────────────────────── Languages ───────────────────────────────//
+
+
+export enum LanguagesEnum {
+  Spanish = 'es',
+  English = 'en',
+}
+
+//─────────────────────────────── Titulo ───────────────────────────────//
+
+export enum TitleSizeEnum {
+  large = "large",
+  small = "small"
+}
+
 //─────────────────────────────── Tareas ───────────────────────────────//
 
 export enum TaskEnum {
@@ -21,20 +47,4 @@ export enum TaskEnum {
 export enum ProjectEntryTypeEnum {
   feature = 'feature',
   benefit = 'benefit',
-}
-
-//─────────────────────────────── Alert color ───────────────────────────────//
-
-export enum AlertColor {
-  Success = 'success',
-  Error = 'error',
-  Warning = 'warning',
-  Info = 'info',
-}
-
-//─────────────────────────────── Languages ───────────────────────────────//
-
-export enum LanguagesEnum {
-  Spanish = 'es',
-  English = 'en',
 }

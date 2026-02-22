@@ -6,9 +6,10 @@
   "nav.about": "Sobre mí",
   "nav.contact": "Contacto",
 
-  "hero.name": "Lautaro Cantero",
+  "hero.name": "Lautaro N. Cantero",
   "hero.role": "Desarrollador Full Stack",
   "hero.welcome": "¡Bienvenido a mi portafolio!",
+  "hero.photo.alt": "Foto de Lautaro N. Cantero",
 
   "buttons.linkedin": "Linkedin",
   "buttons.downloadCV": "Descargar CV",
